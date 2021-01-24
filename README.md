@@ -1,4 +1,6 @@
 # Pytov
+The idea was to take all well known syntaxes, and cimbine them all into one programming language with many posabilities.
+
 ## Usage
 
 Run using python (requires libraries: run `$ pip install -r requirements.txt`):
