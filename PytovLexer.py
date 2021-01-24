@@ -183,7 +183,7 @@ class PytovLexer(Lexer):
     CLOSE_CURLY = 41
     WS = 42
     SEMI_COLON = 43
-    NEWLINE = 44
+    NEW_LINE = 44
 
     channelNames = [ u"DEFAULT_TOKEN_CHANNEL", u"HIDDEN" ]
 
@@ -201,7 +201,7 @@ class PytovLexer(Lexer):
             "OR", "NOT", "TRUE", "FALSE", "ADD", "SUBTRACT", "MULT", "DIVIDE", 
             "FLOOR_DIVISION", "MODULO", "GT", "GE", "LT", "LE", "EQ", "NOT_EQ", 
             "LPAREN", "RPAREN", "RETURN", "DECIMAL", "IDENTIFIER", "OPEN_CURLY", 
-            "CLOSE_CURLY", "WS", "SEMI_COLON", "NEWLINE" ]
+            "CLOSE_CURLY", "WS", "SEMI_COLON", "NEW_LINE" ]
 
     ruleNames = [ "T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", 
                   "T__7", "T__8", "T__9", "T__10", "T__11", "T__12", "STRING", 
@@ -210,7 +210,7 @@ class PytovLexer(Lexer):
                   "DIVIDE", "FLOOR_DIVISION", "MODULO", "GT", "GE", "LT", 
                   "LE", "EQ", "NOT_EQ", "LPAREN", "RPAREN", "RETURN", "DECIMAL", 
                   "IDENTIFIER", "OPEN_CURLY", "CLOSE_CURLY", "WS", "SEMI_COLON", 
-                  "NEWLINE" ]
+                  "NEW_LINE" ]
 
     grammarFileName = "Pytov.g4"
 

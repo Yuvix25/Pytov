@@ -15,3 +15,66 @@ $ pytov [path_to_your_pytov_code]
 
 ## Syntax
 
+### Comments:
+```cs
+# this is a comment
+// this is also a comment
+/*
+and this is a
+multi
+line
+comment
+*/
+```
+
+### Variables:
+```cs
+x = 5 // let or var or type is not required
+print(x)
+```
+
+### If:
+```python
+if 5 > 1{
+    print("5 is greater than 1")
+}
+elif 1 > 5{
+    print("1 is greater than 5")
+}
+else {
+    print("1 is equal to 5")
+}
+```
+
+### Functions:
+```cs
+(func or function or def) func_name(required_params, not_required_params){
+    your_code_here
+    // and if you want you can return like this: return value
+}
+```
+
+```cs
+function print_hi(times){ // required parameter
+    for i in range(times){
+        print("hi")
+    }
+}
+
+def print_hi_default(times=3){ // not required parameter with default value of 3
+    for i in range(times){
+        print("hi")
+    }
+}
+
+func mult(x, y){
+    return x*y
+}
+
+print_hi(5) // output: hihihihihi
+print_hi_default() // output: hihihi
+print(mult(5, 2)) // output: 10
+```
+
+---
+See [Examples](https://github.com/Yuvix25/Pytov/tree/main/Examples)

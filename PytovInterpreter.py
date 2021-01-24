@@ -165,9 +165,28 @@ class PytovInterpreter(PytovVisitor):
             self.errorThrower._raise([ctx.start.line, ctx.getText()], "NameError", f"Name '{ctx.children[0].getText()}' is not defiend.")
 
     def visitIfStatement(self, ctx:PytovParser.IfStatementContext):
-        self.block_is_true = self.visit(ctx.children[1])
-        if self.block_balance == 0 or self.block_is_true:
+        ctx.children = [child for child in ctx.children if type(child) != PytovParser.SeperatorsContext]
+        if self.visit(ctx.children[1]):
+            self.block_is_true = True
             self.visit(ctx.children[2])
+            return
+        if len(ctx.children) > 3:
+            if len(ctx.children) % 3 != 0: # else in if statement
+                for i in range(1, (len(ctx.children) - 2) // 3):
+                    if self.visit(ctx.children[3*i+1]):
+                        self.block_is_true = True
+                        self.visit(ctx.children[3*i+2])
+                        return
+                self.block_is_true = True
+                self.visit(ctx.children[-1])
+            else:
+                for i in range(1, len(ctx.children) // 3):
+                    if self.visit(ctx.children[3*i+1]):
+                        self.block_is_true = True
+                        self.visit(ctx.children[3*i+2])
+                        return
+            
+
 
     def visitWhileStatement(self, ctx:PytovParser.WhileStatementContext):
         while self.visit(ctx.children[1]):

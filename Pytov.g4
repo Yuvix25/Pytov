@@ -16,9 +16,10 @@ allCode
  ;
 
 seperators
- : SEMI_COLON
- | NEWLINE
+ : NEW_LINE
+ | SEMI_COLON
  ;
+
 
 exp
  : LPAREN exp RPAREN              #parenExpression
@@ -87,10 +88,9 @@ boolTF
 ifStatement
  : 
  ('if' exp block)
- ('elif' exp block)*
- ('else' block)?
+ (seperators? 'elif' exp block)*
+ (seperators? 'else' block)?
  ;
-
 
 identifierList
  : identifier
@@ -227,4 +227,4 @@ CLOSE_CURLY: '}' ;
 
 WS         : [ \r\t\u000C]+ -> skip ;
 SEMI_COLON : ';' ;
-NEWLINE    : '\n' ;
+NEW_LINE   : '\n' ;

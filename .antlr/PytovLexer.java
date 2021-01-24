@@ -21,7 +21,7 @@ public class PytovLexer extends Lexer {
 		LINE_COMMENT_P=17, AND=18, OR=19, NOT=20, TRUE=21, FALSE=22, ADD=23, SUBTRACT=24, 
 		MULT=25, DIVIDE=26, FLOOR_DIVISION=27, MODULO=28, GT=29, GE=30, LT=31, 
 		LE=32, EQ=33, NOT_EQ=34, LPAREN=35, RPAREN=36, RETURN=37, DECIMAL=38, 
-		IDENTIFIER=39, OPEN_CURLY=40, CLOSE_CURLY=41, WS=42, SEMI_COLON=43, NEWLINE=44;
+		IDENTIFIER=39, OPEN_CURLY=40, CLOSE_CURLY=41, WS=42, SEMI_COLON=43, NEW_LINE=44;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -37,7 +37,7 @@ public class PytovLexer extends Lexer {
 			"LINE_COMMENT_P", "AND", "OR", "NOT", "TRUE", "FALSE", "ADD", "SUBTRACT", 
 			"MULT", "DIVIDE", "FLOOR_DIVISION", "MODULO", "GT", "GE", "LT", "LE", 
 			"EQ", "NOT_EQ", "LPAREN", "RPAREN", "RETURN", "DECIMAL", "IDENTIFIER", 
-			"OPEN_CURLY", "CLOSE_CURLY", "WS", "SEMI_COLON", "NEWLINE"
+			"OPEN_CURLY", "CLOSE_CURLY", "WS", "SEMI_COLON", "NEW_LINE"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -59,7 +59,7 @@ public class PytovLexer extends Lexer {
 			"AND", "OR", "NOT", "TRUE", "FALSE", "ADD", "SUBTRACT", "MULT", "DIVIDE", 
 			"FLOOR_DIVISION", "MODULO", "GT", "GE", "LT", "LE", "EQ", "NOT_EQ", "LPAREN", 
 			"RPAREN", "RETURN", "DECIMAL", "IDENTIFIER", "OPEN_CURLY", "CLOSE_CURLY", 
-			"WS", "SEMI_COLON", "NEWLINE"
+			"WS", "SEMI_COLON", "NEW_LINE"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
