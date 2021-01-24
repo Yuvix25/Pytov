@@ -187,11 +187,15 @@ closeCurly
 STRING : '"' ( '\\"' | . )*? '"' ;
 
 COMMENT
-    : '/*' .*? '*/' {print("comment found")} -> skip
+    : '/*' .*? '*/' -> skip
 ;
 
-LINE_COMMENT
+LINE_COMMENT_C
     : '//' ~[\r\n]* -> skip
+;
+
+LINE_COMMENT_P
+    : '#' ~[\r\n]* -> skip
 ;
 
 AND        : '&&' ;

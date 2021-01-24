@@ -3,7 +3,7 @@ from PytovLexer import PytovLexer
 from PytovParser import PytovParser
 from PytovVisitor import PytovVisitor
 from antlr4.tree.Tree import TerminalNodeImpl
-
+from antlr4.error.ErrorListener import ErrorListener
 
 def traverse(tree, rule_names, indent = 0):
     if tree.getText() == "<EOF>":

@@ -1,4 +1,4 @@
-// Generated from c:\Users\yuvro\OneDrive\Desktop\PytovMain\Parser\Pytov.g4 by ANTLR 4.7.1
+// Generated from c:\Users\yuvro\OneDrive\Desktop\Pytov\Pytov.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,18 +10,18 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class PytovParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, T__11=12, T__12=13, STRING=14, COMMENT=15, LINE_COMMENT=16, 
-		AND=17, OR=18, NOT=19, TRUE=20, FALSE=21, ADD=22, SUBTRACT=23, MULT=24, 
-		DIVIDE=25, FLOOR_DIVISION=26, MODULO=27, GT=28, GE=29, LT=30, LE=31, EQ=32, 
-		NOT_EQ=33, LPAREN=34, RPAREN=35, RETURN=36, DECIMAL=37, IDENTIFIER=38, 
-		OPEN_CURLY=39, CLOSE_CURLY=40, WS=41, SEMI_COLON=42, NEWLINE=43;
+		T__9=10, T__10=11, T__11=12, T__12=13, STRING=14, COMMENT=15, LINE_COMMENT_C=16, 
+		LINE_COMMENT_P=17, AND=18, OR=19, NOT=20, TRUE=21, FALSE=22, ADD=23, SUBTRACT=24, 
+		MULT=25, DIVIDE=26, FLOOR_DIVISION=27, MODULO=28, GT=29, GE=30, LT=31, 
+		LE=32, EQ=33, NOT_EQ=34, LPAREN=35, RPAREN=36, RETURN=37, DECIMAL=38, 
+		IDENTIFIER=39, OPEN_CURLY=40, CLOSE_CURLY=41, WS=42, SEMI_COLON=43, NEWLINE=44;
 	public static final int
 		RULE_parse = 0, RULE_allCode = 1, RULE_seperators = 2, RULE_exp = 3, RULE_atom = 4, 
 		RULE_listr = 5, RULE_opCpBn = 6, RULE_notl = 7, RULE_identifier = 8, RULE_decimal = 9, 
@@ -32,30 +32,39 @@ public class PytovParser extends Parser {
 		RULE_forStatement = 24, RULE_funcDeclaration = 25, RULE_funcCall = 26, 
 		RULE_returnp = 27, RULE_statement = 28, RULE_block = 29, RULE_openCurly = 30, 
 		RULE_closeCurly = 31;
-	public static final String[] ruleNames = {
-		"parse", "allCode", "seperators", "exp", "atom", "listr", "opCpBn", "notl", 
-		"identifier", "decimal", "string", "comparator", "binary", "operator", 
-		"boolTF", "ifStatement", "identifierList", "declaration", "declarationList", 
-		"variableDeclaration", "expList", "parameterList", "parameterInputList", 
-		"whileStatement", "forStatement", "funcDeclaration", "funcCall", "returnp", 
-		"statement", "block", "openCurly", "closeCurly"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"parse", "allCode", "seperators", "exp", "atom", "listr", "opCpBn", "notl", 
+			"identifier", "decimal", "string", "comparator", "binary", "operator", 
+			"boolTF", "ifStatement", "identifierList", "declaration", "declarationList", 
+			"variableDeclaration", "expList", "parameterList", "parameterInputList", 
+			"whileStatement", "forStatement", "funcDeclaration", "funcCall", "returnp", 
+			"statement", "block", "openCurly", "closeCurly"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'['", "']'", "'if'", "'elif'", "'else'", "','", "'='", "'while'", 
-		"'for'", "'in'", "'func'", "'function'", "'def'", null, null, null, "'&&'", 
-		"'||'", "'!'", null, null, "'+'", "'-'", "'*'", "'/'", "'/_'", "'%'", 
-		"'>'", "'>='", "'<'", "'<='", "'=='", "'!='", "'('", "')'", "'return'", 
-		null, null, "'{'", "'}'", null, "';'", "'\n'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, "STRING", "COMMENT", "LINE_COMMENT", "AND", "OR", "NOT", "TRUE", 
-		"FALSE", "ADD", "SUBTRACT", "MULT", "DIVIDE", "FLOOR_DIVISION", "MODULO", 
-		"GT", "GE", "LT", "LE", "EQ", "NOT_EQ", "LPAREN", "RPAREN", "RETURN", 
-		"DECIMAL", "IDENTIFIER", "OPEN_CURLY", "CLOSE_CURLY", "WS", "SEMI_COLON", 
-		"NEWLINE"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'['", "']'", "'if'", "'elif'", "'else'", "','", "'='", "'while'", 
+			"'for'", "'in'", "'func'", "'function'", "'def'", null, null, null, null, 
+			"'&&'", "'||'", "'!'", null, null, "'+'", "'-'", "'*'", "'/'", "'/_'", 
+			"'%'", "'>'", "'>='", "'<'", "'<='", "'=='", "'!='", "'('", "')'", "'return'", 
+			null, null, "'{'", "'}'", null, "';'", "'\n'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, null, null, null, null, null, null, null, null, null, null, null, 
+			null, null, "STRING", "COMMENT", "LINE_COMMENT_C", "LINE_COMMENT_P", 
+			"AND", "OR", "NOT", "TRUE", "FALSE", "ADD", "SUBTRACT", "MULT", "DIVIDE", 
+			"FLOOR_DIVISION", "MODULO", "GT", "GE", "LT", "LE", "EQ", "NOT_EQ", "LPAREN", 
+			"RPAREN", "RETURN", "DECIMAL", "IDENTIFIER", "OPEN_CURLY", "CLOSE_CURLY", 
+			"WS", "SEMI_COLON", "NEWLINE"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
@@ -105,6 +114,7 @@ public class PytovParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
+
 	public static class ParseContext extends ParserRuleContext {
 		public TerminalNode EOF() { return getToken(PytovParser.EOF, 0); }
 		public List<AllCodeContext> allCode() {
@@ -1527,6 +1537,8 @@ public class PytovParser extends Parser {
 		public IdentifierContext identifier() {
 			return getRuleContext(IdentifierContext.class,0);
 		}
+		public TerminalNode LPAREN() { return getToken(PytovParser.LPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(PytovParser.RPAREN, 0); }
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
 		}
@@ -1591,6 +1603,8 @@ public class PytovParser extends Parser {
 		public IdentifierContext identifier() {
 			return getRuleContext(IdentifierContext.class,0);
 		}
+		public TerminalNode LPAREN() { return getToken(PytovParser.LPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(PytovParser.RPAREN, 0); }
 		public ParameterInputListContext parameterInputList() {
 			return getRuleContext(ParameterInputListContext.class,0);
 		}
@@ -1637,6 +1651,7 @@ public class PytovParser extends Parser {
 	}
 
 	public static class ReturnpContext extends ParserRuleContext {
+		public TerminalNode RETURN() { return getToken(PytovParser.RETURN, 0); }
 		public ExpContext exp() {
 			return getRuleContext(ExpContext.class,0);
 		}
@@ -1897,7 +1912,7 @@ public class PytovParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3-\u0110\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3.\u0110\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -1919,8 +1934,8 @@ public class PytovParser extends Parser {
 		"\3\34\5\34\u00f5\n\34\3\34\3\34\3\35\3\35\3\35\3\36\3\36\3\36\3\36\3\36"+
 		"\5\36\u0101\n\36\3\37\3\37\7\37\u0105\n\37\f\37\16\37\u0108\13\37\3\37"+
 		"\3\37\3 \3 \3!\3!\3!\2\5\b,.\"\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36"+
-		" \"$&(*,.\60\62\64\668:<>@\2\b\3\2,-\3\2\36#\3\2\23\24\3\2\30\35\3\2\26"+
-		"\27\3\2\r\17\2\u0113\2C\3\2\2\2\4M\3\2\2\2\6O\3\2\2\2\b[\3\2\2\2\nk\3"+
+		" \"$&(*,.\60\62\64\668:<>@\2\b\3\2-.\3\2\37$\3\2\24\25\3\2\31\36\3\2\27"+
+		"\30\3\2\r\17\2\u0113\2C\3\2\2\2\4M\3\2\2\2\6O\3\2\2\2\b[\3\2\2\2\nk\3"+
 		"\2\2\2\fm\3\2\2\2\16v\3\2\2\2\20x\3\2\2\2\22z\3\2\2\2\24|\3\2\2\2\26~"+
 		"\3\2\2\2\30\u0080\3\2\2\2\32\u0082\3\2\2\2\34\u0084\3\2\2\2\36\u0086\3"+
 		"\2\2\2 \u0088\3\2\2\2\"\u0099\3\2\2\2$\u00a6\3\2\2\2&\u00a8\3\2\2\2(\u00b3"+
@@ -1929,15 +1944,15 @@ public class PytovParser extends Parser {
 		"\3\2\2\2<\u0102\3\2\2\2>\u010b\3\2\2\2@\u010d\3\2\2\2BD\5\4\3\2CB\3\2"+
 		"\2\2DE\3\2\2\2EC\3\2\2\2EF\3\2\2\2FG\3\2\2\2GH\7\2\2\3H\3\3\2\2\2IN\5"+
 		"\6\4\2JN\5:\36\2KN\5$\23\2LN\5\b\5\2MI\3\2\2\2MJ\3\2\2\2MK\3\2\2\2ML\3"+
-		"\2\2\2N\5\3\2\2\2OP\t\2\2\2P\7\3\2\2\2QR\b\5\1\2RS\7$\2\2ST\5\b\5\2TU"+
-		"\7%\2\2U\\\3\2\2\2VW\5\20\t\2WX\5\b\5\5X\\\3\2\2\2Y\\\5\n\6\2Z\\\5\66"+
+		"\2\2\2N\5\3\2\2\2OP\t\2\2\2P\7\3\2\2\2QR\b\5\1\2RS\7%\2\2ST\5\b\5\2TU"+
+		"\7&\2\2U\\\3\2\2\2VW\5\20\t\2WX\5\b\5\5X\\\3\2\2\2Y\\\5\n\6\2Z\\\5\66"+
 		"\34\2[Q\3\2\2\2[V\3\2\2\2[Y\3\2\2\2[Z\3\2\2\2\\c\3\2\2\2]^\f\6\2\2^_\5"+
 		"\16\b\2_`\5\b\5\7`b\3\2\2\2a]\3\2\2\2be\3\2\2\2ca\3\2\2\2cd\3\2\2\2d\t"+
 		"\3\2\2\2ec\3\2\2\2fl\5\36\20\2gl\5\26\f\2hl\5\24\13\2il\5\22\n\2jl\5\f"+
 		"\7\2kf\3\2\2\2kg\3\2\2\2kh\3\2\2\2ki\3\2\2\2kj\3\2\2\2l\13\3\2\2\2mo\7"+
 		"\3\2\2np\5.\30\2on\3\2\2\2op\3\2\2\2pq\3\2\2\2qr\7\4\2\2r\r\3\2\2\2sw"+
 		"\5\34\17\2tw\5\30\r\2uw\5\32\16\2vs\3\2\2\2vt\3\2\2\2vu\3\2\2\2w\17\3"+
-		"\2\2\2xy\7\25\2\2y\21\3\2\2\2z{\7(\2\2{\23\3\2\2\2|}\7\'\2\2}\25\3\2\2"+
+		"\2\2\2xy\7\26\2\2y\21\3\2\2\2z{\7)\2\2{\23\3\2\2\2|}\7(\2\2}\25\3\2\2"+
 		"\2~\177\7\20\2\2\177\27\3\2\2\2\u0080\u0081\t\3\2\2\u0081\31\3\2\2\2\u0082"+
 		"\u0083\t\4\2\2\u0083\33\3\2\2\2\u0084\u0085\t\5\2\2\u0085\35\3\2\2\2\u0086"+
 		"\u0087\t\6\2\2\u0087\37\3\2\2\2\u0088\u0089\7\5\2\2\u0089\u008a\5\b\5"+
@@ -1971,18 +1986,18 @@ public class PytovParser extends Parser {
 		"\3\2\2\2\u00de\u00df\7\n\2\2\u00df\u00e0\5\b\5\2\u00e0\u00e1\5<\37\2\u00e1"+
 		"\61\3\2\2\2\u00e2\u00e3\7\13\2\2\u00e3\u00e4\5\b\5\2\u00e4\u00e5\7\f\2"+
 		"\2\u00e5\u00e6\5\b\5\2\u00e6\u00e7\5<\37\2\u00e7\63\3\2\2\2\u00e8\u00e9"+
-		"\t\7\2\2\u00e9\u00ea\5\22\n\2\u00ea\u00ec\7$\2\2\u00eb\u00ed\5,\27\2\u00ec"+
-		"\u00eb\3\2\2\2\u00ec\u00ed\3\2\2\2\u00ed\u00ee\3\2\2\2\u00ee\u00ef\7%"+
+		"\t\7\2\2\u00e9\u00ea\5\22\n\2\u00ea\u00ec\7%\2\2\u00eb\u00ed\5,\27\2\u00ec"+
+		"\u00eb\3\2\2\2\u00ec\u00ed\3\2\2\2\u00ed\u00ee\3\2\2\2\u00ee\u00ef\7&"+
 		"\2\2\u00ef\u00f0\5<\37\2\u00f0\65\3\2\2\2\u00f1\u00f2\5\22\n\2\u00f2\u00f4"+
-		"\7$\2\2\u00f3\u00f5\5.\30\2\u00f4\u00f3\3\2\2\2\u00f4\u00f5\3\2\2\2\u00f5"+
-		"\u00f6\3\2\2\2\u00f6\u00f7\7%\2\2\u00f7\67\3\2\2\2\u00f8\u00f9\7&\2\2"+
+		"\7%\2\2\u00f3\u00f5\5.\30\2\u00f4\u00f3\3\2\2\2\u00f4\u00f5\3\2\2\2\u00f5"+
+		"\u00f6\3\2\2\2\u00f6\u00f7\7&\2\2\u00f7\67\3\2\2\2\u00f8\u00f9\7\'\2\2"+
 		"\u00f9\u00fa\5\b\5\2\u00fa9\3\2\2\2\u00fb\u0101\5 \21\2\u00fc\u0101\5"+
 		"\60\31\2\u00fd\u0101\5\62\32\2\u00fe\u0101\5\66\34\2\u00ff\u0101\58\35"+
 		"\2\u0100\u00fb\3\2\2\2\u0100\u00fc\3\2\2\2\u0100\u00fd\3\2\2\2\u0100\u00fe"+
 		"\3\2\2\2\u0100\u00ff\3\2\2\2\u0101;\3\2\2\2\u0102\u0106\5> \2\u0103\u0105"+
 		"\5\4\3\2\u0104\u0103\3\2\2\2\u0105\u0108\3\2\2\2\u0106\u0104\3\2\2\2\u0106"+
 		"\u0107\3\2\2\2\u0107\u0109\3\2\2\2\u0108\u0106\3\2\2\2\u0109\u010a\5@"+
-		"!\2\u010a=\3\2\2\2\u010b\u010c\7)\2\2\u010c?\3\2\2\2\u010d\u010e\7*\2"+
+		"!\2\u010a=\3\2\2\2\u010b\u010c\7*\2\2\u010c?\3\2\2\2\u010d\u010e\7+\2"+
 		"\2\u010eA\3\2\2\2\33EM[ckov\u0092\u0097\u009e\u00a2\u00a6\u00ad\u00b1"+
 		"\u00b7\u00be\u00c2\u00c7\u00ce\u00d4\u00db\u00ec\u00f4\u0100\u0106";
 	public static final ATN _ATN =

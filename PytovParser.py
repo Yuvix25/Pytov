@@ -11,7 +11,7 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3-")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3.")
         buf.write("\u0110\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
@@ -40,7 +40,7 @@ def serializedATN():
         buf.write("\n\36\3\37\3\37\7\37\u0105\n\37\f\37\16\37\u0108\13\37")
         buf.write("\3\37\3\37\3 \3 \3!\3!\3!\2\5\b,.\"\2\4\6\b\n\f\16\20")
         buf.write("\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@\2\b\3")
-        buf.write("\2,-\3\2\36#\3\2\23\24\3\2\30\35\3\2\26\27\3\2\r\17\2")
+        buf.write("\2-.\3\2\37$\3\2\24\25\3\2\31\36\3\2\27\30\3\2\r\17\2")
         buf.write("\u0113\2C\3\2\2\2\4M\3\2\2\2\6O\3\2\2\2\b[\3\2\2\2\nk")
         buf.write("\3\2\2\2\fm\3\2\2\2\16v\3\2\2\2\20x\3\2\2\2\22z\3\2\2")
         buf.write("\2\24|\3\2\2\2\26~\3\2\2\2\30\u0080\3\2\2\2\32\u0082\3")
@@ -53,7 +53,7 @@ def serializedATN():
         buf.write("\2DE\3\2\2\2EC\3\2\2\2EF\3\2\2\2FG\3\2\2\2GH\7\2\2\3H")
         buf.write("\3\3\2\2\2IN\5\6\4\2JN\5:\36\2KN\5$\23\2LN\5\b\5\2MI\3")
         buf.write("\2\2\2MJ\3\2\2\2MK\3\2\2\2ML\3\2\2\2N\5\3\2\2\2OP\t\2")
-        buf.write("\2\2P\7\3\2\2\2QR\b\5\1\2RS\7$\2\2ST\5\b\5\2TU\7%\2\2")
+        buf.write("\2\2P\7\3\2\2\2QR\b\5\1\2RS\7%\2\2ST\5\b\5\2TU\7&\2\2")
         buf.write("U\\\3\2\2\2VW\5\20\t\2WX\5\b\5\5X\\\3\2\2\2Y\\\5\n\6\2")
         buf.write("Z\\\5\66\34\2[Q\3\2\2\2[V\3\2\2\2[Y\3\2\2\2[Z\3\2\2\2")
         buf.write("\\c\3\2\2\2]^\f\6\2\2^_\5\16\b\2_`\5\b\5\7`b\3\2\2\2a")
@@ -63,7 +63,7 @@ def serializedATN():
         buf.write("\2\2\2l\13\3\2\2\2mo\7\3\2\2np\5.\30\2on\3\2\2\2op\3\2")
         buf.write("\2\2pq\3\2\2\2qr\7\4\2\2r\r\3\2\2\2sw\5\34\17\2tw\5\30")
         buf.write("\r\2uw\5\32\16\2vs\3\2\2\2vt\3\2\2\2vu\3\2\2\2w\17\3\2")
-        buf.write("\2\2xy\7\25\2\2y\21\3\2\2\2z{\7(\2\2{\23\3\2\2\2|}\7\'")
+        buf.write("\2\2xy\7\26\2\2y\21\3\2\2\2z{\7)\2\2{\23\3\2\2\2|}\7(")
         buf.write("\2\2}\25\3\2\2\2~\177\7\20\2\2\177\27\3\2\2\2\u0080\u0081")
         buf.write("\t\3\2\2\u0081\31\3\2\2\2\u0082\u0083\t\4\2\2\u0083\33")
         buf.write("\3\2\2\2\u0084\u0085\t\5\2\2\u0085\35\3\2\2\2\u0086\u0087")
@@ -108,12 +108,12 @@ def serializedATN():
         buf.write("\u00e3\7\13\2\2\u00e3\u00e4\5\b\5\2\u00e4\u00e5\7\f\2")
         buf.write("\2\u00e5\u00e6\5\b\5\2\u00e6\u00e7\5<\37\2\u00e7\63\3")
         buf.write("\2\2\2\u00e8\u00e9\t\7\2\2\u00e9\u00ea\5\22\n\2\u00ea")
-        buf.write("\u00ec\7$\2\2\u00eb\u00ed\5,\27\2\u00ec\u00eb\3\2\2\2")
+        buf.write("\u00ec\7%\2\2\u00eb\u00ed\5,\27\2\u00ec\u00eb\3\2\2\2")
         buf.write("\u00ec\u00ed\3\2\2\2\u00ed\u00ee\3\2\2\2\u00ee\u00ef\7")
-        buf.write("%\2\2\u00ef\u00f0\5<\37\2\u00f0\65\3\2\2\2\u00f1\u00f2")
-        buf.write("\5\22\n\2\u00f2\u00f4\7$\2\2\u00f3\u00f5\5.\30\2\u00f4")
+        buf.write("&\2\2\u00ef\u00f0\5<\37\2\u00f0\65\3\2\2\2\u00f1\u00f2")
+        buf.write("\5\22\n\2\u00f2\u00f4\7%\2\2\u00f3\u00f5\5.\30\2\u00f4")
         buf.write("\u00f3\3\2\2\2\u00f4\u00f5\3\2\2\2\u00f5\u00f6\3\2\2\2")
-        buf.write("\u00f6\u00f7\7%\2\2\u00f7\67\3\2\2\2\u00f8\u00f9\7&\2")
+        buf.write("\u00f6\u00f7\7&\2\2\u00f7\67\3\2\2\2\u00f8\u00f9\7\'\2")
         buf.write("\2\u00f9\u00fa\5\b\5\2\u00fa9\3\2\2\2\u00fb\u0101\5 \21")
         buf.write("\2\u00fc\u0101\5\60\31\2\u00fd\u0101\5\62\32\2\u00fe\u0101")
         buf.write("\5\66\34\2\u00ff\u0101\58\35\2\u0100\u00fb\3\2\2\2\u0100")
@@ -122,8 +122,8 @@ def serializedATN():
         buf.write("\u0103\u0105\5\4\3\2\u0104\u0103\3\2\2\2\u0105\u0108\3")
         buf.write("\2\2\2\u0106\u0104\3\2\2\2\u0106\u0107\3\2\2\2\u0107\u0109")
         buf.write("\3\2\2\2\u0108\u0106\3\2\2\2\u0109\u010a\5@!\2\u010a=")
-        buf.write("\3\2\2\2\u010b\u010c\7)\2\2\u010c?\3\2\2\2\u010d\u010e")
-        buf.write("\7*\2\2\u010eA\3\2\2\2\33EM[ckov\u0092\u0097\u009e\u00a2")
+        buf.write("\3\2\2\2\u010b\u010c\7*\2\2\u010c?\3\2\2\2\u010d\u010e")
+        buf.write("\7+\2\2\u010eA\3\2\2\2\33EM[ckov\u0092\u0097\u009e\u00a2")
         buf.write("\u00a6\u00ad\u00b1\u00b7\u00be\u00c2\u00c7\u00ce\u00d4")
         buf.write("\u00db\u00ec\u00f4\u0100\u0106")
         return buf.getvalue()
@@ -142,8 +142,8 @@ class PytovParser ( Parser ):
     literalNames = [ "<INVALID>", "'['", "']'", "'if'", "'elif'", "'else'", 
                      "','", "'='", "'while'", "'for'", "'in'", "'func'", 
                      "'function'", "'def'", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'&&'", "'||'", "'!'", "<INVALID>", "<INVALID>", "'+'", 
-                     "'-'", "'*'", "'/'", "'/_'", "'%'", "'>'", "'>='", 
+                     "<INVALID>", "'&&'", "'||'", "'!'", "<INVALID>", "<INVALID>", 
+                     "'+'", "'-'", "'*'", "'/'", "'/_'", "'%'", "'>'", "'>='", 
                      "'<'", "'<='", "'=='", "'!='", "'('", "')'", "'return'", 
                      "<INVALID>", "<INVALID>", "'{'", "'}'", "<INVALID>", 
                      "';'", "'\n'" ]
@@ -151,12 +151,12 @@ class PytovParser ( Parser ):
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "STRING", "COMMENT", "LINE_COMMENT", 
-                      "AND", "OR", "NOT", "TRUE", "FALSE", "ADD", "SUBTRACT", 
-                      "MULT", "DIVIDE", "FLOOR_DIVISION", "MODULO", "GT", 
-                      "GE", "LT", "LE", "EQ", "NOT_EQ", "LPAREN", "RPAREN", 
-                      "RETURN", "DECIMAL", "IDENTIFIER", "OPEN_CURLY", "CLOSE_CURLY", 
-                      "WS", "SEMI_COLON", "NEWLINE" ]
+                      "<INVALID>", "<INVALID>", "STRING", "COMMENT", "LINE_COMMENT_C", 
+                      "LINE_COMMENT_P", "AND", "OR", "NOT", "TRUE", "FALSE", 
+                      "ADD", "SUBTRACT", "MULT", "DIVIDE", "FLOOR_DIVISION", 
+                      "MODULO", "GT", "GE", "LT", "LE", "EQ", "NOT_EQ", 
+                      "LPAREN", "RPAREN", "RETURN", "DECIMAL", "IDENTIFIER", 
+                      "OPEN_CURLY", "CLOSE_CURLY", "WS", "SEMI_COLON", "NEWLINE" ]
 
     RULE_parse = 0
     RULE_allCode = 1
@@ -215,34 +215,35 @@ class PytovParser ( Parser ):
     T__12=13
     STRING=14
     COMMENT=15
-    LINE_COMMENT=16
-    AND=17
-    OR=18
-    NOT=19
-    TRUE=20
-    FALSE=21
-    ADD=22
-    SUBTRACT=23
-    MULT=24
-    DIVIDE=25
-    FLOOR_DIVISION=26
-    MODULO=27
-    GT=28
-    GE=29
-    LT=30
-    LE=31
-    EQ=32
-    NOT_EQ=33
-    LPAREN=34
-    RPAREN=35
-    RETURN=36
-    DECIMAL=37
-    IDENTIFIER=38
-    OPEN_CURLY=39
-    CLOSE_CURLY=40
-    WS=41
-    SEMI_COLON=42
-    NEWLINE=43
+    LINE_COMMENT_C=16
+    LINE_COMMENT_P=17
+    AND=18
+    OR=19
+    NOT=20
+    TRUE=21
+    FALSE=22
+    ADD=23
+    SUBTRACT=24
+    MULT=25
+    DIVIDE=26
+    FLOOR_DIVISION=27
+    MODULO=28
+    GT=29
+    GE=30
+    LT=31
+    LE=32
+    EQ=33
+    NOT_EQ=34
+    LPAREN=35
+    RPAREN=36
+    RETURN=37
+    DECIMAL=38
+    IDENTIFIER=39
+    OPEN_CURLY=40
+    CLOSE_CURLY=41
+    WS=42
+    SEMI_COLON=43
+    NEWLINE=44
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
