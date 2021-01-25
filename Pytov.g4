@@ -88,7 +88,7 @@ boolTF
 ifStatement
  : 
  ('if' exp block)
- (seperators? 'elif' exp block)*
+ (seperators? ('elif'|'else if') exp block)*
  (seperators? 'else' block)?
  ;
 

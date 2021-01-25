@@ -40,7 +40,7 @@ print(x)
 if 5 > 1{
     print("5 is greater than 1")
 }
-elif 1 > 5{
+elif 1 > 5{ # else if 1 > 5 will work too!
     print("1 is greater than 5")
 }
 else {

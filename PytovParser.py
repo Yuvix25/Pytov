@@ -11,7 +11,7 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3.")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3/")
         buf.write("\u0116\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
@@ -40,84 +40,84 @@ def serializedATN():
         buf.write("\3\36\3\36\3\36\3\36\3\36\5\36\u0107\n\36\3\37\3\37\7")
         buf.write("\37\u010b\n\37\f\37\16\37\u010e\13\37\3\37\3\37\3 \3 ")
         buf.write("\3!\3!\3!\2\5\b,.\"\2\4\6\b\n\f\16\20\22\24\26\30\32\34")
-        buf.write("\36 \"$&(*,.\60\62\64\668:<>@\2\b\3\2-.\3\2\37$\3\2\24")
-        buf.write("\25\3\2\31\36\3\2\27\30\3\2\r\17\2\u011b\2C\3\2\2\2\4")
-        buf.write("M\3\2\2\2\6O\3\2\2\2\b[\3\2\2\2\nk\3\2\2\2\fm\3\2\2\2")
-        buf.write("\16v\3\2\2\2\20x\3\2\2\2\22z\3\2\2\2\24|\3\2\2\2\26~\3")
-        buf.write("\2\2\2\30\u0080\3\2\2\2\32\u0082\3\2\2\2\34\u0084\3\2")
-        buf.write("\2\2\36\u0086\3\2\2\2 \u0088\3\2\2\2\"\u009f\3\2\2\2$")
-        buf.write("\u00ac\3\2\2\2&\u00ae\3\2\2\2(\u00b9\3\2\2\2*\u00bf\3")
-        buf.write("\2\2\2,\u00cd\3\2\2\2.\u00da\3\2\2\2\60\u00e4\3\2\2\2")
-        buf.write("\62\u00e8\3\2\2\2\64\u00ee\3\2\2\2\66\u00f7\3\2\2\28\u00fe")
-        buf.write("\3\2\2\2:\u0106\3\2\2\2<\u0108\3\2\2\2>\u0111\3\2\2\2")
-        buf.write("@\u0113\3\2\2\2BD\5\4\3\2CB\3\2\2\2DE\3\2\2\2EC\3\2\2")
-        buf.write("\2EF\3\2\2\2FG\3\2\2\2GH\7\2\2\3H\3\3\2\2\2IN\5\6\4\2")
-        buf.write("JN\5:\36\2KN\5$\23\2LN\5\b\5\2MI\3\2\2\2MJ\3\2\2\2MK\3")
-        buf.write("\2\2\2ML\3\2\2\2N\5\3\2\2\2OP\t\2\2\2P\7\3\2\2\2QR\b\5")
-        buf.write("\1\2RS\7%\2\2ST\5\b\5\2TU\7&\2\2U\\\3\2\2\2VW\5\20\t\2")
-        buf.write("WX\5\b\5\5X\\\3\2\2\2Y\\\5\n\6\2Z\\\5\66\34\2[Q\3\2\2")
-        buf.write("\2[V\3\2\2\2[Y\3\2\2\2[Z\3\2\2\2\\c\3\2\2\2]^\f\6\2\2")
-        buf.write("^_\5\16\b\2_`\5\b\5\7`b\3\2\2\2a]\3\2\2\2be\3\2\2\2ca")
-        buf.write("\3\2\2\2cd\3\2\2\2d\t\3\2\2\2ec\3\2\2\2fl\5\36\20\2gl")
-        buf.write("\5\26\f\2hl\5\24\13\2il\5\22\n\2jl\5\f\7\2kf\3\2\2\2k")
-        buf.write("g\3\2\2\2kh\3\2\2\2ki\3\2\2\2kj\3\2\2\2l\13\3\2\2\2mo")
-        buf.write("\7\3\2\2np\5.\30\2on\3\2\2\2op\3\2\2\2pq\3\2\2\2qr\7\4")
-        buf.write("\2\2r\r\3\2\2\2sw\5\34\17\2tw\5\30\r\2uw\5\32\16\2vs\3")
-        buf.write("\2\2\2vt\3\2\2\2vu\3\2\2\2w\17\3\2\2\2xy\7\26\2\2y\21")
-        buf.write("\3\2\2\2z{\7)\2\2{\23\3\2\2\2|}\7(\2\2}\25\3\2\2\2~\177")
-        buf.write("\7\20\2\2\177\27\3\2\2\2\u0080\u0081\t\3\2\2\u0081\31")
-        buf.write("\3\2\2\2\u0082\u0083\t\4\2\2\u0083\33\3\2\2\2\u0084\u0085")
-        buf.write("\t\5\2\2\u0085\35\3\2\2\2\u0086\u0087\t\6\2\2\u0087\37")
-        buf.write("\3\2\2\2\u0088\u0089\7\5\2\2\u0089\u008a\5\b\5\2\u008a")
+        buf.write("\36 \"$&(*,.\60\62\64\668:<>@\2\t\3\2./\3\2 %\3\2\25\26")
+        buf.write("\3\2\32\37\3\2\30\31\3\2\6\7\3\2\16\20\2\u011b\2C\3\2")
+        buf.write("\2\2\4M\3\2\2\2\6O\3\2\2\2\b[\3\2\2\2\nk\3\2\2\2\fm\3")
+        buf.write("\2\2\2\16v\3\2\2\2\20x\3\2\2\2\22z\3\2\2\2\24|\3\2\2\2")
+        buf.write("\26~\3\2\2\2\30\u0080\3\2\2\2\32\u0082\3\2\2\2\34\u0084")
+        buf.write("\3\2\2\2\36\u0086\3\2\2\2 \u0088\3\2\2\2\"\u009f\3\2\2")
+        buf.write("\2$\u00ac\3\2\2\2&\u00ae\3\2\2\2(\u00b9\3\2\2\2*\u00bf")
+        buf.write("\3\2\2\2,\u00cd\3\2\2\2.\u00da\3\2\2\2\60\u00e4\3\2\2")
+        buf.write("\2\62\u00e8\3\2\2\2\64\u00ee\3\2\2\2\66\u00f7\3\2\2\2")
+        buf.write("8\u00fe\3\2\2\2:\u0106\3\2\2\2<\u0108\3\2\2\2>\u0111\3")
+        buf.write("\2\2\2@\u0113\3\2\2\2BD\5\4\3\2CB\3\2\2\2DE\3\2\2\2EC")
+        buf.write("\3\2\2\2EF\3\2\2\2FG\3\2\2\2GH\7\2\2\3H\3\3\2\2\2IN\5")
+        buf.write("\6\4\2JN\5:\36\2KN\5$\23\2LN\5\b\5\2MI\3\2\2\2MJ\3\2\2")
+        buf.write("\2MK\3\2\2\2ML\3\2\2\2N\5\3\2\2\2OP\t\2\2\2P\7\3\2\2\2")
+        buf.write("QR\b\5\1\2RS\7&\2\2ST\5\b\5\2TU\7\'\2\2U\\\3\2\2\2VW\5")
+        buf.write("\20\t\2WX\5\b\5\5X\\\3\2\2\2Y\\\5\n\6\2Z\\\5\66\34\2[")
+        buf.write("Q\3\2\2\2[V\3\2\2\2[Y\3\2\2\2[Z\3\2\2\2\\c\3\2\2\2]^\f")
+        buf.write("\6\2\2^_\5\16\b\2_`\5\b\5\7`b\3\2\2\2a]\3\2\2\2be\3\2")
+        buf.write("\2\2ca\3\2\2\2cd\3\2\2\2d\t\3\2\2\2ec\3\2\2\2fl\5\36\20")
+        buf.write("\2gl\5\26\f\2hl\5\24\13\2il\5\22\n\2jl\5\f\7\2kf\3\2\2")
+        buf.write("\2kg\3\2\2\2kh\3\2\2\2ki\3\2\2\2kj\3\2\2\2l\13\3\2\2\2")
+        buf.write("mo\7\3\2\2np\5.\30\2on\3\2\2\2op\3\2\2\2pq\3\2\2\2qr\7")
+        buf.write("\4\2\2r\r\3\2\2\2sw\5\34\17\2tw\5\30\r\2uw\5\32\16\2v")
+        buf.write("s\3\2\2\2vt\3\2\2\2vu\3\2\2\2w\17\3\2\2\2xy\7\27\2\2y")
+        buf.write("\21\3\2\2\2z{\7*\2\2{\23\3\2\2\2|}\7)\2\2}\25\3\2\2\2")
+        buf.write("~\177\7\21\2\2\177\27\3\2\2\2\u0080\u0081\t\3\2\2\u0081")
+        buf.write("\31\3\2\2\2\u0082\u0083\t\4\2\2\u0083\33\3\2\2\2\u0084")
+        buf.write("\u0085\t\5\2\2\u0085\35\3\2\2\2\u0086\u0087\t\6\2\2\u0087")
+        buf.write("\37\3\2\2\2\u0088\u0089\7\5\2\2\u0089\u008a\5\b\5\2\u008a")
         buf.write("\u008b\5<\37\2\u008b\u0095\3\2\2\2\u008c\u008e\5\6\4\2")
         buf.write("\u008d\u008c\3\2\2\2\u008d\u008e\3\2\2\2\u008e\u008f\3")
-        buf.write("\2\2\2\u008f\u0090\7\6\2\2\u0090\u0091\5\b\5\2\u0091\u0092")
+        buf.write("\2\2\2\u008f\u0090\t\7\2\2\u0090\u0091\5\b\5\2\u0091\u0092")
         buf.write("\5<\37\2\u0092\u0094\3\2\2\2\u0093\u008d\3\2\2\2\u0094")
         buf.write("\u0097\3\2\2\2\u0095\u0093\3\2\2\2\u0095\u0096\3\2\2\2")
         buf.write("\u0096\u009d\3\2\2\2\u0097\u0095\3\2\2\2\u0098\u009a\5")
         buf.write("\6\4\2\u0099\u0098\3\2\2\2\u0099\u009a\3\2\2\2\u009a\u009b")
-        buf.write("\3\2\2\2\u009b\u009c\7\7\2\2\u009c\u009e\5<\37\2\u009d")
+        buf.write("\3\2\2\2\u009b\u009c\7\b\2\2\u009c\u009e\5<\37\2\u009d")
         buf.write("\u0099\3\2\2\2\u009d\u009e\3\2\2\2\u009e!\3\2\2\2\u009f")
-        buf.write("\u00a4\5\22\n\2\u00a0\u00a1\7\b\2\2\u00a1\u00a3\5\22\n")
+        buf.write("\u00a4\5\22\n\2\u00a0\u00a1\7\t\2\2\u00a1\u00a3\5\22\n")
         buf.write("\2\u00a2\u00a0\3\2\2\2\u00a3\u00a6\3\2\2\2\u00a4\u00a2")
         buf.write("\3\2\2\2\u00a4\u00a5\3\2\2\2\u00a5\u00a8\3\2\2\2\u00a6")
-        buf.write("\u00a4\3\2\2\2\u00a7\u00a9\7\b\2\2\u00a8\u00a7\3\2\2\2")
+        buf.write("\u00a4\3\2\2\2\u00a7\u00a9\7\t\2\2\u00a8\u00a7\3\2\2\2")
         buf.write("\u00a8\u00a9\3\2\2\2\u00a9#\3\2\2\2\u00aa\u00ad\5(\25")
         buf.write("\2\u00ab\u00ad\5\64\33\2\u00ac\u00aa\3\2\2\2\u00ac\u00ab")
         buf.write("\3\2\2\2\u00ad%\3\2\2\2\u00ae\u00b3\5(\25\2\u00af\u00b0")
-        buf.write("\7\b\2\2\u00b0\u00b2\5(\25\2\u00b1\u00af\3\2\2\2\u00b2")
+        buf.write("\7\t\2\2\u00b0\u00b2\5(\25\2\u00b1\u00af\3\2\2\2\u00b2")
         buf.write("\u00b5\3\2\2\2\u00b3\u00b1\3\2\2\2\u00b3\u00b4\3\2\2\2")
         buf.write("\u00b4\u00b7\3\2\2\2\u00b5\u00b3\3\2\2\2\u00b6\u00b8\7")
-        buf.write("\b\2\2\u00b7\u00b6\3\2\2\2\u00b7\u00b8\3\2\2\2\u00b8\'")
-        buf.write("\3\2\2\2\u00b9\u00ba\5\22\n\2\u00ba\u00bd\7\t\2\2\u00bb")
+        buf.write("\t\2\2\u00b7\u00b6\3\2\2\2\u00b7\u00b8\3\2\2\2\u00b8\'")
+        buf.write("\3\2\2\2\u00b9\u00ba\5\22\n\2\u00ba\u00bd\7\n\2\2\u00bb")
         buf.write("\u00be\5\b\5\2\u00bc\u00be\5\66\34\2\u00bd\u00bb\3\2\2")
         buf.write("\2\u00bd\u00bc\3\2\2\2\u00be)\3\2\2\2\u00bf\u00c4\5\b")
-        buf.write("\5\2\u00c0\u00c1\7\b\2\2\u00c1\u00c3\5\b\5\2\u00c2\u00c0")
+        buf.write("\5\2\u00c0\u00c1\7\t\2\2\u00c1\u00c3\5\b\5\2\u00c2\u00c0")
         buf.write("\3\2\2\2\u00c3\u00c6\3\2\2\2\u00c4\u00c2\3\2\2\2\u00c4")
         buf.write("\u00c5\3\2\2\2\u00c5\u00c8\3\2\2\2\u00c6\u00c4\3\2\2\2")
-        buf.write("\u00c7\u00c9\7\b\2\2\u00c8\u00c7\3\2\2\2\u00c8\u00c9\3")
+        buf.write("\u00c7\u00c9\7\t\2\2\u00c8\u00c7\3\2\2\2\u00c8\u00c9\3")
         buf.write("\2\2\2\u00c9+\3\2\2\2\u00ca\u00cb\b\27\1\2\u00cb\u00ce")
         buf.write("\5\"\22\2\u00cc\u00ce\5&\24\2\u00cd\u00ca\3\2\2\2\u00cd")
         buf.write("\u00cc\3\2\2\2\u00ce\u00d4\3\2\2\2\u00cf\u00d0\f\5\2\2")
-        buf.write("\u00d0\u00d1\7\b\2\2\u00d1\u00d3\5,\27\6\u00d2\u00cf\3")
+        buf.write("\u00d0\u00d1\7\t\2\2\u00d1\u00d3\5,\27\6\u00d2\u00cf\3")
         buf.write("\2\2\2\u00d3\u00d6\3\2\2\2\u00d4\u00d2\3\2\2\2\u00d4\u00d5")
         buf.write("\3\2\2\2\u00d5-\3\2\2\2\u00d6\u00d4\3\2\2\2\u00d7\u00d8")
         buf.write("\b\30\1\2\u00d8\u00db\5*\26\2\u00d9\u00db\5&\24\2\u00da")
         buf.write("\u00d7\3\2\2\2\u00da\u00d9\3\2\2\2\u00db\u00e1\3\2\2\2")
-        buf.write("\u00dc\u00dd\f\5\2\2\u00dd\u00de\7\b\2\2\u00de\u00e0\5")
+        buf.write("\u00dc\u00dd\f\5\2\2\u00dd\u00de\7\t\2\2\u00de\u00e0\5")
         buf.write(".\30\6\u00df\u00dc\3\2\2\2\u00e0\u00e3\3\2\2\2\u00e1\u00df")
         buf.write("\3\2\2\2\u00e1\u00e2\3\2\2\2\u00e2/\3\2\2\2\u00e3\u00e1")
-        buf.write("\3\2\2\2\u00e4\u00e5\7\n\2\2\u00e5\u00e6\5\b\5\2\u00e6")
-        buf.write("\u00e7\5<\37\2\u00e7\61\3\2\2\2\u00e8\u00e9\7\13\2\2\u00e9")
-        buf.write("\u00ea\5\b\5\2\u00ea\u00eb\7\f\2\2\u00eb\u00ec\5\b\5\2")
-        buf.write("\u00ec\u00ed\5<\37\2\u00ed\63\3\2\2\2\u00ee\u00ef\t\7")
-        buf.write("\2\2\u00ef\u00f0\5\22\n\2\u00f0\u00f2\7%\2\2\u00f1\u00f3")
+        buf.write("\3\2\2\2\u00e4\u00e5\7\13\2\2\u00e5\u00e6\5\b\5\2\u00e6")
+        buf.write("\u00e7\5<\37\2\u00e7\61\3\2\2\2\u00e8\u00e9\7\f\2\2\u00e9")
+        buf.write("\u00ea\5\b\5\2\u00ea\u00eb\7\r\2\2\u00eb\u00ec\5\b\5\2")
+        buf.write("\u00ec\u00ed\5<\37\2\u00ed\63\3\2\2\2\u00ee\u00ef\t\b")
+        buf.write("\2\2\u00ef\u00f0\5\22\n\2\u00f0\u00f2\7&\2\2\u00f1\u00f3")
         buf.write("\5,\27\2\u00f2\u00f1\3\2\2\2\u00f2\u00f3\3\2\2\2\u00f3")
-        buf.write("\u00f4\3\2\2\2\u00f4\u00f5\7&\2\2\u00f5\u00f6\5<\37\2")
-        buf.write("\u00f6\65\3\2\2\2\u00f7\u00f8\5\22\n\2\u00f8\u00fa\7%")
+        buf.write("\u00f4\3\2\2\2\u00f4\u00f5\7\'\2\2\u00f5\u00f6\5<\37\2")
+        buf.write("\u00f6\65\3\2\2\2\u00f7\u00f8\5\22\n\2\u00f8\u00fa\7&")
         buf.write("\2\2\u00f9\u00fb\5.\30\2\u00fa\u00f9\3\2\2\2\u00fa\u00fb")
-        buf.write("\3\2\2\2\u00fb\u00fc\3\2\2\2\u00fc\u00fd\7&\2\2\u00fd")
-        buf.write("\67\3\2\2\2\u00fe\u00ff\7\'\2\2\u00ff\u0100\5\b\5\2\u0100")
+        buf.write("\3\2\2\2\u00fb\u00fc\3\2\2\2\u00fc\u00fd\7\'\2\2\u00fd")
+        buf.write("\67\3\2\2\2\u00fe\u00ff\7(\2\2\u00ff\u0100\5\b\5\2\u0100")
         buf.write("9\3\2\2\2\u0101\u0107\5 \21\2\u0102\u0107\5\60\31\2\u0103")
         buf.write("\u0107\5\62\32\2\u0104\u0107\5\66\34\2\u0105\u0107\58")
         buf.write("\35\2\u0106\u0101\3\2\2\2\u0106\u0102\3\2\2\2\u0106\u0103")
@@ -126,7 +126,7 @@ def serializedATN():
         buf.write("\u0109\3\2\2\2\u010b\u010e\3\2\2\2\u010c\u010a\3\2\2\2")
         buf.write("\u010c\u010d\3\2\2\2\u010d\u010f\3\2\2\2\u010e\u010c\3")
         buf.write("\2\2\2\u010f\u0110\5@!\2\u0110=\3\2\2\2\u0111\u0112\7")
-        buf.write("*\2\2\u0112?\3\2\2\2\u0113\u0114\7+\2\2\u0114A\3\2\2\2")
+        buf.write("+\2\2\u0112?\3\2\2\2\u0113\u0114\7,\2\2\u0114A\3\2\2\2")
         buf.write("\35EM[ckov\u008d\u0095\u0099\u009d\u00a4\u00a8\u00ac\u00b3")
         buf.write("\u00b7\u00bd\u00c4\u00c8\u00cd\u00d4\u00da\u00e1\u00f2")
         buf.write("\u00fa\u0106\u010c")
@@ -143,24 +143,25 @@ class PytovParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'['", "']'", "'if'", "'elif'", "'else'", 
-                     "','", "'='", "'while'", "'for'", "'in'", "'func'", 
-                     "'function'", "'def'", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "'&&'", "'||'", "'!'", "<INVALID>", "<INVALID>", 
-                     "'+'", "'-'", "'*'", "'/'", "'/_'", "'%'", "'>'", "'>='", 
-                     "'<'", "'<='", "'=='", "'!='", "'('", "')'", "'return'", 
-                     "<INVALID>", "<INVALID>", "'{'", "'}'", "<INVALID>", 
-                     "';'", "'\n'" ]
+    literalNames = [ "<INVALID>", "'['", "']'", "'if'", "'elif'", "'else if'", 
+                     "'else'", "','", "'='", "'while'", "'for'", "'in'", 
+                     "'func'", "'function'", "'def'", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "'&&'", "'||'", "'!'", "<INVALID>", 
+                     "<INVALID>", "'+'", "'-'", "'*'", "'/'", "'/_'", "'%'", 
+                     "'>'", "'>='", "'<'", "'<='", "'=='", "'!='", "'('", 
+                     "')'", "'return'", "<INVALID>", "<INVALID>", "'{'", 
+                     "'}'", "<INVALID>", "';'", "'\n'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "STRING", "COMMENT", "LINE_COMMENT_C", 
-                      "LINE_COMMENT_P", "AND", "OR", "NOT", "TRUE", "FALSE", 
-                      "ADD", "SUBTRACT", "MULT", "DIVIDE", "FLOOR_DIVISION", 
-                      "MODULO", "GT", "GE", "LT", "LE", "EQ", "NOT_EQ", 
-                      "LPAREN", "RPAREN", "RETURN", "DECIMAL", "IDENTIFIER", 
-                      "OPEN_CURLY", "CLOSE_CURLY", "WS", "SEMI_COLON", "NEW_LINE" ]
+                      "<INVALID>", "<INVALID>", "<INVALID>", "STRING", "COMMENT", 
+                      "LINE_COMMENT_C", "LINE_COMMENT_P", "AND", "OR", "NOT", 
+                      "TRUE", "FALSE", "ADD", "SUBTRACT", "MULT", "DIVIDE", 
+                      "FLOOR_DIVISION", "MODULO", "GT", "GE", "LT", "LE", 
+                      "EQ", "NOT_EQ", "LPAREN", "RPAREN", "RETURN", "DECIMAL", 
+                      "IDENTIFIER", "OPEN_CURLY", "CLOSE_CURLY", "WS", "SEMI_COLON", 
+                      "NEW_LINE" ]
 
     RULE_parse = 0
     RULE_allCode = 1
@@ -217,37 +218,38 @@ class PytovParser ( Parser ):
     T__10=11
     T__11=12
     T__12=13
-    STRING=14
-    COMMENT=15
-    LINE_COMMENT_C=16
-    LINE_COMMENT_P=17
-    AND=18
-    OR=19
-    NOT=20
-    TRUE=21
-    FALSE=22
-    ADD=23
-    SUBTRACT=24
-    MULT=25
-    DIVIDE=26
-    FLOOR_DIVISION=27
-    MODULO=28
-    GT=29
-    GE=30
-    LT=31
-    LE=32
-    EQ=33
-    NOT_EQ=34
-    LPAREN=35
-    RPAREN=36
-    RETURN=37
-    DECIMAL=38
-    IDENTIFIER=39
-    OPEN_CURLY=40
-    CLOSE_CURLY=41
-    WS=42
-    SEMI_COLON=43
-    NEW_LINE=44
+    T__13=14
+    STRING=15
+    COMMENT=16
+    LINE_COMMENT_C=17
+    LINE_COMMENT_P=18
+    AND=19
+    OR=20
+    NOT=21
+    TRUE=22
+    FALSE=23
+    ADD=24
+    SUBTRACT=25
+    MULT=26
+    DIVIDE=27
+    FLOOR_DIVISION=28
+    MODULO=29
+    GT=30
+    GE=31
+    LT=32
+    LE=33
+    EQ=34
+    NOT_EQ=35
+    LPAREN=36
+    RPAREN=37
+    RETURN=38
+    DECIMAL=39
+    IDENTIFIER=40
+    OPEN_CURLY=41
+    CLOSE_CURLY=42
+    WS=43
+    SEMI_COLON=44
+    NEW_LINE=45
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -310,7 +312,7 @@ class PytovParser ( Parser ):
                 self.state = 67 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.T__2) | (1 << PytovParser.T__7) | (1 << PytovParser.T__8) | (1 << PytovParser.T__10) | (1 << PytovParser.T__11) | (1 << PytovParser.T__12) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.RETURN) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER) | (1 << PytovParser.SEMI_COLON) | (1 << PytovParser.NEW_LINE))) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.T__2) | (1 << PytovParser.T__8) | (1 << PytovParser.T__9) | (1 << PytovParser.T__11) | (1 << PytovParser.T__12) | (1 << PytovParser.T__13) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.RETURN) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER) | (1 << PytovParser.SEMI_COLON) | (1 << PytovParser.NEW_LINE))) != 0)):
                     break
 
             self.state = 69
@@ -1429,7 +1431,12 @@ class PytovParser ( Parser ):
 
 
                     self.state = 141
-                    self.match(PytovParser.T__3)
+                    _la = self._input.LA(1)
+                    if not(_la==PytovParser.T__3 or _la==PytovParser.T__4):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
                     self.state = 142
                     self.exp(0)
                     self.state = 143
@@ -1451,7 +1458,7 @@ class PytovParser ( Parser ):
 
 
                 self.state = 153
-                self.match(PytovParser.T__4)
+                self.match(PytovParser.T__5)
                 self.state = 154
                 self.block()
 
@@ -1512,7 +1519,7 @@ class PytovParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 158
-                    self.match(PytovParser.T__5)
+                    self.match(PytovParser.T__6)
                     self.state = 159
                     self.identifier() 
                 self.state = 164
@@ -1524,7 +1531,7 @@ class PytovParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
             if la_ == 1:
                 self.state = 165
-                self.match(PytovParser.T__5)
+                self.match(PytovParser.T__6)
 
 
         except RecognitionException as re:
@@ -1583,7 +1590,7 @@ class PytovParser ( Parser ):
                 self.state = 168
                 self.variableDeclaration()
                 pass
-            elif token in [PytovParser.T__10, PytovParser.T__11, PytovParser.T__12]:
+            elif token in [PytovParser.T__11, PytovParser.T__12, PytovParser.T__13]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 169
                 self.funcDeclaration()
@@ -1647,7 +1654,7 @@ class PytovParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 173
-                    self.match(PytovParser.T__5)
+                    self.match(PytovParser.T__6)
                     self.state = 174
                     self.variableDeclaration() 
                 self.state = 179
@@ -1659,7 +1666,7 @@ class PytovParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
             if la_ == 1:
                 self.state = 180
-                self.match(PytovParser.T__5)
+                self.match(PytovParser.T__6)
 
 
         except RecognitionException as re:
@@ -1718,7 +1725,7 @@ class PytovParser ( Parser ):
             self.state = 183
             self.identifier()
             self.state = 184
-            self.match(PytovParser.T__6)
+            self.match(PytovParser.T__7)
             self.state = 187
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
@@ -1789,7 +1796,7 @@ class PytovParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 190
-                    self.match(PytovParser.T__5)
+                    self.match(PytovParser.T__6)
                     self.state = 191
                     self.exp(0) 
                 self.state = 196
@@ -1801,7 +1808,7 @@ class PytovParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
             if la_ == 1:
                 self.state = 197
-                self.match(PytovParser.T__5)
+                self.match(PytovParser.T__6)
 
 
         except RecognitionException as re:
@@ -1892,7 +1899,7 @@ class PytovParser ( Parser ):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
                     self.state = 206
-                    self.match(PytovParser.T__5)
+                    self.match(PytovParser.T__6)
                     self.state = 207
                     self.parameterList(4) 
                 self.state = 212
@@ -1987,7 +1994,7 @@ class PytovParser ( Parser ):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
                     self.state = 219
-                    self.match(PytovParser.T__5)
+                    self.match(PytovParser.T__6)
                     self.state = 220
                     self.parameterInputList(4) 
                 self.state = 225
@@ -2044,7 +2051,7 @@ class PytovParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 226
-            self.match(PytovParser.T__7)
+            self.match(PytovParser.T__8)
             self.state = 227
             self.exp(0)
             self.state = 228
@@ -2102,11 +2109,11 @@ class PytovParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 230
-            self.match(PytovParser.T__8)
+            self.match(PytovParser.T__9)
             self.state = 231
             self.exp(0)
             self.state = 232
-            self.match(PytovParser.T__9)
+            self.match(PytovParser.T__10)
             self.state = 233
             self.exp(0)
             self.state = 234
@@ -2173,7 +2180,7 @@ class PytovParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 236
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__10) | (1 << PytovParser.T__11) | (1 << PytovParser.T__12))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__11) | (1 << PytovParser.T__12) | (1 << PytovParser.T__13))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -2384,12 +2391,12 @@ class PytovParser ( Parser ):
                 self.state = 255
                 self.ifStatement()
                 pass
-            elif token in [PytovParser.T__7]:
+            elif token in [PytovParser.T__8]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 256
                 self.whileStatement()
                 pass
-            elif token in [PytovParser.T__8]:
+            elif token in [PytovParser.T__9]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 257
                 self.forStatement()
@@ -2469,7 +2476,7 @@ class PytovParser ( Parser ):
             self.state = 266
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.T__2) | (1 << PytovParser.T__7) | (1 << PytovParser.T__8) | (1 << PytovParser.T__10) | (1 << PytovParser.T__11) | (1 << PytovParser.T__12) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.RETURN) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER) | (1 << PytovParser.SEMI_COLON) | (1 << PytovParser.NEW_LINE))) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.T__2) | (1 << PytovParser.T__8) | (1 << PytovParser.T__9) | (1 << PytovParser.T__11) | (1 << PytovParser.T__12) | (1 << PytovParser.T__13) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.RETURN) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER) | (1 << PytovParser.SEMI_COLON) | (1 << PytovParser.NEW_LINE))) != 0):
                 self.state = 263
                 self.allCode()
                 self.state = 268
