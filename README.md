@@ -48,6 +48,17 @@ else {
 }
 ```
 
+### loop:
+```python
+for i in range(10){
+    print(i)
+}
+a= [1, 4, 7, 8]
+for x in a{
+    print(x)
+}
+```
+
 ### Functions:
 ```cs
 (func or function or def) func_name(required_params, not_required_params){
