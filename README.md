@@ -1,5 +1,5 @@
 # Pytov
-The idea was to take all well known syntaxes, and cimbine them all into one programming language with many posabilities.
+The idea was to take all well known syntaxes, and cםmbine them into one programming language with many posabilities.
 
 ## Usage
 
