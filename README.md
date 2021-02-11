@@ -73,6 +73,23 @@ while x < 5{
 }
 ```
 
+### Switch:
+```js
+// for more info about switch take a look at switch at js, it is exactly the same...
+a = "hi"
+switch a{
+    case "hello":
+        print("a=='hello'")
+        break
+    case "hi":
+    case "hihi"
+        print("a=='hi' or a=='hihi'")
+        break
+    default:
+        print("a!='hi' and a!='hihi' and a!='hello'")
+}
+```
+
 ### Functions:
 ```cs
 (func or function or def) func_name(required_params, not_required_params){

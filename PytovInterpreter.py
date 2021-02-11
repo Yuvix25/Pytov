@@ -110,9 +110,9 @@ class PytovInterpreter(PytovVisitor):
 
     def visitBreakp(self, ctx:PytovParser.BreakpContext):
         if self.in_switch or self.in_loop:
-            raise BreakIndicator("return found.")
+            raise BreakIndicator("break found.")
         else:
-            self.errorThrower._raise([ctx.start.line, ctx.getText()], "SyntaxError", f"You cannot use return outside loop or switch.")
+            self.errorThrower._raise([ctx.start.line, ctx.getText()], "SyntaxError", f"You cannot use break outside loop or switch.")
 
     def visitFuncDeclaration(self, ctx:PytovParser.FuncDeclarationContext):
         if len(ctx.children) == 5:
@@ -198,22 +198,26 @@ class PytovInterpreter(PytovVisitor):
                         return
     
     def visitSwitchStatement(self, ctx:PytovParser.SwitchStatementContext):
-        ctx.children = [child for child in ctx.children if type(child) != PytovParser.SeperatorsContext]
-        cases = [child for child in ctx.children if type(child) == PytovParser.SwitchCaseContext or type(child) == PytovParser.SwitchElseContext]
-        switch_on = self.visit(ctx.children[1])
         self.in_switch = True
-        for case in cases:
-            if type(case) == PytovParser.SwitchCaseContext and switch_on == self.visit(case.children[1]):
-                try:
-                    self.visit(case.children[2])
-                except BreakIndicator:
-                    break
+        ctx.children = [child for child in ctx.children if type(child) != PytovParser.SeperatorsContext]
+        switch_on = self.visit(ctx.children[1])
+        case_index = 0
+        for line in ctx.children:
+            if type(line) == PytovParser.SwitchCaseContext:
+                if switch_on == self.visit(line.children[1]):
+                    try:
+                        for run_line in ctx.children[case_index:]:
+                            self.visit(run_line)
+                    except BreakIndicator:
+                        break
             
-            elif type(case) == PytovParser.SwitchElseContext:
+            elif type(line) == PytovParser.SwitchDefaultContext:
                 try:
-                    self.visit(case.children[1])
+                    for run_line in ctx.children[case_index:]:
+                        self.visit(run_line)
                 except BreakIndicator:
                     break
+            case_index += 1
         self.in_switch = False
 
 

@@ -97,23 +97,19 @@ breakp
  ;
 
 switchCase
- : 'case' exp block
+ : 'case' exp ':'
  seperators*
  ;
 
-switchElse
- : 'else' block
+switchDefault
+ : 'default:'
  seperators*
  ;
 
 switchStatement
  : 
  'switch' exp openCurly
- seperators*
- switchCase*
- seperators*
- switchElse?
- seperators*
+ ((switchCase|switchDefault)? allCode)*
  closeCurly
  ;
 
@@ -185,7 +181,7 @@ statement
  : ifStatement
  | switchStatement
  | switchCase
- | switchElse
+ | switchDefault
  | whileStatement
  | forStatement
  | funcCall
@@ -194,7 +190,8 @@ statement
  ;
 
 block
- : 
+ :
+ seperators*
  openCurly allCode* closeCurly
  ;
 

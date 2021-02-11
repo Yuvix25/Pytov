@@ -206,12 +206,12 @@ class PytovListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PytovParser#switchElse.
-    def enterSwitchElse(self, ctx:PytovParser.SwitchElseContext):
+    # Enter a parse tree produced by PytovParser#switchDefault.
+    def enterSwitchDefault(self, ctx:PytovParser.SwitchDefaultContext):
         pass
 
-    # Exit a parse tree produced by PytovParser#switchElse.
-    def exitSwitchElse(self, ctx:PytovParser.SwitchElseContext):
+    # Exit a parse tree produced by PytovParser#switchDefault.
+    def exitSwitchDefault(self, ctx:PytovParser.SwitchDefaultContext):
         pass
 
 

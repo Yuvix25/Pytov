@@ -119,8 +119,8 @@ class PytovVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PytovParser#switchElse.
-    def visitSwitchElse(self, ctx:PytovParser.SwitchElseContext):
+    # Visit a parse tree produced by PytovParser#switchDefault.
+    def visitSwitchDefault(self, ctx:PytovParser.SwitchDefaultContext):
         return self.visitChildren(ctx)
 
 
