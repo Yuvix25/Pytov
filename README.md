@@ -48,14 +48,28 @@ else {
 }
 ```
 
-### loop:
-```python
+### Loops:
+#### For:
+```cs
 for i in range(10){
     print(i)
 }
 a = [1, 4, 7, 8]
 for x in a{
     print(x)
+    if x == 4{
+        break // loop will stop when x == 4
+    }
+}
+```
+#### While:
+```cs
+// loop the the block as long as x < 5
+x = 0
+while x < 5{
+    print(x)
+    x += 2
+    // (break will work just the same here)
 }
 ```
 

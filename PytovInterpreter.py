@@ -216,14 +216,17 @@ class PytovInterpreter(PytovVisitor):
 
 
     def visitWhileStatement(self, ctx:PytovParser.WhileStatementContext):
+        self.in_loop = True
         try:
             while self.visit(ctx.children[1]):
                 self.visit(ctx.children[2])
         except BreakIndicator:
             pass
+        self.in_loop = False
 
     def visitForStatement(self, ctx:PytovParser.ForStatementContext):
         container = self.visit(ctx.children[3])
+        self.in_loop = True
         try:
             for i in range(len(container)):
                 if self.is_in_func:
@@ -233,6 +236,7 @@ class PytovInterpreter(PytovVisitor):
                 self.visit(ctx.children[4])
         except BreakIndicator:
             pass
+        self.in_loop = False
 
 
     def visitOperator(self, ctx:PytovParser.OperatorContext):
