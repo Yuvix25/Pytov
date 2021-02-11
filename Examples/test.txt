@@ -40,4 +40,19 @@ z = x
 print(z(1, 5, w=20))
 func_test()
 
+switch a{
+    case [1, 2, 3, 5]{
+        print("hi0")
+        break
+    }
+    case [1, 2, 3, 4]{
+        print("hi1")
+        break
+    }
+    else{
+        print("hi2")
+        break
+    }
+}
+
 #test

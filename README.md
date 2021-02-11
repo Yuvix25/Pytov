@@ -53,7 +53,7 @@ else {
 for i in range(10){
     print(i)
 }
-a= [1, 4, 7, 8]
+a = [1, 4, 7, 8]
 for x in a{
     print(x)
 }

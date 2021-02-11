@@ -1,4 +1,4 @@
-# Generated from Pytov.g4 by ANTLR 4.9
+# Generated from Pytov.g4 by ANTLR 4.9.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .PytovParser import PytovParser
@@ -185,6 +185,42 @@ class PytovListener(ParseTreeListener):
 
     # Exit a parse tree produced by PytovParser#ifStatement.
     def exitIfStatement(self, ctx:PytovParser.IfStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#breakp.
+    def enterBreakp(self, ctx:PytovParser.BreakpContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#breakp.
+    def exitBreakp(self, ctx:PytovParser.BreakpContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#switchCase.
+    def enterSwitchCase(self, ctx:PytovParser.SwitchCaseContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#switchCase.
+    def exitSwitchCase(self, ctx:PytovParser.SwitchCaseContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#switchElse.
+    def enterSwitchElse(self, ctx:PytovParser.SwitchElseContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#switchElse.
+    def exitSwitchElse(self, ctx:PytovParser.SwitchElseContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#switchStatement.
+    def enterSwitchStatement(self, ctx:PytovParser.SwitchStatementContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#switchStatement.
+    def exitSwitchStatement(self, ctx:PytovParser.SwitchStatementContext):
         pass
 
 

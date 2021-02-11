@@ -1,4 +1,4 @@
-# Generated from Pytov.g4 by ANTLR 4.9
+# Generated from Pytov.g4 by ANTLR 4.9.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .PytovParser import PytovParser
@@ -106,6 +106,26 @@ class PytovVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by PytovParser#ifStatement.
     def visitIfStatement(self, ctx:PytovParser.IfStatementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#breakp.
+    def visitBreakp(self, ctx:PytovParser.BreakpContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#switchCase.
+    def visitSwitchCase(self, ctx:PytovParser.SwitchCaseContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#switchElse.
+    def visitSwitchElse(self, ctx:PytovParser.SwitchElseContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#switchStatement.
+    def visitSwitchStatement(self, ctx:PytovParser.SwitchStatementContext):
         return self.visitChildren(ctx)
 
 

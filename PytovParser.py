@@ -1,4 +1,4 @@
-# Generated from Pytov.g4 by ANTLR 4.9
+# Generated from Pytov.g4 by ANTLR 4.9.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -11,125 +11,161 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3/")
-        buf.write("\u0116\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\62")
+        buf.write("\u015b\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
         buf.write("\t\31\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36")
-        buf.write("\4\37\t\37\4 \t \4!\t!\3\2\6\2D\n\2\r\2\16\2E\3\2\3\2")
-        buf.write("\3\3\3\3\3\3\3\3\5\3N\n\3\3\4\3\4\3\5\3\5\3\5\3\5\3\5")
-        buf.write("\3\5\3\5\3\5\3\5\3\5\5\5\\\n\5\3\5\3\5\3\5\3\5\7\5b\n")
-        buf.write("\5\f\5\16\5e\13\5\3\6\3\6\3\6\3\6\3\6\5\6l\n\6\3\7\3\7")
-        buf.write("\5\7p\n\7\3\7\3\7\3\b\3\b\3\b\5\bw\n\b\3\t\3\t\3\n\3\n")
-        buf.write("\3\13\3\13\3\f\3\f\3\r\3\r\3\16\3\16\3\17\3\17\3\20\3")
-        buf.write("\20\3\21\3\21\3\21\3\21\3\21\5\21\u008e\n\21\3\21\3\21")
-        buf.write("\3\21\3\21\7\21\u0094\n\21\f\21\16\21\u0097\13\21\3\21")
-        buf.write("\5\21\u009a\n\21\3\21\3\21\5\21\u009e\n\21\3\22\3\22\3")
-        buf.write("\22\7\22\u00a3\n\22\f\22\16\22\u00a6\13\22\3\22\5\22\u00a9")
-        buf.write("\n\22\3\23\3\23\5\23\u00ad\n\23\3\24\3\24\3\24\7\24\u00b2")
-        buf.write("\n\24\f\24\16\24\u00b5\13\24\3\24\5\24\u00b8\n\24\3\25")
-        buf.write("\3\25\3\25\3\25\5\25\u00be\n\25\3\26\3\26\3\26\7\26\u00c3")
-        buf.write("\n\26\f\26\16\26\u00c6\13\26\3\26\5\26\u00c9\n\26\3\27")
-        buf.write("\3\27\3\27\5\27\u00ce\n\27\3\27\3\27\3\27\7\27\u00d3\n")
-        buf.write("\27\f\27\16\27\u00d6\13\27\3\30\3\30\3\30\5\30\u00db\n")
-        buf.write("\30\3\30\3\30\3\30\7\30\u00e0\n\30\f\30\16\30\u00e3\13")
-        buf.write("\30\3\31\3\31\3\31\3\31\3\32\3\32\3\32\3\32\3\32\3\32")
-        buf.write("\3\33\3\33\3\33\3\33\5\33\u00f3\n\33\3\33\3\33\3\33\3")
-        buf.write("\34\3\34\3\34\5\34\u00fb\n\34\3\34\3\34\3\35\3\35\3\35")
-        buf.write("\3\36\3\36\3\36\3\36\3\36\5\36\u0107\n\36\3\37\3\37\7")
-        buf.write("\37\u010b\n\37\f\37\16\37\u010e\13\37\3\37\3\37\3 \3 ")
-        buf.write("\3!\3!\3!\2\5\b,.\"\2\4\6\b\n\f\16\20\22\24\26\30\32\34")
-        buf.write("\36 \"$&(*,.\60\62\64\668:<>@\2\t\3\2./\3\2 %\3\2\25\26")
-        buf.write("\3\2\32\37\3\2\30\31\3\2\6\7\3\2\16\20\2\u011b\2C\3\2")
-        buf.write("\2\2\4M\3\2\2\2\6O\3\2\2\2\b[\3\2\2\2\nk\3\2\2\2\fm\3")
-        buf.write("\2\2\2\16v\3\2\2\2\20x\3\2\2\2\22z\3\2\2\2\24|\3\2\2\2")
-        buf.write("\26~\3\2\2\2\30\u0080\3\2\2\2\32\u0082\3\2\2\2\34\u0084")
-        buf.write("\3\2\2\2\36\u0086\3\2\2\2 \u0088\3\2\2\2\"\u009f\3\2\2")
-        buf.write("\2$\u00ac\3\2\2\2&\u00ae\3\2\2\2(\u00b9\3\2\2\2*\u00bf")
-        buf.write("\3\2\2\2,\u00cd\3\2\2\2.\u00da\3\2\2\2\60\u00e4\3\2\2")
-        buf.write("\2\62\u00e8\3\2\2\2\64\u00ee\3\2\2\2\66\u00f7\3\2\2\2")
-        buf.write("8\u00fe\3\2\2\2:\u0106\3\2\2\2<\u0108\3\2\2\2>\u0111\3")
-        buf.write("\2\2\2@\u0113\3\2\2\2BD\5\4\3\2CB\3\2\2\2DE\3\2\2\2EC")
-        buf.write("\3\2\2\2EF\3\2\2\2FG\3\2\2\2GH\7\2\2\3H\3\3\2\2\2IN\5")
-        buf.write("\6\4\2JN\5:\36\2KN\5$\23\2LN\5\b\5\2MI\3\2\2\2MJ\3\2\2")
-        buf.write("\2MK\3\2\2\2ML\3\2\2\2N\5\3\2\2\2OP\t\2\2\2P\7\3\2\2\2")
-        buf.write("QR\b\5\1\2RS\7&\2\2ST\5\b\5\2TU\7\'\2\2U\\\3\2\2\2VW\5")
-        buf.write("\20\t\2WX\5\b\5\5X\\\3\2\2\2Y\\\5\n\6\2Z\\\5\66\34\2[")
-        buf.write("Q\3\2\2\2[V\3\2\2\2[Y\3\2\2\2[Z\3\2\2\2\\c\3\2\2\2]^\f")
-        buf.write("\6\2\2^_\5\16\b\2_`\5\b\5\7`b\3\2\2\2a]\3\2\2\2be\3\2")
-        buf.write("\2\2ca\3\2\2\2cd\3\2\2\2d\t\3\2\2\2ec\3\2\2\2fl\5\36\20")
-        buf.write("\2gl\5\26\f\2hl\5\24\13\2il\5\22\n\2jl\5\f\7\2kf\3\2\2")
-        buf.write("\2kg\3\2\2\2kh\3\2\2\2ki\3\2\2\2kj\3\2\2\2l\13\3\2\2\2")
-        buf.write("mo\7\3\2\2np\5.\30\2on\3\2\2\2op\3\2\2\2pq\3\2\2\2qr\7")
-        buf.write("\4\2\2r\r\3\2\2\2sw\5\34\17\2tw\5\30\r\2uw\5\32\16\2v")
-        buf.write("s\3\2\2\2vt\3\2\2\2vu\3\2\2\2w\17\3\2\2\2xy\7\27\2\2y")
-        buf.write("\21\3\2\2\2z{\7*\2\2{\23\3\2\2\2|}\7)\2\2}\25\3\2\2\2")
-        buf.write("~\177\7\21\2\2\177\27\3\2\2\2\u0080\u0081\t\3\2\2\u0081")
-        buf.write("\31\3\2\2\2\u0082\u0083\t\4\2\2\u0083\33\3\2\2\2\u0084")
-        buf.write("\u0085\t\5\2\2\u0085\35\3\2\2\2\u0086\u0087\t\6\2\2\u0087")
-        buf.write("\37\3\2\2\2\u0088\u0089\7\5\2\2\u0089\u008a\5\b\5\2\u008a")
-        buf.write("\u008b\5<\37\2\u008b\u0095\3\2\2\2\u008c\u008e\5\6\4\2")
-        buf.write("\u008d\u008c\3\2\2\2\u008d\u008e\3\2\2\2\u008e\u008f\3")
-        buf.write("\2\2\2\u008f\u0090\t\7\2\2\u0090\u0091\5\b\5\2\u0091\u0092")
-        buf.write("\5<\37\2\u0092\u0094\3\2\2\2\u0093\u008d\3\2\2\2\u0094")
-        buf.write("\u0097\3\2\2\2\u0095\u0093\3\2\2\2\u0095\u0096\3\2\2\2")
-        buf.write("\u0096\u009d\3\2\2\2\u0097\u0095\3\2\2\2\u0098\u009a\5")
-        buf.write("\6\4\2\u0099\u0098\3\2\2\2\u0099\u009a\3\2\2\2\u009a\u009b")
-        buf.write("\3\2\2\2\u009b\u009c\7\b\2\2\u009c\u009e\5<\37\2\u009d")
-        buf.write("\u0099\3\2\2\2\u009d\u009e\3\2\2\2\u009e!\3\2\2\2\u009f")
-        buf.write("\u00a4\5\22\n\2\u00a0\u00a1\7\t\2\2\u00a1\u00a3\5\22\n")
-        buf.write("\2\u00a2\u00a0\3\2\2\2\u00a3\u00a6\3\2\2\2\u00a4\u00a2")
-        buf.write("\3\2\2\2\u00a4\u00a5\3\2\2\2\u00a5\u00a8\3\2\2\2\u00a6")
-        buf.write("\u00a4\3\2\2\2\u00a7\u00a9\7\t\2\2\u00a8\u00a7\3\2\2\2")
-        buf.write("\u00a8\u00a9\3\2\2\2\u00a9#\3\2\2\2\u00aa\u00ad\5(\25")
-        buf.write("\2\u00ab\u00ad\5\64\33\2\u00ac\u00aa\3\2\2\2\u00ac\u00ab")
-        buf.write("\3\2\2\2\u00ad%\3\2\2\2\u00ae\u00b3\5(\25\2\u00af\u00b0")
-        buf.write("\7\t\2\2\u00b0\u00b2\5(\25\2\u00b1\u00af\3\2\2\2\u00b2")
-        buf.write("\u00b5\3\2\2\2\u00b3\u00b1\3\2\2\2\u00b3\u00b4\3\2\2\2")
-        buf.write("\u00b4\u00b7\3\2\2\2\u00b5\u00b3\3\2\2\2\u00b6\u00b8\7")
-        buf.write("\t\2\2\u00b7\u00b6\3\2\2\2\u00b7\u00b8\3\2\2\2\u00b8\'")
-        buf.write("\3\2\2\2\u00b9\u00ba\5\22\n\2\u00ba\u00bd\7\n\2\2\u00bb")
-        buf.write("\u00be\5\b\5\2\u00bc\u00be\5\66\34\2\u00bd\u00bb\3\2\2")
-        buf.write("\2\u00bd\u00bc\3\2\2\2\u00be)\3\2\2\2\u00bf\u00c4\5\b")
-        buf.write("\5\2\u00c0\u00c1\7\t\2\2\u00c1\u00c3\5\b\5\2\u00c2\u00c0")
-        buf.write("\3\2\2\2\u00c3\u00c6\3\2\2\2\u00c4\u00c2\3\2\2\2\u00c4")
-        buf.write("\u00c5\3\2\2\2\u00c5\u00c8\3\2\2\2\u00c6\u00c4\3\2\2\2")
-        buf.write("\u00c7\u00c9\7\t\2\2\u00c8\u00c7\3\2\2\2\u00c8\u00c9\3")
-        buf.write("\2\2\2\u00c9+\3\2\2\2\u00ca\u00cb\b\27\1\2\u00cb\u00ce")
-        buf.write("\5\"\22\2\u00cc\u00ce\5&\24\2\u00cd\u00ca\3\2\2\2\u00cd")
-        buf.write("\u00cc\3\2\2\2\u00ce\u00d4\3\2\2\2\u00cf\u00d0\f\5\2\2")
-        buf.write("\u00d0\u00d1\7\t\2\2\u00d1\u00d3\5,\27\6\u00d2\u00cf\3")
-        buf.write("\2\2\2\u00d3\u00d6\3\2\2\2\u00d4\u00d2\3\2\2\2\u00d4\u00d5")
-        buf.write("\3\2\2\2\u00d5-\3\2\2\2\u00d6\u00d4\3\2\2\2\u00d7\u00d8")
-        buf.write("\b\30\1\2\u00d8\u00db\5*\26\2\u00d9\u00db\5&\24\2\u00da")
-        buf.write("\u00d7\3\2\2\2\u00da\u00d9\3\2\2\2\u00db\u00e1\3\2\2\2")
-        buf.write("\u00dc\u00dd\f\5\2\2\u00dd\u00de\7\t\2\2\u00de\u00e0\5")
-        buf.write(".\30\6\u00df\u00dc\3\2\2\2\u00e0\u00e3\3\2\2\2\u00e1\u00df")
-        buf.write("\3\2\2\2\u00e1\u00e2\3\2\2\2\u00e2/\3\2\2\2\u00e3\u00e1")
-        buf.write("\3\2\2\2\u00e4\u00e5\7\13\2\2\u00e5\u00e6\5\b\5\2\u00e6")
-        buf.write("\u00e7\5<\37\2\u00e7\61\3\2\2\2\u00e8\u00e9\7\f\2\2\u00e9")
-        buf.write("\u00ea\5\b\5\2\u00ea\u00eb\7\r\2\2\u00eb\u00ec\5\b\5\2")
-        buf.write("\u00ec\u00ed\5<\37\2\u00ed\63\3\2\2\2\u00ee\u00ef\t\b")
-        buf.write("\2\2\u00ef\u00f0\5\22\n\2\u00f0\u00f2\7&\2\2\u00f1\u00f3")
-        buf.write("\5,\27\2\u00f2\u00f1\3\2\2\2\u00f2\u00f3\3\2\2\2\u00f3")
-        buf.write("\u00f4\3\2\2\2\u00f4\u00f5\7\'\2\2\u00f5\u00f6\5<\37\2")
-        buf.write("\u00f6\65\3\2\2\2\u00f7\u00f8\5\22\n\2\u00f8\u00fa\7&")
-        buf.write("\2\2\u00f9\u00fb\5.\30\2\u00fa\u00f9\3\2\2\2\u00fa\u00fb")
-        buf.write("\3\2\2\2\u00fb\u00fc\3\2\2\2\u00fc\u00fd\7\'\2\2\u00fd")
-        buf.write("\67\3\2\2\2\u00fe\u00ff\7(\2\2\u00ff\u0100\5\b\5\2\u0100")
-        buf.write("9\3\2\2\2\u0101\u0107\5 \21\2\u0102\u0107\5\60\31\2\u0103")
-        buf.write("\u0107\5\62\32\2\u0104\u0107\5\66\34\2\u0105\u0107\58")
-        buf.write("\35\2\u0106\u0101\3\2\2\2\u0106\u0102\3\2\2\2\u0106\u0103")
-        buf.write("\3\2\2\2\u0106\u0104\3\2\2\2\u0106\u0105\3\2\2\2\u0107")
-        buf.write(";\3\2\2\2\u0108\u010c\5> \2\u0109\u010b\5\4\3\2\u010a")
-        buf.write("\u0109\3\2\2\2\u010b\u010e\3\2\2\2\u010c\u010a\3\2\2\2")
-        buf.write("\u010c\u010d\3\2\2\2\u010d\u010f\3\2\2\2\u010e\u010c\3")
-        buf.write("\2\2\2\u010f\u0110\5@!\2\u0110=\3\2\2\2\u0111\u0112\7")
-        buf.write("+\2\2\u0112?\3\2\2\2\u0113\u0114\7,\2\2\u0114A\3\2\2\2")
-        buf.write("\35EM[ckov\u008d\u0095\u0099\u009d\u00a4\u00a8\u00ac\u00b3")
-        buf.write("\u00b7\u00bd\u00c4\u00c8\u00cd\u00d4\u00da\u00e1\u00f2")
-        buf.write("\u00fa\u0106\u010c")
+        buf.write("\4\37\t\37\4 \t \4!\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\3\2\6")
+        buf.write("\2L\n\2\r\2\16\2M\3\2\3\2\3\3\3\3\3\3\3\3\5\3V\n\3\3\4")
+        buf.write("\3\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\5\5d\n\5")
+        buf.write("\3\5\3\5\3\5\3\5\7\5j\n\5\f\5\16\5m\13\5\3\6\3\6\3\6\3")
+        buf.write("\6\3\6\5\6t\n\6\3\7\3\7\5\7x\n\7\3\7\3\7\3\b\3\b\3\b\5")
+        buf.write("\b\177\n\b\3\t\3\t\3\n\3\n\3\13\3\13\3\f\3\f\3\r\3\r\3")
+        buf.write("\16\3\16\3\17\3\17\3\20\3\20\3\21\3\21\3\21\3\21\3\21")
+        buf.write("\7\21\u0096\n\21\f\21\16\21\u0099\13\21\3\21\3\21\3\21")
+        buf.write("\3\21\7\21\u009f\n\21\f\21\16\21\u00a2\13\21\3\21\7\21")
+        buf.write("\u00a5\n\21\f\21\16\21\u00a8\13\21\3\21\3\21\5\21\u00ac")
+        buf.write("\n\21\3\22\3\22\3\23\3\23\3\23\3\23\7\23\u00b4\n\23\f")
+        buf.write("\23\16\23\u00b7\13\23\3\24\3\24\3\24\7\24\u00bc\n\24\f")
+        buf.write("\24\16\24\u00bf\13\24\3\25\3\25\3\25\3\25\7\25\u00c5\n")
+        buf.write("\25\f\25\16\25\u00c8\13\25\3\25\7\25\u00cb\n\25\f\25\16")
+        buf.write("\25\u00ce\13\25\3\25\7\25\u00d1\n\25\f\25\16\25\u00d4")
+        buf.write("\13\25\3\25\5\25\u00d7\n\25\3\25\7\25\u00da\n\25\f\25")
+        buf.write("\16\25\u00dd\13\25\3\25\3\25\3\26\3\26\3\26\7\26\u00e4")
+        buf.write("\n\26\f\26\16\26\u00e7\13\26\3\26\5\26\u00ea\n\26\3\27")
+        buf.write("\3\27\5\27\u00ee\n\27\3\30\3\30\3\30\7\30\u00f3\n\30\f")
+        buf.write("\30\16\30\u00f6\13\30\3\30\5\30\u00f9\n\30\3\31\3\31\3")
+        buf.write("\31\3\31\5\31\u00ff\n\31\3\32\3\32\3\32\7\32\u0104\n\32")
+        buf.write("\f\32\16\32\u0107\13\32\3\32\5\32\u010a\n\32\3\33\3\33")
+        buf.write("\3\33\5\33\u010f\n\33\3\33\3\33\3\33\7\33\u0114\n\33\f")
+        buf.write("\33\16\33\u0117\13\33\3\34\3\34\3\34\5\34\u011c\n\34\3")
+        buf.write("\34\3\34\3\34\7\34\u0121\n\34\f\34\16\34\u0124\13\34\3")
+        buf.write("\35\3\35\3\35\3\35\3\36\3\36\3\36\3\36\3\36\3\36\3\37")
+        buf.write("\3\37\3\37\3\37\5\37\u0134\n\37\3\37\3\37\3\37\3 \3 \3")
+        buf.write(" \5 \u013c\n \3 \3 \3!\3!\3!\3\"\3\"\3\"\3\"\3\"\3\"\3")
+        buf.write("\"\3\"\3\"\5\"\u014c\n\"\3#\3#\7#\u0150\n#\f#\16#\u0153")
+        buf.write("\13#\3#\3#\3$\3$\3%\3%\3%\2\5\b\64\66&\2\4\6\b\n\f\16")
+        buf.write("\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDF")
+        buf.write("H\2\t\3\2\61\62\3\2\"\'\3\2\27\30\3\2\34!\3\2\32\33\3")
+        buf.write("\2\6\7\3\2\20\22\2\u0167\2K\3\2\2\2\4U\3\2\2\2\6W\3\2")
+        buf.write("\2\2\bc\3\2\2\2\ns\3\2\2\2\fu\3\2\2\2\16~\3\2\2\2\20\u0080")
+        buf.write("\3\2\2\2\22\u0082\3\2\2\2\24\u0084\3\2\2\2\26\u0086\3")
+        buf.write("\2\2\2\30\u0088\3\2\2\2\32\u008a\3\2\2\2\34\u008c\3\2")
+        buf.write("\2\2\36\u008e\3\2\2\2 \u0090\3\2\2\2\"\u00ad\3\2\2\2$")
+        buf.write("\u00af\3\2\2\2&\u00b8\3\2\2\2(\u00c0\3\2\2\2*\u00e0\3")
+        buf.write("\2\2\2,\u00ed\3\2\2\2.\u00ef\3\2\2\2\60\u00fa\3\2\2\2")
+        buf.write("\62\u0100\3\2\2\2\64\u010e\3\2\2\2\66\u011b\3\2\2\28\u0125")
+        buf.write("\3\2\2\2:\u0129\3\2\2\2<\u012f\3\2\2\2>\u0138\3\2\2\2")
+        buf.write("@\u013f\3\2\2\2B\u014b\3\2\2\2D\u014d\3\2\2\2F\u0156\3")
+        buf.write("\2\2\2H\u0158\3\2\2\2JL\5\4\3\2KJ\3\2\2\2LM\3\2\2\2MK")
+        buf.write("\3\2\2\2MN\3\2\2\2NO\3\2\2\2OP\7\2\2\3P\3\3\2\2\2QV\5")
+        buf.write("\6\4\2RV\5B\"\2SV\5,\27\2TV\5\b\5\2UQ\3\2\2\2UR\3\2\2")
+        buf.write("\2US\3\2\2\2UT\3\2\2\2V\5\3\2\2\2WX\t\2\2\2X\7\3\2\2\2")
+        buf.write("YZ\b\5\1\2Z[\7(\2\2[\\\5\b\5\2\\]\7)\2\2]d\3\2\2\2^_\5")
+        buf.write("\20\t\2_`\5\b\5\5`d\3\2\2\2ad\5\n\6\2bd\5> \2cY\3\2\2")
+        buf.write("\2c^\3\2\2\2ca\3\2\2\2cb\3\2\2\2dk\3\2\2\2ef\f\6\2\2f")
+        buf.write("g\5\16\b\2gh\5\b\5\7hj\3\2\2\2ie\3\2\2\2jm\3\2\2\2ki\3")
+        buf.write("\2\2\2kl\3\2\2\2l\t\3\2\2\2mk\3\2\2\2nt\5\36\20\2ot\5")
+        buf.write("\26\f\2pt\5\24\13\2qt\5\22\n\2rt\5\f\7\2sn\3\2\2\2so\3")
+        buf.write("\2\2\2sp\3\2\2\2sq\3\2\2\2sr\3\2\2\2t\13\3\2\2\2uw\7\3")
+        buf.write("\2\2vx\5\66\34\2wv\3\2\2\2wx\3\2\2\2xy\3\2\2\2yz\7\4\2")
+        buf.write("\2z\r\3\2\2\2{\177\5\34\17\2|\177\5\30\r\2}\177\5\32\16")
+        buf.write("\2~{\3\2\2\2~|\3\2\2\2~}\3\2\2\2\177\17\3\2\2\2\u0080")
+        buf.write("\u0081\7\31\2\2\u0081\21\3\2\2\2\u0082\u0083\7-\2\2\u0083")
+        buf.write("\23\3\2\2\2\u0084\u0085\7,\2\2\u0085\25\3\2\2\2\u0086")
+        buf.write("\u0087\7\23\2\2\u0087\27\3\2\2\2\u0088\u0089\t\3\2\2\u0089")
+        buf.write("\31\3\2\2\2\u008a\u008b\t\4\2\2\u008b\33\3\2\2\2\u008c")
+        buf.write("\u008d\t\5\2\2\u008d\35\3\2\2\2\u008e\u008f\t\6\2\2\u008f")
+        buf.write("\37\3\2\2\2\u0090\u0091\7\5\2\2\u0091\u0092\5\b\5\2\u0092")
+        buf.write("\u0093\5D#\2\u0093\u00a0\3\2\2\2\u0094\u0096\5\6\4\2\u0095")
+        buf.write("\u0094\3\2\2\2\u0096\u0099\3\2\2\2\u0097\u0095\3\2\2\2")
+        buf.write("\u0097\u0098\3\2\2\2\u0098\u009a\3\2\2\2\u0099\u0097\3")
+        buf.write("\2\2\2\u009a\u009b\t\7\2\2\u009b\u009c\5\b\5\2\u009c\u009d")
+        buf.write("\5D#\2\u009d\u009f\3\2\2\2\u009e\u0097\3\2\2\2\u009f\u00a2")
+        buf.write("\3\2\2\2\u00a0\u009e\3\2\2\2\u00a0\u00a1\3\2\2\2\u00a1")
+        buf.write("\u00ab\3\2\2\2\u00a2\u00a0\3\2\2\2\u00a3\u00a5\5\6\4\2")
+        buf.write("\u00a4\u00a3\3\2\2\2\u00a5\u00a8\3\2\2\2\u00a6\u00a4\3")
+        buf.write("\2\2\2\u00a6\u00a7\3\2\2\2\u00a7\u00a9\3\2\2\2\u00a8\u00a6")
+        buf.write("\3\2\2\2\u00a9\u00aa\7\b\2\2\u00aa\u00ac\5D#\2\u00ab\u00a6")
+        buf.write("\3\2\2\2\u00ab\u00ac\3\2\2\2\u00ac!\3\2\2\2\u00ad\u00ae")
+        buf.write("\7+\2\2\u00ae#\3\2\2\2\u00af\u00b0\7\t\2\2\u00b0\u00b1")
+        buf.write("\5\b\5\2\u00b1\u00b5\5D#\2\u00b2\u00b4\5\6\4\2\u00b3\u00b2")
+        buf.write("\3\2\2\2\u00b4\u00b7\3\2\2\2\u00b5\u00b3\3\2\2\2\u00b5")
+        buf.write("\u00b6\3\2\2\2\u00b6%\3\2\2\2\u00b7\u00b5\3\2\2\2\u00b8")
+        buf.write("\u00b9\7\b\2\2\u00b9\u00bd\5D#\2\u00ba\u00bc\5\6\4\2\u00bb")
+        buf.write("\u00ba\3\2\2\2\u00bc\u00bf\3\2\2\2\u00bd\u00bb\3\2\2\2")
+        buf.write("\u00bd\u00be\3\2\2\2\u00be\'\3\2\2\2\u00bf\u00bd\3\2\2")
+        buf.write("\2\u00c0\u00c1\7\n\2\2\u00c1\u00c2\5\b\5\2\u00c2\u00c6")
+        buf.write("\5F$\2\u00c3\u00c5\5\6\4\2\u00c4\u00c3\3\2\2\2\u00c5\u00c8")
+        buf.write("\3\2\2\2\u00c6\u00c4\3\2\2\2\u00c6\u00c7\3\2\2\2\u00c7")
+        buf.write("\u00cc\3\2\2\2\u00c8\u00c6\3\2\2\2\u00c9\u00cb\5$\23\2")
+        buf.write("\u00ca\u00c9\3\2\2\2\u00cb\u00ce\3\2\2\2\u00cc\u00ca\3")
+        buf.write("\2\2\2\u00cc\u00cd\3\2\2\2\u00cd\u00d2\3\2\2\2\u00ce\u00cc")
+        buf.write("\3\2\2\2\u00cf\u00d1\5\6\4\2\u00d0\u00cf\3\2\2\2\u00d1")
+        buf.write("\u00d4\3\2\2\2\u00d2\u00d0\3\2\2\2\u00d2\u00d3\3\2\2\2")
+        buf.write("\u00d3\u00d6\3\2\2\2\u00d4\u00d2\3\2\2\2\u00d5\u00d7\5")
+        buf.write("&\24\2\u00d6\u00d5\3\2\2\2\u00d6\u00d7\3\2\2\2\u00d7\u00db")
+        buf.write("\3\2\2\2\u00d8\u00da\5\6\4\2\u00d9\u00d8\3\2\2\2\u00da")
+        buf.write("\u00dd\3\2\2\2\u00db\u00d9\3\2\2\2\u00db\u00dc\3\2\2\2")
+        buf.write("\u00dc\u00de\3\2\2\2\u00dd\u00db\3\2\2\2\u00de\u00df\5")
+        buf.write("H%\2\u00df)\3\2\2\2\u00e0\u00e5\5\22\n\2\u00e1\u00e2\7")
+        buf.write("\13\2\2\u00e2\u00e4\5\22\n\2\u00e3\u00e1\3\2\2\2\u00e4")
+        buf.write("\u00e7\3\2\2\2\u00e5\u00e3\3\2\2\2\u00e5\u00e6\3\2\2\2")
+        buf.write("\u00e6\u00e9\3\2\2\2\u00e7\u00e5\3\2\2\2\u00e8\u00ea\7")
+        buf.write("\13\2\2\u00e9\u00e8\3\2\2\2\u00e9\u00ea\3\2\2\2\u00ea")
+        buf.write("+\3\2\2\2\u00eb\u00ee\5\60\31\2\u00ec\u00ee\5<\37\2\u00ed")
+        buf.write("\u00eb\3\2\2\2\u00ed\u00ec\3\2\2\2\u00ee-\3\2\2\2\u00ef")
+        buf.write("\u00f4\5\60\31\2\u00f0\u00f1\7\13\2\2\u00f1\u00f3\5\60")
+        buf.write("\31\2\u00f2\u00f0\3\2\2\2\u00f3\u00f6\3\2\2\2\u00f4\u00f2")
+        buf.write("\3\2\2\2\u00f4\u00f5\3\2\2\2\u00f5\u00f8\3\2\2\2\u00f6")
+        buf.write("\u00f4\3\2\2\2\u00f7\u00f9\7\13\2\2\u00f8\u00f7\3\2\2")
+        buf.write("\2\u00f8\u00f9\3\2\2\2\u00f9/\3\2\2\2\u00fa\u00fb\5\22")
+        buf.write("\n\2\u00fb\u00fe\7\f\2\2\u00fc\u00ff\5\b\5\2\u00fd\u00ff")
+        buf.write("\5> \2\u00fe\u00fc\3\2\2\2\u00fe\u00fd\3\2\2\2\u00ff\61")
+        buf.write("\3\2\2\2\u0100\u0105\5\b\5\2\u0101\u0102\7\13\2\2\u0102")
+        buf.write("\u0104\5\b\5\2\u0103\u0101\3\2\2\2\u0104\u0107\3\2\2\2")
+        buf.write("\u0105\u0103\3\2\2\2\u0105\u0106\3\2\2\2\u0106\u0109\3")
+        buf.write("\2\2\2\u0107\u0105\3\2\2\2\u0108\u010a\7\13\2\2\u0109")
+        buf.write("\u0108\3\2\2\2\u0109\u010a\3\2\2\2\u010a\63\3\2\2\2\u010b")
+        buf.write("\u010c\b\33\1\2\u010c\u010f\5*\26\2\u010d\u010f\5.\30")
+        buf.write("\2\u010e\u010b\3\2\2\2\u010e\u010d\3\2\2\2\u010f\u0115")
+        buf.write("\3\2\2\2\u0110\u0111\f\5\2\2\u0111\u0112\7\13\2\2\u0112")
+        buf.write("\u0114\5\64\33\6\u0113\u0110\3\2\2\2\u0114\u0117\3\2\2")
+        buf.write("\2\u0115\u0113\3\2\2\2\u0115\u0116\3\2\2\2\u0116\65\3")
+        buf.write("\2\2\2\u0117\u0115\3\2\2\2\u0118\u0119\b\34\1\2\u0119")
+        buf.write("\u011c\5\62\32\2\u011a\u011c\5.\30\2\u011b\u0118\3\2\2")
+        buf.write("\2\u011b\u011a\3\2\2\2\u011c\u0122\3\2\2\2\u011d\u011e")
+        buf.write("\f\5\2\2\u011e\u011f\7\13\2\2\u011f\u0121\5\66\34\6\u0120")
+        buf.write("\u011d\3\2\2\2\u0121\u0124\3\2\2\2\u0122\u0120\3\2\2\2")
+        buf.write("\u0122\u0123\3\2\2\2\u0123\67\3\2\2\2\u0124\u0122\3\2")
+        buf.write("\2\2\u0125\u0126\7\r\2\2\u0126\u0127\5\b\5\2\u0127\u0128")
+        buf.write("\5D#\2\u01289\3\2\2\2\u0129\u012a\7\16\2\2\u012a\u012b")
+        buf.write("\5\b\5\2\u012b\u012c\7\17\2\2\u012c\u012d\5\b\5\2\u012d")
+        buf.write("\u012e\5D#\2\u012e;\3\2\2\2\u012f\u0130\t\b\2\2\u0130")
+        buf.write("\u0131\5\22\n\2\u0131\u0133\7(\2\2\u0132\u0134\5\64\33")
+        buf.write("\2\u0133\u0132\3\2\2\2\u0133\u0134\3\2\2\2\u0134\u0135")
+        buf.write("\3\2\2\2\u0135\u0136\7)\2\2\u0136\u0137\5D#\2\u0137=\3")
+        buf.write("\2\2\2\u0138\u0139\5\22\n\2\u0139\u013b\7(\2\2\u013a\u013c")
+        buf.write("\5\66\34\2\u013b\u013a\3\2\2\2\u013b\u013c\3\2\2\2\u013c")
+        buf.write("\u013d\3\2\2\2\u013d\u013e\7)\2\2\u013e?\3\2\2\2\u013f")
+        buf.write("\u0140\7*\2\2\u0140\u0141\5\b\5\2\u0141A\3\2\2\2\u0142")
+        buf.write("\u014c\5 \21\2\u0143\u014c\5(\25\2\u0144\u014c\5$\23\2")
+        buf.write("\u0145\u014c\5&\24\2\u0146\u014c\58\35\2\u0147\u014c\5")
+        buf.write(":\36\2\u0148\u014c\5> \2\u0149\u014c\5@!\2\u014a\u014c")
+        buf.write("\5\"\22\2\u014b\u0142\3\2\2\2\u014b\u0143\3\2\2\2\u014b")
+        buf.write("\u0144\3\2\2\2\u014b\u0145\3\2\2\2\u014b\u0146\3\2\2\2")
+        buf.write("\u014b\u0147\3\2\2\2\u014b\u0148\3\2\2\2\u014b\u0149\3")
+        buf.write("\2\2\2\u014b\u014a\3\2\2\2\u014cC\3\2\2\2\u014d\u0151")
+        buf.write("\5F$\2\u014e\u0150\5\4\3\2\u014f\u014e\3\2\2\2\u0150\u0153")
+        buf.write("\3\2\2\2\u0151\u014f\3\2\2\2\u0151\u0152\3\2\2\2\u0152")
+        buf.write("\u0154\3\2\2\2\u0153\u0151\3\2\2\2\u0154\u0155\5H%\2\u0155")
+        buf.write("E\3\2\2\2\u0156\u0157\7.\2\2\u0157G\3\2\2\2\u0158\u0159")
+        buf.write("\7/\2\2\u0159I\3\2\2\2$MUcksw~\u0097\u00a0\u00a6\u00ab")
+        buf.write("\u00b5\u00bd\u00c6\u00cc\u00d2\u00d6\u00db\u00e5\u00e9")
+        buf.write("\u00ed\u00f4\u00f8\u00fe\u0105\u0109\u010e\u0115\u011b")
+        buf.write("\u0122\u0133\u013b\u014b\u0151")
         return buf.getvalue()
 
 
@@ -144,22 +180,24 @@ class PytovParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'['", "']'", "'if'", "'elif'", "'else if'", 
-                     "'else'", "','", "'='", "'while'", "'for'", "'in'", 
-                     "'func'", "'function'", "'def'", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "'&&'", "'||'", "'!'", "<INVALID>", 
-                     "<INVALID>", "'+'", "'-'", "'*'", "'/'", "'/_'", "'%'", 
-                     "'>'", "'>='", "'<'", "'<='", "'=='", "'!='", "'('", 
-                     "')'", "'return'", "<INVALID>", "<INVALID>", "'{'", 
-                     "'}'", "<INVALID>", "';'", "'\n'" ]
+                     "'else'", "'case'", "'switch'", "','", "'='", "'while'", 
+                     "'for'", "'in'", "'func'", "'function'", "'def'", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "'&&'", "'||'", 
+                     "'!'", "<INVALID>", "<INVALID>", "'+'", "'-'", "'*'", 
+                     "'/'", "'/_'", "'%'", "'>'", "'>='", "'<'", "'<='", 
+                     "'=='", "'!='", "'('", "')'", "'return'", "'break'", 
+                     "<INVALID>", "<INVALID>", "'{'", "'}'", "<INVALID>", 
+                     "';'", "'\n'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "<INVALID>", "STRING", "COMMENT", 
-                      "LINE_COMMENT_C", "LINE_COMMENT_P", "AND", "OR", "NOT", 
-                      "TRUE", "FALSE", "ADD", "SUBTRACT", "MULT", "DIVIDE", 
-                      "FLOOR_DIVISION", "MODULO", "GT", "GE", "LT", "LE", 
-                      "EQ", "NOT_EQ", "LPAREN", "RPAREN", "RETURN", "DECIMAL", 
+                      "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "STRING", "COMMENT", "LINE_COMMENT_C", 
+                      "LINE_COMMENT_P", "AND", "OR", "NOT", "TRUE", "FALSE", 
+                      "ADD", "SUBTRACT", "MULT", "DIVIDE", "FLOOR_DIVISION", 
+                      "MODULO", "GT", "GE", "LT", "LE", "EQ", "NOT_EQ", 
+                      "LPAREN", "RPAREN", "RETURN", "BREAK", "DECIMAL", 
                       "IDENTIFIER", "OPEN_CURLY", "CLOSE_CURLY", "WS", "SEMI_COLON", 
                       "NEW_LINE" ]
 
@@ -179,26 +217,31 @@ class PytovParser ( Parser ):
     RULE_operator = 13
     RULE_boolTF = 14
     RULE_ifStatement = 15
-    RULE_identifierList = 16
-    RULE_declaration = 17
-    RULE_declarationList = 18
-    RULE_variableDeclaration = 19
-    RULE_expList = 20
-    RULE_parameterList = 21
-    RULE_parameterInputList = 22
-    RULE_whileStatement = 23
-    RULE_forStatement = 24
-    RULE_funcDeclaration = 25
-    RULE_funcCall = 26
-    RULE_returnp = 27
-    RULE_statement = 28
-    RULE_block = 29
-    RULE_openCurly = 30
-    RULE_closeCurly = 31
+    RULE_breakp = 16
+    RULE_switchCase = 17
+    RULE_switchElse = 18
+    RULE_switchStatement = 19
+    RULE_identifierList = 20
+    RULE_declaration = 21
+    RULE_declarationList = 22
+    RULE_variableDeclaration = 23
+    RULE_expList = 24
+    RULE_parameterList = 25
+    RULE_parameterInputList = 26
+    RULE_whileStatement = 27
+    RULE_forStatement = 28
+    RULE_funcDeclaration = 29
+    RULE_funcCall = 30
+    RULE_returnp = 31
+    RULE_statement = 32
+    RULE_block = 33
+    RULE_openCurly = 34
+    RULE_closeCurly = 35
 
     ruleNames =  [ "parse", "allCode", "seperators", "exp", "atom", "listr", 
                    "opCpBn", "notl", "identifier", "decimal", "string", 
                    "comparator", "binary", "operator", "boolTF", "ifStatement", 
+                   "breakp", "switchCase", "switchElse", "switchStatement", 
                    "identifierList", "declaration", "declarationList", "variableDeclaration", 
                    "expList", "parameterList", "parameterInputList", "whileStatement", 
                    "forStatement", "funcDeclaration", "funcCall", "returnp", 
@@ -219,41 +262,44 @@ class PytovParser ( Parser ):
     T__11=12
     T__12=13
     T__13=14
-    STRING=15
-    COMMENT=16
-    LINE_COMMENT_C=17
-    LINE_COMMENT_P=18
-    AND=19
-    OR=20
-    NOT=21
-    TRUE=22
-    FALSE=23
-    ADD=24
-    SUBTRACT=25
-    MULT=26
-    DIVIDE=27
-    FLOOR_DIVISION=28
-    MODULO=29
-    GT=30
-    GE=31
-    LT=32
-    LE=33
-    EQ=34
-    NOT_EQ=35
-    LPAREN=36
-    RPAREN=37
-    RETURN=38
-    DECIMAL=39
-    IDENTIFIER=40
-    OPEN_CURLY=41
-    CLOSE_CURLY=42
-    WS=43
-    SEMI_COLON=44
-    NEW_LINE=45
+    T__14=15
+    T__15=16
+    STRING=17
+    COMMENT=18
+    LINE_COMMENT_C=19
+    LINE_COMMENT_P=20
+    AND=21
+    OR=22
+    NOT=23
+    TRUE=24
+    FALSE=25
+    ADD=26
+    SUBTRACT=27
+    MULT=28
+    DIVIDE=29
+    FLOOR_DIVISION=30
+    MODULO=31
+    GT=32
+    GE=33
+    LT=34
+    LE=35
+    EQ=36
+    NOT_EQ=37
+    LPAREN=38
+    RPAREN=39
+    RETURN=40
+    BREAK=41
+    DECIMAL=42
+    IDENTIFIER=43
+    OPEN_CURLY=44
+    CLOSE_CURLY=45
+    WS=46
+    SEMI_COLON=47
+    NEW_LINE=48
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.9")
+        self.checkVersion("4.9.1")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -261,6 +307,7 @@ class PytovParser ( Parser ):
 
 
     class ParseContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -303,19 +350,19 @@ class PytovParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 65 
+            self.state = 73 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 64
+                self.state = 72
                 self.allCode()
-                self.state = 67 
+                self.state = 75 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.T__2) | (1 << PytovParser.T__8) | (1 << PytovParser.T__9) | (1 << PytovParser.T__11) | (1 << PytovParser.T__12) | (1 << PytovParser.T__13) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.RETURN) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER) | (1 << PytovParser.SEMI_COLON) | (1 << PytovParser.NEW_LINE))) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.T__2) | (1 << PytovParser.T__5) | (1 << PytovParser.T__6) | (1 << PytovParser.T__7) | (1 << PytovParser.T__10) | (1 << PytovParser.T__11) | (1 << PytovParser.T__13) | (1 << PytovParser.T__14) | (1 << PytovParser.T__15) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.RETURN) | (1 << PytovParser.BREAK) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER) | (1 << PytovParser.SEMI_COLON) | (1 << PytovParser.NEW_LINE))) != 0)):
                     break
 
-            self.state = 69
+            self.state = 77
             self.match(PytovParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -327,6 +374,7 @@ class PytovParser ( Parser ):
 
 
     class AllCodeContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -373,30 +421,30 @@ class PytovParser ( Parser ):
         localctx = PytovParser.AllCodeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_allCode)
         try:
-            self.state = 75
+            self.state = 83
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 71
+                self.state = 79
                 self.seperators()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 72
+                self.state = 80
                 self.statement()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 73
+                self.state = 81
                 self.declaration()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 74
+                self.state = 82
                 self.exp(0)
                 pass
 
@@ -411,6 +459,7 @@ class PytovParser ( Parser ):
 
 
     class SeperatorsContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -449,7 +498,7 @@ class PytovParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 77
+            self.state = 85
             _la = self._input.LA(1)
             if not(_la==PytovParser.SEMI_COLON or _la==PytovParser.NEW_LINE):
                 self._errHandler.recoverInline(self)
@@ -466,6 +515,7 @@ class PytovParser ( Parser ):
 
 
     class ExpContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -631,7 +681,7 @@ class PytovParser ( Parser ):
         self.enterRecursionRule(localctx, 6, self.RULE_exp, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 89
+            self.state = 97
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,2,self._ctx)
             if la_ == 1:
@@ -639,11 +689,11 @@ class PytovParser ( Parser ):
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 80
+                self.state = 88
                 self.match(PytovParser.LPAREN)
-                self.state = 81
+                self.state = 89
                 self.exp(0)
-                self.state = 82
+                self.state = 90
                 self.match(PytovParser.RPAREN)
                 pass
 
@@ -651,9 +701,9 @@ class PytovParser ( Parser ):
                 localctx = PytovParser.NotExpressionContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 84
+                self.state = 92
                 self.notl()
-                self.state = 85
+                self.state = 93
                 self.exp(3)
                 pass
 
@@ -661,7 +711,7 @@ class PytovParser ( Parser ):
                 localctx = PytovParser.AtomExpressionContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 87
+                self.state = 95
                 self.atom()
                 pass
 
@@ -669,13 +719,13 @@ class PytovParser ( Parser ):
                 localctx = PytovParser.FuncCallExpressionContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 88
+                self.state = 96
                 self.funcCall()
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 97
+            self.state = 105
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -686,15 +736,15 @@ class PytovParser ( Parser ):
                     localctx = PytovParser.OpCpBnExpressionContext(self, PytovParser.ExpContext(self, _parentctx, _parentState))
                     localctx.left = _prevctx
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_exp)
-                    self.state = 91
+                    self.state = 99
                     if not self.precpred(self._ctx, 4):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                    self.state = 92
+                    self.state = 100
                     localctx.op = self.opCpBn()
-                    self.state = 93
+                    self.state = 101
                     localctx.right = self.exp(5) 
-                self.state = 99
+                self.state = 107
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
 
@@ -708,6 +758,7 @@ class PytovParser ( Parser ):
 
 
     class AtomContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -758,32 +809,32 @@ class PytovParser ( Parser ):
         localctx = PytovParser.AtomContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_atom)
         try:
-            self.state = 105
+            self.state = 113
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [PytovParser.TRUE, PytovParser.FALSE]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 100
+                self.state = 108
                 self.boolTF()
                 pass
             elif token in [PytovParser.STRING]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 101
+                self.state = 109
                 self.string()
                 pass
             elif token in [PytovParser.DECIMAL]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 102
+                self.state = 110
                 self.decimal()
                 pass
             elif token in [PytovParser.IDENTIFIER]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 103
+                self.state = 111
                 self.identifier()
                 pass
             elif token in [PytovParser.T__0]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 104
+                self.state = 112
                 self.listr()
                 pass
             else:
@@ -799,6 +850,7 @@ class PytovParser ( Parser ):
 
 
     class ListrContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -835,17 +887,17 @@ class PytovParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 107
+            self.state = 115
             self.match(PytovParser.T__0)
-            self.state = 109
+            self.state = 117
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER))) != 0):
-                self.state = 108
+                self.state = 116
                 self.parameterInputList(0)
 
 
-            self.state = 111
+            self.state = 119
             self.match(PytovParser.T__1)
         except RecognitionException as re:
             localctx.exception = re
@@ -857,6 +909,7 @@ class PytovParser ( Parser ):
 
 
     class OpCpBnContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -899,22 +952,22 @@ class PytovParser ( Parser ):
         localctx = PytovParser.OpCpBnContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_opCpBn)
         try:
-            self.state = 116
+            self.state = 124
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [PytovParser.ADD, PytovParser.SUBTRACT, PytovParser.MULT, PytovParser.DIVIDE, PytovParser.FLOOR_DIVISION, PytovParser.MODULO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 113
+                self.state = 121
                 self.operator()
                 pass
             elif token in [PytovParser.GT, PytovParser.GE, PytovParser.LT, PytovParser.LE, PytovParser.EQ, PytovParser.NOT_EQ]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 114
+                self.state = 122
                 self.comparator()
                 pass
             elif token in [PytovParser.AND, PytovParser.OR]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 115
+                self.state = 123
                 self.binary()
                 pass
             else:
@@ -930,6 +983,7 @@ class PytovParser ( Parser ):
 
 
     class NotlContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -964,7 +1018,7 @@ class PytovParser ( Parser ):
         self.enterRule(localctx, 14, self.RULE_notl)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 118
+            self.state = 126
             self.match(PytovParser.NOT)
         except RecognitionException as re:
             localctx.exception = re
@@ -976,6 +1030,7 @@ class PytovParser ( Parser ):
 
 
     class IdentifierContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1010,7 +1065,7 @@ class PytovParser ( Parser ):
         self.enterRule(localctx, 16, self.RULE_identifier)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 120
+            self.state = 128
             self.match(PytovParser.IDENTIFIER)
         except RecognitionException as re:
             localctx.exception = re
@@ -1022,6 +1077,7 @@ class PytovParser ( Parser ):
 
 
     class DecimalContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1056,7 +1112,7 @@ class PytovParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_decimal)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 122
+            self.state = 130
             self.match(PytovParser.DECIMAL)
         except RecognitionException as re:
             localctx.exception = re
@@ -1068,6 +1124,7 @@ class PytovParser ( Parser ):
 
 
     class StringContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1102,7 +1159,7 @@ class PytovParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_string)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 124
+            self.state = 132
             self.match(PytovParser.STRING)
         except RecognitionException as re:
             localctx.exception = re
@@ -1114,6 +1171,7 @@ class PytovParser ( Parser ):
 
 
     class ComparatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1164,7 +1222,7 @@ class PytovParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 126
+            self.state = 134
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.GT) | (1 << PytovParser.GE) | (1 << PytovParser.LT) | (1 << PytovParser.LE) | (1 << PytovParser.EQ) | (1 << PytovParser.NOT_EQ))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -1181,6 +1239,7 @@ class PytovParser ( Parser ):
 
 
     class BinaryContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1219,7 +1278,7 @@ class PytovParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 128
+            self.state = 136
             _la = self._input.LA(1)
             if not(_la==PytovParser.AND or _la==PytovParser.OR):
                 self._errHandler.recoverInline(self)
@@ -1236,6 +1295,7 @@ class PytovParser ( Parser ):
 
 
     class OperatorContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1286,7 +1346,7 @@ class PytovParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 130
+            self.state = 138
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.ADD) | (1 << PytovParser.SUBTRACT) | (1 << PytovParser.MULT) | (1 << PytovParser.DIVIDE) | (1 << PytovParser.FLOOR_DIVISION) | (1 << PytovParser.MODULO))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -1303,6 +1363,7 @@ class PytovParser ( Parser ):
 
 
     class BoolTFContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1341,7 +1402,7 @@ class PytovParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 132
+            self.state = 140
             _la = self._input.LA(1)
             if not(_la==PytovParser.TRUE or _la==PytovParser.FALSE):
                 self._errHandler.recoverInline(self)
@@ -1358,6 +1419,7 @@ class PytovParser ( Parser ):
 
 
     class IfStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1411,55 +1473,59 @@ class PytovParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 134
+            self.state = 142
             self.match(PytovParser.T__2)
-            self.state = 135
+            self.state = 143
             self.exp(0)
-            self.state = 136
+            self.state = 144
             self.block()
-            self.state = 147
+            self.state = 158
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 139
+                    self.state = 149
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==PytovParser.SEMI_COLON or _la==PytovParser.NEW_LINE:
-                        self.state = 138
+                    while _la==PytovParser.SEMI_COLON or _la==PytovParser.NEW_LINE:
+                        self.state = 146
                         self.seperators()
+                        self.state = 151
+                        self._errHandler.sync(self)
+                        _la = self._input.LA(1)
 
-
-                    self.state = 141
+                    self.state = 152
                     _la = self._input.LA(1)
                     if not(_la==PytovParser.T__3 or _la==PytovParser.T__4):
                         self._errHandler.recoverInline(self)
                     else:
                         self._errHandler.reportMatch(self)
                         self.consume()
-                    self.state = 142
+                    self.state = 153
                     self.exp(0)
-                    self.state = 143
+                    self.state = 154
                     self.block() 
-                self.state = 149
+                self.state = 160
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
 
-            self.state = 155
+            self.state = 169
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,10,self._ctx)
             if la_ == 1:
-                self.state = 151
+                self.state = 164
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==PytovParser.SEMI_COLON or _la==PytovParser.NEW_LINE:
-                    self.state = 150
+                while _la==PytovParser.SEMI_COLON or _la==PytovParser.NEW_LINE:
+                    self.state = 161
                     self.seperators()
+                    self.state = 166
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
 
-
-                self.state = 153
+                self.state = 167
                 self.match(PytovParser.T__5)
-                self.state = 154
+                self.state = 168
                 self.block()
 
 
@@ -1472,7 +1538,328 @@ class PytovParser ( Parser ):
         return localctx
 
 
+    class BreakpContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def BREAK(self):
+            return self.getToken(PytovParser.BREAK, 0)
+
+        def getRuleIndex(self):
+            return PytovParser.RULE_breakp
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBreakp" ):
+                listener.enterBreakp(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBreakp" ):
+                listener.exitBreakp(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBreakp" ):
+                return visitor.visitBreakp(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def breakp(self):
+
+        localctx = PytovParser.BreakpContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_breakp)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 171
+            self.match(PytovParser.BREAK)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class SwitchCaseContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exp(self):
+            return self.getTypedRuleContext(PytovParser.ExpContext,0)
+
+
+        def block(self):
+            return self.getTypedRuleContext(PytovParser.BlockContext,0)
+
+
+        def seperators(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(PytovParser.SeperatorsContext)
+            else:
+                return self.getTypedRuleContext(PytovParser.SeperatorsContext,i)
+
+
+        def getRuleIndex(self):
+            return PytovParser.RULE_switchCase
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSwitchCase" ):
+                listener.enterSwitchCase(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSwitchCase" ):
+                listener.exitSwitchCase(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSwitchCase" ):
+                return visitor.visitSwitchCase(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def switchCase(self):
+
+        localctx = PytovParser.SwitchCaseContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 34, self.RULE_switchCase)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 173
+            self.match(PytovParser.T__6)
+            self.state = 174
+            self.exp(0)
+            self.state = 175
+            self.block()
+            self.state = 179
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,11,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 176
+                    self.seperators() 
+                self.state = 181
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,11,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class SwitchElseContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def block(self):
+            return self.getTypedRuleContext(PytovParser.BlockContext,0)
+
+
+        def seperators(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(PytovParser.SeperatorsContext)
+            else:
+                return self.getTypedRuleContext(PytovParser.SeperatorsContext,i)
+
+
+        def getRuleIndex(self):
+            return PytovParser.RULE_switchElse
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSwitchElse" ):
+                listener.enterSwitchElse(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSwitchElse" ):
+                listener.exitSwitchElse(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSwitchElse" ):
+                return visitor.visitSwitchElse(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def switchElse(self):
+
+        localctx = PytovParser.SwitchElseContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 36, self.RULE_switchElse)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 182
+            self.match(PytovParser.T__5)
+            self.state = 183
+            self.block()
+            self.state = 187
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 184
+                    self.seperators() 
+                self.state = 189
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class SwitchStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exp(self):
+            return self.getTypedRuleContext(PytovParser.ExpContext,0)
+
+
+        def openCurly(self):
+            return self.getTypedRuleContext(PytovParser.OpenCurlyContext,0)
+
+
+        def closeCurly(self):
+            return self.getTypedRuleContext(PytovParser.CloseCurlyContext,0)
+
+
+        def seperators(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(PytovParser.SeperatorsContext)
+            else:
+                return self.getTypedRuleContext(PytovParser.SeperatorsContext,i)
+
+
+        def switchCase(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(PytovParser.SwitchCaseContext)
+            else:
+                return self.getTypedRuleContext(PytovParser.SwitchCaseContext,i)
+
+
+        def switchElse(self):
+            return self.getTypedRuleContext(PytovParser.SwitchElseContext,0)
+
+
+        def getRuleIndex(self):
+            return PytovParser.RULE_switchStatement
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSwitchStatement" ):
+                listener.enterSwitchStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSwitchStatement" ):
+                listener.exitSwitchStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSwitchStatement" ):
+                return visitor.visitSwitchStatement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def switchStatement(self):
+
+        localctx = PytovParser.SwitchStatementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 38, self.RULE_switchStatement)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 190
+            self.match(PytovParser.T__7)
+            self.state = 191
+            self.exp(0)
+            self.state = 192
+            self.openCurly()
+            self.state = 196
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 193
+                    self.seperators() 
+                self.state = 198
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
+
+            self.state = 202
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==PytovParser.T__6:
+                self.state = 199
+                self.switchCase()
+                self.state = 204
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 208
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,15,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 205
+                    self.seperators() 
+                self.state = 210
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,15,self._ctx)
+
+            self.state = 212
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==PytovParser.T__5:
+                self.state = 211
+                self.switchElse()
+
+
+            self.state = 217
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            while _la==PytovParser.SEMI_COLON or _la==PytovParser.NEW_LINE:
+                self.state = 214
+                self.seperators()
+                self.state = 219
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+
+            self.state = 220
+            self.closeCurly()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
     class IdentifierListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1508,30 +1895,30 @@ class PytovParser ( Parser ):
     def identifierList(self):
 
         localctx = PytovParser.IdentifierListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_identifierList)
+        self.enterRule(localctx, 40, self.RULE_identifierList)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 157
+            self.state = 222
             self.identifier()
-            self.state = 162
+            self.state = 227
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,11,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,18,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 158
-                    self.match(PytovParser.T__6)
-                    self.state = 159
+                    self.state = 223
+                    self.match(PytovParser.T__8)
+                    self.state = 224
                     self.identifier() 
-                self.state = 164
+                self.state = 229
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,11,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,18,self._ctx)
 
-            self.state = 166
+            self.state = 231
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
             if la_ == 1:
-                self.state = 165
-                self.match(PytovParser.T__6)
+                self.state = 230
+                self.match(PytovParser.T__8)
 
 
         except RecognitionException as re:
@@ -1544,6 +1931,7 @@ class PytovParser ( Parser ):
 
 
     class DeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1580,19 +1968,19 @@ class PytovParser ( Parser ):
     def declaration(self):
 
         localctx = PytovParser.DeclarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_declaration)
+        self.enterRule(localctx, 42, self.RULE_declaration)
         try:
-            self.state = 170
+            self.state = 235
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [PytovParser.IDENTIFIER]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 168
+                self.state = 233
                 self.variableDeclaration()
                 pass
-            elif token in [PytovParser.T__11, PytovParser.T__12, PytovParser.T__13]:
+            elif token in [PytovParser.T__13, PytovParser.T__14, PytovParser.T__15]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 169
+                self.state = 234
                 self.funcDeclaration()
                 pass
             else:
@@ -1608,6 +1996,7 @@ class PytovParser ( Parser ):
 
 
     class DeclarationListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1643,30 +2032,30 @@ class PytovParser ( Parser ):
     def declarationList(self):
 
         localctx = PytovParser.DeclarationListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_declarationList)
+        self.enterRule(localctx, 44, self.RULE_declarationList)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 172
+            self.state = 237
             self.variableDeclaration()
-            self.state = 177
+            self.state = 242
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,14,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 173
-                    self.match(PytovParser.T__6)
-                    self.state = 174
+                    self.state = 238
+                    self.match(PytovParser.T__8)
+                    self.state = 239
                     self.variableDeclaration() 
-                self.state = 179
+                self.state = 244
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,14,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
 
-            self.state = 181
+            self.state = 246
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,22,self._ctx)
             if la_ == 1:
-                self.state = 180
-                self.match(PytovParser.T__6)
+                self.state = 245
+                self.match(PytovParser.T__8)
 
 
         except RecognitionException as re:
@@ -1679,6 +2068,7 @@ class PytovParser ( Parser ):
 
 
     class VariableDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1719,23 +2109,23 @@ class PytovParser ( Parser ):
     def variableDeclaration(self):
 
         localctx = PytovParser.VariableDeclarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_variableDeclaration)
+        self.enterRule(localctx, 46, self.RULE_variableDeclaration)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 183
+            self.state = 248
             self.identifier()
-            self.state = 184
-            self.match(PytovParser.T__7)
-            self.state = 187
+            self.state = 249
+            self.match(PytovParser.T__9)
+            self.state = 252
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,23,self._ctx)
             if la_ == 1:
-                self.state = 185
+                self.state = 250
                 self.exp(0)
                 pass
 
             elif la_ == 2:
-                self.state = 186
+                self.state = 251
                 self.funcCall()
                 pass
 
@@ -1750,6 +2140,7 @@ class PytovParser ( Parser ):
 
 
     class ExpListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1785,30 +2176,30 @@ class PytovParser ( Parser ):
     def expList(self):
 
         localctx = PytovParser.ExpListContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_expList)
+        self.enterRule(localctx, 48, self.RULE_expList)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 189
+            self.state = 254
             self.exp(0)
-            self.state = 194
+            self.state = 259
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,24,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 190
-                    self.match(PytovParser.T__6)
-                    self.state = 191
+                    self.state = 255
+                    self.match(PytovParser.T__8)
+                    self.state = 256
                     self.exp(0) 
-                self.state = 196
+                self.state = 261
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,24,self._ctx)
 
-            self.state = 198
+            self.state = 263
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
             if la_ == 1:
-                self.state = 197
-                self.match(PytovParser.T__6)
+                self.state = 262
+                self.match(PytovParser.T__8)
 
 
         except RecognitionException as re:
@@ -1821,6 +2212,7 @@ class PytovParser ( Parser ):
 
 
     class ParameterListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1865,28 +2257,28 @@ class PytovParser ( Parser ):
         _parentState = self.state
         localctx = PytovParser.ParameterListContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 42
-        self.enterRecursionRule(localctx, 42, self.RULE_parameterList, _p)
+        _startState = 50
+        self.enterRecursionRule(localctx, 50, self.RULE_parameterList, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 203
+            self.state = 268
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,26,self._ctx)
             if la_ == 1:
-                self.state = 201
+                self.state = 266
                 self.identifierList()
                 pass
 
             elif la_ == 2:
-                self.state = 202
+                self.state = 267
                 self.declarationList()
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 210
+            self.state = 275
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -1894,17 +2286,17 @@ class PytovParser ( Parser ):
                     _prevctx = localctx
                     localctx = PytovParser.ParameterListContext(self, _parentctx, _parentState)
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_parameterList)
-                    self.state = 205
+                    self.state = 270
                     if not self.precpred(self._ctx, 3):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
-                    self.state = 206
-                    self.match(PytovParser.T__6)
-                    self.state = 207
+                    self.state = 271
+                    self.match(PytovParser.T__8)
+                    self.state = 272
                     self.parameterList(4) 
-                self.state = 212
+                self.state = 277
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,20,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,27,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1916,6 +2308,7 @@ class PytovParser ( Parser ):
 
 
     class ParameterInputListContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1960,28 +2353,28 @@ class PytovParser ( Parser ):
         _parentState = self.state
         localctx = PytovParser.ParameterInputListContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 44
-        self.enterRecursionRule(localctx, 44, self.RULE_parameterInputList, _p)
+        _startState = 52
+        self.enterRecursionRule(localctx, 52, self.RULE_parameterInputList, _p)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 216
+            self.state = 281
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,28,self._ctx)
             if la_ == 1:
-                self.state = 214
+                self.state = 279
                 self.expList()
                 pass
 
             elif la_ == 2:
-                self.state = 215
+                self.state = 280
                 self.declarationList()
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 223
+            self.state = 288
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
@@ -1989,17 +2382,17 @@ class PytovParser ( Parser ):
                     _prevctx = localctx
                     localctx = PytovParser.ParameterInputListContext(self, _parentctx, _parentState)
                     self.pushNewRecursionContext(localctx, _startState, self.RULE_parameterInputList)
-                    self.state = 218
+                    self.state = 283
                     if not self.precpred(self._ctx, 3):
                         from antlr4.error.Errors import FailedPredicateException
                         raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
-                    self.state = 219
-                    self.match(PytovParser.T__6)
-                    self.state = 220
+                    self.state = 284
+                    self.match(PytovParser.T__8)
+                    self.state = 285
                     self.parameterInputList(4) 
-                self.state = 225
+                self.state = 290
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,22,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,29,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2011,6 +2404,7 @@ class PytovParser ( Parser ):
 
 
     class WhileStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2047,14 +2441,14 @@ class PytovParser ( Parser ):
     def whileStatement(self):
 
         localctx = PytovParser.WhileStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_whileStatement)
+        self.enterRule(localctx, 54, self.RULE_whileStatement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 226
-            self.match(PytovParser.T__8)
-            self.state = 227
+            self.state = 291
+            self.match(PytovParser.T__10)
+            self.state = 292
             self.exp(0)
-            self.state = 228
+            self.state = 293
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -2066,6 +2460,7 @@ class PytovParser ( Parser ):
 
 
     class ForStatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2105,18 +2500,18 @@ class PytovParser ( Parser ):
     def forStatement(self):
 
         localctx = PytovParser.ForStatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 48, self.RULE_forStatement)
+        self.enterRule(localctx, 56, self.RULE_forStatement)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 230
-            self.match(PytovParser.T__9)
-            self.state = 231
+            self.state = 295
+            self.match(PytovParser.T__11)
+            self.state = 296
             self.exp(0)
-            self.state = 232
-            self.match(PytovParser.T__10)
-            self.state = 233
+            self.state = 297
+            self.match(PytovParser.T__12)
+            self.state = 298
             self.exp(0)
-            self.state = 234
+            self.state = 299
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -2128,6 +2523,7 @@ class PytovParser ( Parser ):
 
 
     class FuncDeclarationContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2174,32 +2570,32 @@ class PytovParser ( Parser ):
     def funcDeclaration(self):
 
         localctx = PytovParser.FuncDeclarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 50, self.RULE_funcDeclaration)
+        self.enterRule(localctx, 58, self.RULE_funcDeclaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 236
+            self.state = 301
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__11) | (1 << PytovParser.T__12) | (1 << PytovParser.T__13))) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__13) | (1 << PytovParser.T__14) | (1 << PytovParser.T__15))) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
                 self.consume()
-            self.state = 237
+            self.state = 302
             self.identifier()
-            self.state = 238
+            self.state = 303
             self.match(PytovParser.LPAREN)
-            self.state = 240
+            self.state = 305
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==PytovParser.IDENTIFIER:
-                self.state = 239
+                self.state = 304
                 self.parameterList(0)
 
 
-            self.state = 242
+            self.state = 307
             self.match(PytovParser.RPAREN)
-            self.state = 243
+            self.state = 308
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -2211,6 +2607,7 @@ class PytovParser ( Parser ):
 
 
     class FuncCallContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2253,23 +2650,23 @@ class PytovParser ( Parser ):
     def funcCall(self):
 
         localctx = PytovParser.FuncCallContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 52, self.RULE_funcCall)
+        self.enterRule(localctx, 60, self.RULE_funcCall)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 245
+            self.state = 310
             self.identifier()
-            self.state = 246
+            self.state = 311
             self.match(PytovParser.LPAREN)
-            self.state = 248
+            self.state = 313
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER))) != 0):
-                self.state = 247
+                self.state = 312
                 self.parameterInputList(0)
 
 
-            self.state = 250
+            self.state = 315
             self.match(PytovParser.RPAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -2281,6 +2678,7 @@ class PytovParser ( Parser ):
 
 
     class ReturnpContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2316,12 +2714,12 @@ class PytovParser ( Parser ):
     def returnp(self):
 
         localctx = PytovParser.ReturnpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 54, self.RULE_returnp)
+        self.enterRule(localctx, 62, self.RULE_returnp)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 252
+            self.state = 317
             self.match(PytovParser.RETURN)
-            self.state = 253
+            self.state = 318
             self.exp(0)
         except RecognitionException as re:
             localctx.exception = re
@@ -2333,6 +2731,7 @@ class PytovParser ( Parser ):
 
 
     class StatementContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2340,6 +2739,18 @@ class PytovParser ( Parser ):
 
         def ifStatement(self):
             return self.getTypedRuleContext(PytovParser.IfStatementContext,0)
+
+
+        def switchStatement(self):
+            return self.getTypedRuleContext(PytovParser.SwitchStatementContext,0)
+
+
+        def switchCase(self):
+            return self.getTypedRuleContext(PytovParser.SwitchCaseContext,0)
+
+
+        def switchElse(self):
+            return self.getTypedRuleContext(PytovParser.SwitchElseContext,0)
 
 
         def whileStatement(self):
@@ -2356,6 +2767,10 @@ class PytovParser ( Parser ):
 
         def returnp(self):
             return self.getTypedRuleContext(PytovParser.ReturnpContext,0)
+
+
+        def breakp(self):
+            return self.getTypedRuleContext(PytovParser.BreakpContext,0)
 
 
         def getRuleIndex(self):
@@ -2381,35 +2796,55 @@ class PytovParser ( Parser ):
     def statement(self):
 
         localctx = PytovParser.StatementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 56, self.RULE_statement)
+        self.enterRule(localctx, 64, self.RULE_statement)
         try:
-            self.state = 260
+            self.state = 329
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [PytovParser.T__2]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 255
+                self.state = 320
                 self.ifStatement()
                 pass
-            elif token in [PytovParser.T__8]:
+            elif token in [PytovParser.T__7]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 256
+                self.state = 321
+                self.switchStatement()
+                pass
+            elif token in [PytovParser.T__6]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 322
+                self.switchCase()
+                pass
+            elif token in [PytovParser.T__5]:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 323
+                self.switchElse()
+                pass
+            elif token in [PytovParser.T__10]:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 324
                 self.whileStatement()
                 pass
-            elif token in [PytovParser.T__9]:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 257
+            elif token in [PytovParser.T__11]:
+                self.enterOuterAlt(localctx, 6)
+                self.state = 325
                 self.forStatement()
                 pass
             elif token in [PytovParser.IDENTIFIER]:
-                self.enterOuterAlt(localctx, 4)
-                self.state = 258
+                self.enterOuterAlt(localctx, 7)
+                self.state = 326
                 self.funcCall()
                 pass
             elif token in [PytovParser.RETURN]:
-                self.enterOuterAlt(localctx, 5)
-                self.state = 259
+                self.enterOuterAlt(localctx, 8)
+                self.state = 327
                 self.returnp()
+                pass
+            elif token in [PytovParser.BREAK]:
+                self.enterOuterAlt(localctx, 9)
+                self.state = 328
+                self.breakp()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -2424,6 +2859,7 @@ class PytovParser ( Parser ):
 
 
     class BlockContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2467,23 +2903,23 @@ class PytovParser ( Parser ):
     def block(self):
 
         localctx = PytovParser.BlockContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 58, self.RULE_block)
+        self.enterRule(localctx, 66, self.RULE_block)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 262
+            self.state = 331
             self.openCurly()
-            self.state = 266
+            self.state = 335
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.T__2) | (1 << PytovParser.T__8) | (1 << PytovParser.T__9) | (1 << PytovParser.T__11) | (1 << PytovParser.T__12) | (1 << PytovParser.T__13) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.RETURN) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER) | (1 << PytovParser.SEMI_COLON) | (1 << PytovParser.NEW_LINE))) != 0):
-                self.state = 263
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << PytovParser.T__0) | (1 << PytovParser.T__2) | (1 << PytovParser.T__5) | (1 << PytovParser.T__6) | (1 << PytovParser.T__7) | (1 << PytovParser.T__10) | (1 << PytovParser.T__11) | (1 << PytovParser.T__13) | (1 << PytovParser.T__14) | (1 << PytovParser.T__15) | (1 << PytovParser.STRING) | (1 << PytovParser.NOT) | (1 << PytovParser.TRUE) | (1 << PytovParser.FALSE) | (1 << PytovParser.LPAREN) | (1 << PytovParser.RETURN) | (1 << PytovParser.BREAK) | (1 << PytovParser.DECIMAL) | (1 << PytovParser.IDENTIFIER) | (1 << PytovParser.SEMI_COLON) | (1 << PytovParser.NEW_LINE))) != 0):
+                self.state = 332
                 self.allCode()
-                self.state = 268
+                self.state = 337
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 269
+            self.state = 338
             self.closeCurly()
         except RecognitionException as re:
             localctx.exception = re
@@ -2495,6 +2931,7 @@ class PytovParser ( Parser ):
 
 
     class OpenCurlyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2526,10 +2963,10 @@ class PytovParser ( Parser ):
     def openCurly(self):
 
         localctx = PytovParser.OpenCurlyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 60, self.RULE_openCurly)
+        self.enterRule(localctx, 68, self.RULE_openCurly)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 271
+            self.state = 340
             self.match(PytovParser.OPEN_CURLY)
         except RecognitionException as re:
             localctx.exception = re
@@ -2541,6 +2978,7 @@ class PytovParser ( Parser ):
 
 
     class CloseCurlyContext(ParserRuleContext):
+        __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2572,10 +3010,10 @@ class PytovParser ( Parser ):
     def closeCurly(self):
 
         localctx = PytovParser.CloseCurlyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 62, self.RULE_closeCurly)
+        self.enterRule(localctx, 70, self.RULE_closeCurly)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 273
+            self.state = 342
             self.match(PytovParser.CLOSE_CURLY)
         except RecognitionException as re:
             localctx.exception = re
@@ -2591,8 +3029,8 @@ class PytovParser ( Parser ):
         if self._predicates == None:
             self._predicates = dict()
         self._predicates[3] = self.exp_sempred
-        self._predicates[21] = self.parameterList_sempred
-        self._predicates[22] = self.parameterInputList_sempred
+        self._predicates[25] = self.parameterList_sempred
+        self._predicates[26] = self.parameterInputList_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))

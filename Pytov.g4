@@ -88,8 +88,33 @@ boolTF
 ifStatement
  : 
  ('if' exp block)
- (seperators? ('elif'|'else if') exp block)*
- (seperators? 'else' block)?
+ (seperators* ('elif'|'else if') exp block)*
+ (seperators* 'else' block)?
+ ;
+
+breakp
+ : BREAK
+ ;
+
+switchCase
+ : 'case' exp block
+ seperators*
+ ;
+
+switchElse
+ : 'else' block
+ seperators*
+ ;
+
+switchStatement
+ : 
+ 'switch' exp openCurly
+ seperators*
+ switchCase*
+ seperators*
+ switchElse?
+ seperators*
+ closeCurly
  ;
 
 identifierList
@@ -158,12 +183,15 @@ returnp
 
 statement
  : ifStatement
+ | switchStatement
+ | switchCase
+ | switchElse
  | whileStatement
  | forStatement
  | funcCall
  | returnp
+ | breakp
  ;
-
 
 block
  : 
@@ -218,6 +246,7 @@ NOT_EQ     : '!=' ;
 LPAREN     : '(' ;
 RPAREN     : ')' ;
 RETURN     : 'return';
+BREAK      : 'break';
 DECIMAL    : [0-9]+ ( '.' [0-9]+ )? ;
 IDENTIFIER : [a-zA-Z_] [a-zA-Z0-9_]* ;
 

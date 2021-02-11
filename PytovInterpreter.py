@@ -13,6 +13,8 @@ class PytovInterpreter(PytovVisitor):
         self.block_balance = 0
         self.block_is_true = True
         self.last_block_is_true = True
+        self.in_switch = False
+        self.in_loop = False
         self.is_in_func = False
         self.active_funcs = []
         self.func_out = None
@@ -103,6 +105,12 @@ class PytovInterpreter(PytovVisitor):
         else:
             self.errorThrower._raise([ctx.start.line, ctx.getText()], "SyntaxError", f"You cannot use return outside function.")
 
+    def visitBreakp(self, ctx:PytovParser.BreakpContext):
+        if self.in_switch or self.in_loop:
+            raise BreakIndicator("return found.")
+        else:
+            self.errorThrower._raise([ctx.start.line, ctx.getText()], "SyntaxError", f"You cannot use return outside loop or switch.")
+
     def visitFuncDeclaration(self, ctx:PytovParser.FuncDeclarationContext):
         if len(ctx.children) == 5:
             self.variables[ctx.children[1].getText()] = {'name':ctx.children[1].getText(), 'body':ctx.children[4], 'localVariables':{}, 'args':[[],{}]}
@@ -185,22 +193,46 @@ class PytovInterpreter(PytovVisitor):
                         self.block_is_true = True
                         self.visit(ctx.children[3*i+2])
                         return
+    
+    def visitSwitchStatement(self, ctx:PytovParser.SwitchStatementContext):
+        ctx.children = [child for child in ctx.children if type(child) != PytovParser.SeperatorsContext]
+        cases = [child for child in ctx.children if type(child) == PytovParser.SwitchCaseContext or type(child) == PytovParser.SwitchElseContext]
+        switch_on = self.visit(ctx.children[1])
+        self.in_switch = True
+        for case in cases:
+            if type(case) == PytovParser.SwitchCaseContext and switch_on == self.visit(case.children[1]):
+                try:
+                    self.visit(case.children[2])
+                except BreakIndicator:
+                    break
             
+            elif type(case) == PytovParser.SwitchElseContext:
+                try:
+                    self.visit(case.children[1])
+                except BreakIndicator:
+                    break
+        self.in_switch = False
+
 
 
     def visitWhileStatement(self, ctx:PytovParser.WhileStatementContext):
-        while self.visit(ctx.children[1]):
-            self.visit(ctx.children[2])
+        try:
+            while self.visit(ctx.children[1]):
+                self.visit(ctx.children[2])
+        except BreakIndicator:
+            pass
 
     def visitForStatement(self, ctx:PytovParser.ForStatementContext):
         container = self.visit(ctx.children[3])
-        
-        for i in range(len(container)):
-            if self.is_in_func:
-                self.active_funcs[-1]['localVariables'][ctx.children[1].getText()] = container[i]
-            else:
-                self.variables[ctx.children[1].getText()] = container[i]
-            self.visit(ctx.children[4])
+        try:
+            for i in range(len(container)):
+                if self.is_in_func:
+                    self.active_funcs[-1]['localVariables'][ctx.children[1].getText()] = container[i]
+                else:
+                    self.variables[ctx.children[1].getText()] = container[i]
+                self.visit(ctx.children[4])
+        except BreakIndicator:
+            pass
 
 
     def visitOperator(self, ctx:PytovParser.OperatorContext):
