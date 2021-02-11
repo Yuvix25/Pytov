@@ -178,7 +178,7 @@ funcCall
  ;
 
 returnp
- : 'return' exp
+ : 'return' exp?
  ;
 
 statement

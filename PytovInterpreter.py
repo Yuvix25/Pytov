@@ -100,7 +100,10 @@ class PytovInterpreter(PytovVisitor):
 
     def visitReturnp(self, ctx:PytovParser.ReturnpContext):
         if self.is_in_func:
-            self.func_out = self.visit(ctx.children[1])
+            if len(ctx.children) > 1:
+                self.func_out = self.visit(ctx.children[1])
+            else:
+                self.func_out = None
             raise ReturnIndicator("return found.")
         else:
             self.errorThrower._raise([ctx.start.line, ctx.getText()], "SyntaxError", f"You cannot use return outside function.")
