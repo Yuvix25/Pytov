@@ -61,6 +61,11 @@ for x in a{
         break // loop will stop when x == 4
     }
 }
+
+for (i = 5; i<10; i++){
+    print(i)
+}
+// output: 5, 6, 7, 8, 9
 ```
 #### While:
 ```cs
@@ -75,7 +80,7 @@ while x < 5{
 
 ### Switch:
 ```js
-// for more info about switch take a look at switch at js, it is exactly the same...
+// for more info about switch take a look at switch in js, it is exactly the same...
 a = "hi"
 switch a{
     case "hello":

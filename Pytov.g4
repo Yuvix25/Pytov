@@ -27,6 +27,8 @@ exp
  | notl exp                       #notExpression
  | atom                           #atomExpression
  | funcCall                       #funcCallExpression
+ | incDec                         #incDecExpression
+ | beforeIncDec                   #beforeIncDecExpression
  ;
 
 atom
@@ -39,6 +41,22 @@ atom
 
 listr
  : '[' parameterInputList? ']'
+ ;
+
+incDec
+ : identifier (inc | dec)
+ ;
+
+beforeIncDec
+ : (inc | dec) identifier
+ ;
+
+inc
+ : INC
+ ;
+
+dec
+ : DEC
  ;
 
 opCpBn
@@ -131,7 +149,7 @@ declarationList
  ;
 
 variableDeclaration 
- : identifier '=' (exp | funcCall)
+ : 'global'? identifier '=' (exp | funcCall)
  ;
 
 expList
@@ -162,6 +180,11 @@ forStatement
  : 'for' exp 'in' exp block
  ;
 
+nonPythonForStatement
+ : ('for' variableDeclaration ';' exp ';' (exp|variableDeclaration) block)
+ | ('for' '(' variableDeclaration ';' exp ';' (exp|variableDeclaration) ')' block)
+ ;
+
 funcDeclaration
  : ('func' | 'function' | 'def')
  identifier
@@ -184,6 +207,7 @@ statement
  | switchDefault
  | whileStatement
  | forStatement
+ | nonPythonForStatement
  | funcCall
  | returnp
  | breakp
@@ -228,6 +252,8 @@ OR         : '||';
 NOT        : '!';
 TRUE       : 'true' | 'True';
 FALSE      : 'false' | 'False';
+INC        : '++';
+DEC        : '--';
 ADD        : '+';
 SUBTRACT   : '-';
 MULT       : '*';

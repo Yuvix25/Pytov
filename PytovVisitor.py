@@ -24,6 +24,11 @@ class PytovVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PytovParser#beforeIncDecExpression.
+    def visitBeforeIncDecExpression(self, ctx:PytovParser.BeforeIncDecExpressionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PytovParser#atomExpression.
     def visitAtomExpression(self, ctx:PytovParser.AtomExpressionContext):
         return self.visitChildren(ctx)
@@ -49,6 +54,11 @@ class PytovVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PytovParser#incDecExpression.
+    def visitIncDecExpression(self, ctx:PytovParser.IncDecExpressionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PytovParser#atom.
     def visitAtom(self, ctx:PytovParser.AtomContext):
         return self.visitChildren(ctx)
@@ -56,6 +66,26 @@ class PytovVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by PytovParser#listr.
     def visitListr(self, ctx:PytovParser.ListrContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#incDec.
+    def visitIncDec(self, ctx:PytovParser.IncDecContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#beforeIncDec.
+    def visitBeforeIncDec(self, ctx:PytovParser.BeforeIncDecContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#inc.
+    def visitInc(self, ctx:PytovParser.IncContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#dec.
+    def visitDec(self, ctx:PytovParser.DecContext):
         return self.visitChildren(ctx)
 
 
@@ -171,6 +201,11 @@ class PytovVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by PytovParser#forStatement.
     def visitForStatement(self, ctx:PytovParser.ForStatementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#nonPythonForStatement.
+    def visitNonPythonForStatement(self, ctx:PytovParser.NonPythonForStatementContext):
         return self.visitChildren(ctx)
 
 

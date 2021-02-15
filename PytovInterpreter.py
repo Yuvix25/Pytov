@@ -7,6 +7,7 @@ from exceptions import *
 class PytovInterpreter(PytovVisitor):
     def __init__(self, file_name):
         self.variables = {}
+        self.global_variables = {}
         self.errorThrower = LineException(file_name)
         self.builtin_funcs = ['print', 'range']
 
@@ -22,13 +23,15 @@ class PytovInterpreter(PytovVisitor):
     def visitTerminal(self, ctx:TerminalNodeImpl):
         if self.is_in_func:
             value = ctx.getText()
-            if value in list(self.active_funcs[-1]['localVariables'].keys()):
+            if value in list(self.active_funcs[-1]['localVariables'].keys()) + list(self.global_variables.keys()):
                 return self.active_funcs[-1]['localVariables'][value]
             return value
         else:
             value = ctx.getText()
             if value in list(self.variables.keys()):
                 return self.variables[value]
+            elif value in list(self.global_variables.keys()):
+                return self.global_variables[value]
             return value
 
     def visitDeclarationList(self, ctx:PytovParser.DeclarationListContext):
@@ -220,8 +223,6 @@ class PytovInterpreter(PytovVisitor):
             case_index += 1
         self.in_switch = False
 
-
-
     def visitWhileStatement(self, ctx:PytovParser.WhileStatementContext):
         self.in_loop = True
         try:
@@ -245,6 +246,22 @@ class PytovInterpreter(PytovVisitor):
             pass
         self.in_loop = False
 
+    def visitNonPythonForStatement(self, ctx:PytovParser.nonPythonForStatement):
+        if len(ctx.children) == 9:
+            ctx.children = ctx.children[2:]
+            ctx.children.pop(-2)
+
+        self.visit(ctx.children[0])
+        while_cond = ctx.children[2]
+        self.in_loop = True
+        try:
+            while self.visit(while_cond):
+                self.visit(ctx.children[-1]) # Block
+                self.visit(ctx.children[-2]) # Execute at end of every iteration
+        except BreakIndicator:
+            pass
+        self.in_loop = False
+
 
     def visitOperator(self, ctx:PytovParser.OperatorContext):
         return ctx.getText()
@@ -263,6 +280,47 @@ class PytovInterpreter(PytovVisitor):
 
     def visitAtom(self, ctx:PytovParser.AtomContext):
         return self.visit(ctx.children[0])
+
+    def visitIncDec(self, ctx:PytovParser.IncDecContext):
+        if type(ctx.children[1]) == PytovParser.IncContext:
+            add = 1
+        else:
+            add = -1
+
+        value = ctx.children[0].getText()
+        if self.is_in_func:
+            if value in list(self.active_funcs[-1]['localVariables'].keys()):
+                self.active_funcs[-1]['localVariables'][value] += add
+        elif value in list(self.variables.keys()):
+            self.variables[value] += add
+        elif value in list(self.global_variables.keys()):
+            self.global_variables[value] += add
+        elif value not in self.builtin_funcs:
+            self.errorThrower._raise([ctx.start.line, ctx.getText()], "NameError", f"Name '{value}' is not defiend.")
+        
+        return self.visit(ctx.children[0]) - add
+
+    def visitBeforeIncDec(self, ctx:PytovParser.BeforeIncDecContext):
+        if type(ctx.children[0]) == PytovParser.IncContext:
+            add = 1
+        else:
+            add = -1
+
+        value = ctx.children[1].getText()
+        if self.is_in_func:
+            if value in list(self.active_funcs[-1]['localVariables'].keys()):
+                self.active_funcs[-1]['localVariables'][value] += add
+        elif value in list(self.variables.keys()):
+            self.variables[value] += add
+        elif value in list(self.global_variables.keys()):
+            self.global_variables[value] += add
+        elif value not in self.builtin_funcs:
+            self.errorThrower._raise([ctx.start.line, ctx.getText()], "NameError", f"Name '{value}' is not defiend.")
+        
+        return self.visit(ctx.children[1])
+            
+
+
 
     def visitOpCpBnExpression(self, ctx:PytovParser.OpCpBnExpressionContext):
         r = self.visit(ctx.right)
@@ -315,10 +373,12 @@ class PytovInterpreter(PytovVisitor):
                 return self.active_funcs[-1]['localVariables'][value]
         elif value in list(self.variables.keys()):
             return self.variables[value]
+        elif value in list(self.global_variables.keys()):
+            return self.global_variables[value]
         elif value not in self.builtin_funcs:
             self.errorThrower._raise([ctx.start.line, ctx.getText()], "NameError", f"Name '{value}' is not defiend.")
         
-        return value
+        self.errorThrower._raise([ctx.start.line, ctx.getText()], "NameError", f"Name '{value}' is not defiend.")
 
     def visitDecimal(self, ctx:PytovParser.DecimalContext):
         value = ctx.getText()
@@ -333,17 +393,14 @@ class PytovInterpreter(PytovVisitor):
         return self.visit(ctx.children[1])[0]
 
     def visitVariableDeclaration(self, ctx:PytovParser.VariableDeclarationContext):
-        if self.block_balance == 0 or self.block_is_true:
+        if len(ctx.children) == 4:
+            self.global_variables[ctx.children[1].getText()] = self.visit(ctx.children[2])
+
+        elif self.block_balance == 0 or self.block_is_true:
             if self.is_in_func:
-                children = ctx.children
-                value = self.visit(children[2])
-
-                self.active_funcs[-1]['localVariables'][children[0].getText()] = value
+                self.active_funcs[-1]['localVariables'][ctx.children[0].getText()] = self.visit(ctx.children[2])
             else:
-                children = ctx.children
-                value = self.visit(children[2])
-
-                self.variables[children[0].getText()] = value
+                self.variables[ctx.children[0].getText()] = self.visit(ctx.children[2])
 
     def visitBlock(self, ctx:PytovParser.BlockContext):
         if (self.block_balance == 0) or (self.block_is_true):

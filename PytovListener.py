@@ -35,6 +35,15 @@ class PytovListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PytovParser#beforeIncDecExpression.
+    def enterBeforeIncDecExpression(self, ctx:PytovParser.BeforeIncDecExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#beforeIncDecExpression.
+    def exitBeforeIncDecExpression(self, ctx:PytovParser.BeforeIncDecExpressionContext):
+        pass
+
+
     # Enter a parse tree produced by PytovParser#atomExpression.
     def enterAtomExpression(self, ctx:PytovParser.AtomExpressionContext):
         pass
@@ -80,6 +89,15 @@ class PytovListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PytovParser#incDecExpression.
+    def enterIncDecExpression(self, ctx:PytovParser.IncDecExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#incDecExpression.
+    def exitIncDecExpression(self, ctx:PytovParser.IncDecExpressionContext):
+        pass
+
+
     # Enter a parse tree produced by PytovParser#atom.
     def enterAtom(self, ctx:PytovParser.AtomContext):
         pass
@@ -95,6 +113,42 @@ class PytovListener(ParseTreeListener):
 
     # Exit a parse tree produced by PytovParser#listr.
     def exitListr(self, ctx:PytovParser.ListrContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#incDec.
+    def enterIncDec(self, ctx:PytovParser.IncDecContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#incDec.
+    def exitIncDec(self, ctx:PytovParser.IncDecContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#beforeIncDec.
+    def enterBeforeIncDec(self, ctx:PytovParser.BeforeIncDecContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#beforeIncDec.
+    def exitBeforeIncDec(self, ctx:PytovParser.BeforeIncDecContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#inc.
+    def enterInc(self, ctx:PytovParser.IncContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#inc.
+    def exitInc(self, ctx:PytovParser.IncContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#dec.
+    def enterDec(self, ctx:PytovParser.DecContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#dec.
+    def exitDec(self, ctx:PytovParser.DecContext):
         pass
 
 
@@ -302,6 +356,15 @@ class PytovListener(ParseTreeListener):
 
     # Exit a parse tree produced by PytovParser#forStatement.
     def exitForStatement(self, ctx:PytovParser.ForStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#nonPythonForStatement.
+    def enterNonPythonForStatement(self, ctx:PytovParser.NonPythonForStatementContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#nonPythonForStatement.
+    def exitNonPythonForStatement(self, ctx:PytovParser.NonPythonForStatementContext):
         pass
 
 
