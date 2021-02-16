@@ -107,6 +107,15 @@ class PytovListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PytovParser#importp.
+    def enterImportp(self, ctx:PytovParser.ImportpContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#importp.
+    def exitImportp(self, ctx:PytovParser.ImportpContext):
+        pass
+
+
     # Enter a parse tree produced by PytovParser#listr.
     def enterListr(self, ctx:PytovParser.ListrContext):
         pass

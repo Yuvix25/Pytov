@@ -3,9 +3,13 @@ from antlr4.tree.Tree import TerminalNodeImpl
 from PytovVisitor import PytovVisitor
 from PytovParser import PytovParser
 from exceptions import *
+from pytov import main
 
 class PytovInterpreter(PytovVisitor):
-    def __init__(self, file_name):
+    def __init__(self, file_name, name = 'main'):
+        self._name = name
+        self.file_name = file_name.replace('/', '\\')
+
         self.variables = {}
         self.global_variables = {}
         self.errorThrower = LineException(file_name)
@@ -33,6 +37,17 @@ class PytovInterpreter(PytovVisitor):
             elif value in list(self.global_variables.keys()):
                 return self.global_variables[value]
             return value
+
+    def visitImportp(self, ctx:PytovParser.ImportpContext):
+        if type(ctx.children[1]) == PytovParser.string:
+            im_name = ctx.children[1].getText() + ".pv"
+        else:
+            im_name = self.visit(ctx.children[1]).replace('/', '\\')
+        im_name = '\\'.join(self.file_name.split('\\')[:-1]) + '\\' + im_name
+        
+        imported = main(im_name, 'imported')
+        self.variables.update(imported.variables)
+        self.global_variables.update(imported.global_variables)
 
     def visitDeclarationList(self, ctx:PytovParser.DeclarationListContext):
         dec_list = {}
@@ -263,14 +278,14 @@ class PytovInterpreter(PytovVisitor):
         self.in_loop = False
 
 
-    def visitOperator(self, ctx:PytovParser.OperatorContext):
-        return ctx.getText()
+    # def visitOperator(self, ctx:PytovParser.OperatorContext):
+    #     return ctx.getText()
 
-    def visitComparator(self, ctx:PytovParser.ComparatorContext):
-        return ctx.getText()
+    # def visitComparator(self, ctx:PytovParser.ComparatorContext):
+    #     return ctx.getText()
 
-    def visitBinary(self, ctx:PytovParser.BinaryContext):
-        return ctx.getText()
+    # def visitBinary(self, ctx:PytovParser.BinaryContext):
+    #     return ctx.getText()
 
     def visitNotExpression(self, ctx:PytovParser.NotExpressionContext):
         return not self.visit(ctx.children[1])
@@ -318,14 +333,12 @@ class PytovInterpreter(PytovVisitor):
             self.errorThrower._raise([ctx.start.line, ctx.getText()], "NameError", f"Name '{value}' is not defiend.")
         
         return self.visit(ctx.children[1])
-            
-
 
 
     def visitOpCpBnExpression(self, ctx:PytovParser.OpCpBnExpressionContext):
         r = self.visit(ctx.right)
         l = self.visit(ctx.left)
-        o = str(self.visit(ctx.op))
+        o = ctx.op.getText()
 
         if type(r) == str:
             r = '"' + r + '"'
@@ -375,6 +388,8 @@ class PytovInterpreter(PytovVisitor):
             return self.variables[value]
         elif value in list(self.global_variables.keys()):
             return self.global_variables[value]
+        elif value == "__name__":
+            return self._name
         elif value not in self.builtin_funcs:
             self.errorThrower._raise([ctx.start.line, ctx.getText()], "NameError", f"Name '{value}' is not defiend.")
         
@@ -393,11 +408,32 @@ class PytovInterpreter(PytovVisitor):
         return self.visit(ctx.children[1])[0]
 
     def visitVariableDeclaration(self, ctx:PytovParser.VariableDeclarationContext):
+        if len(ctx.children) == 5:
+            try:
+                self.global_variables[ctx.children[1].getText()] = self.visit(ctx.children[3])
+            except KeyError:
+                self.errorThrower._raise([ctx.start.line, ctx.getText()], "NameError", f"(Global) Name '{ctx.children[1].getText()}' is not defiend.")
+
         if len(ctx.children) == 4:
-            self.global_variables[ctx.children[1].getText()] = self.visit(ctx.children[2])
+            if type(ctx.children[0]) == PytovParser.IdentifierContext:
+                op = ctx.children[1].getText()
+                try:
+                    # evaluate is unsafe, not too bad here because parser identified this as an operator, yet need to change in the future.
+                    if ctx.children[0].getText() in self.global_variables:
+                        self.global_variables[ctx.children[0].getText()] = eval(f"{self.global_variables[ctx.children[0].getText()]} {op} {self.visit(ctx.children[3])}")
+                    elif self.is_in_func:
+                        self.active_funcs[-1]['localVariables'][ctx.children[0].getText()] = eval(f"{self.active_funcs[-1]['localVariables'][ctx.children[0].getText()]} {op} {self.visit(ctx.children[3])}")
+                    else:
+                        self.variables[ctx.children[0].getText()] = eval(f"{self.variables[ctx.children[0].getText()]} {op} {self.visit(ctx.children[3])}")
+                except KeyError:
+                    self.errorThrower._raise([ctx.start.line, ctx.getText()], "NameError", f"Name '{ctx.children[0].getText()}' is not defiend.")
+            else:
+                self.global_variables[ctx.children[1].getText()] = self.visit(ctx.children[3])
 
         elif self.block_balance == 0 or self.block_is_true:
-            if self.is_in_func:
+            if ctx.children[0].getText() in self.global_variables:
+                self.global_variables[ctx.children[0].getText()] = self.visit(ctx.children[2])
+            elif self.is_in_func:
                 self.active_funcs[-1]['localVariables'][ctx.children[0].getText()] = self.visit(ctx.children[2])
             else:
                 self.variables[ctx.children[0].getText()] = self.visit(ctx.children[2])

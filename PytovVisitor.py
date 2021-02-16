@@ -64,6 +64,11 @@ class PytovVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PytovParser#importp.
+    def visitImportp(self, ctx:PytovParser.ImportpContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PytovParser#listr.
     def visitListr(self, ctx:PytovParser.ListrContext):
         return self.visitChildren(ctx)

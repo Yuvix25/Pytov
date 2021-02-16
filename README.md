@@ -125,5 +125,24 @@ print_hi_default() // output: hihihi
 print(mult(5, 2)) // output: 10
 ```
 
+
+### Imports:
+#### test2.pv:
+```java
+if __name__ == "main"{ // will be true when file will be runned directly
+    x = 5
+}
+else if __name__ == "imported" { // will be true when file is imported
+    x = 7
+}
+```
+
+#### test1.pv:
+```java
+x = 6
+import test2 // you can also import like this: import "test2.pv"
+print(x) // output will be 7
+```
+
 ---
 See [Examples](https://github.com/Yuvix25/Pytov/tree/main/Examples)

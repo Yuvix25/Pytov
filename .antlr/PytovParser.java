@@ -18,31 +18,32 @@ public class PytovParser extends Parser {
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
 		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
-		T__17=18, T__18=19, STRING=20, COMMENT=21, LINE_COMMENT_C=22, LINE_COMMENT_P=23, 
-		AND=24, OR=25, NOT=26, TRUE=27, FALSE=28, INC=29, DEC=30, ADD=31, SUBTRACT=32, 
-		MULT=33, DIVIDE=34, FLOOR_DIVISION=35, MODULO=36, GT=37, GE=38, LT=39, 
-		LE=40, EQ=41, NOT_EQ=42, LPAREN=43, RPAREN=44, RETURN=45, BREAK=46, DECIMAL=47, 
-		IDENTIFIER=48, OPEN_CURLY=49, CLOSE_CURLY=50, WS=51, SEMI_COLON=52, NEW_LINE=53;
+		T__17=18, T__18=19, T__19=20, STRING=21, COMMENT=22, LINE_COMMENT_C=23, 
+		LINE_COMMENT_P=24, AND=25, OR=26, NOT=27, TRUE=28, FALSE=29, INC=30, DEC=31, 
+		ADD=32, SUBTRACT=33, POWER=34, MULT=35, DIVIDE=36, FLOOR_DIVISION=37, 
+		MODULO=38, GT=39, GE=40, LT=41, LE=42, EQ=43, NOT_EQ=44, LPAREN=45, RPAREN=46, 
+		RETURN=47, BREAK=48, DECIMAL=49, IDENTIFIER=50, OPEN_CURLY=51, CLOSE_CURLY=52, 
+		WS=53, SEMI_COLON=54, NEW_LINE=55;
 	public static final int
 		RULE_parse = 0, RULE_allCode = 1, RULE_seperators = 2, RULE_exp = 3, RULE_atom = 4, 
-		RULE_listr = 5, RULE_incDec = 6, RULE_beforeIncDec = 7, RULE_inc = 8, 
-		RULE_dec = 9, RULE_opCpBn = 10, RULE_notl = 11, RULE_identifier = 12, 
-		RULE_decimal = 13, RULE_string = 14, RULE_comparator = 15, RULE_binary = 16, 
-		RULE_operator = 17, RULE_boolTF = 18, RULE_ifStatement = 19, RULE_breakp = 20, 
-		RULE_switchCase = 21, RULE_switchDefault = 22, RULE_switchStatement = 23, 
-		RULE_identifierList = 24, RULE_declaration = 25, RULE_declarationList = 26, 
-		RULE_variableDeclaration = 27, RULE_expList = 28, RULE_parameterList = 29, 
-		RULE_parameterInputList = 30, RULE_whileStatement = 31, RULE_forStatement = 32, 
-		RULE_nonPythonForStatement = 33, RULE_funcDeclaration = 34, RULE_funcCall = 35, 
-		RULE_returnp = 36, RULE_statement = 37, RULE_block = 38, RULE_openCurly = 39, 
-		RULE_closeCurly = 40;
+		RULE_importp = 5, RULE_listr = 6, RULE_incDec = 7, RULE_beforeIncDec = 8, 
+		RULE_inc = 9, RULE_dec = 10, RULE_opCpBn = 11, RULE_notl = 12, RULE_identifier = 13, 
+		RULE_decimal = 14, RULE_string = 15, RULE_comparator = 16, RULE_binary = 17, 
+		RULE_operator = 18, RULE_boolTF = 19, RULE_ifStatement = 20, RULE_breakp = 21, 
+		RULE_switchCase = 22, RULE_switchDefault = 23, RULE_switchStatement = 24, 
+		RULE_identifierList = 25, RULE_declaration = 26, RULE_declarationList = 27, 
+		RULE_variableDeclaration = 28, RULE_expList = 29, RULE_parameterList = 30, 
+		RULE_parameterInputList = 31, RULE_whileStatement = 32, RULE_forStatement = 33, 
+		RULE_nonPythonForStatement = 34, RULE_funcDeclaration = 35, RULE_funcCall = 36, 
+		RULE_returnp = 37, RULE_statement = 38, RULE_block = 39, RULE_openCurly = 40, 
+		RULE_closeCurly = 41;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"parse", "allCode", "seperators", "exp", "atom", "listr", "incDec", "beforeIncDec", 
-			"inc", "dec", "opCpBn", "notl", "identifier", "decimal", "string", "comparator", 
-			"binary", "operator", "boolTF", "ifStatement", "breakp", "switchCase", 
-			"switchDefault", "switchStatement", "identifierList", "declaration", 
-			"declarationList", "variableDeclaration", "expList", "parameterList", 
+			"parse", "allCode", "seperators", "exp", "atom", "importp", "listr", 
+			"incDec", "beforeIncDec", "inc", "dec", "opCpBn", "notl", "identifier", 
+			"decimal", "string", "comparator", "binary", "operator", "boolTF", "ifStatement", 
+			"breakp", "switchCase", "switchDefault", "switchStatement", "identifierList", 
+			"declaration", "declarationList", "variableDeclaration", "expList", "parameterList", 
 			"parameterInputList", "whileStatement", "forStatement", "nonPythonForStatement", 
 			"funcDeclaration", "funcCall", "returnp", "statement", "block", "openCurly", 
 			"closeCurly"
@@ -52,22 +53,22 @@ public class PytovParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'['", "']'", "'if'", "'elif'", "'else if'", "'else'", "'case'", 
-			"':'", "'default:'", "'switch'", "','", "'global'", "'='", "'while'", 
-			"'for'", "'in'", "'func'", "'function'", "'def'", null, null, null, null, 
-			"'&&'", "'||'", "'!'", null, null, "'++'", "'--'", "'+'", "'-'", "'*'", 
-			"'/'", "'/_'", "'%'", "'>'", "'>='", "'<'", "'<='", "'=='", "'!='", "'('", 
-			"')'", "'return'", "'break'", null, null, "'{'", "'}'", null, "';'", 
-			"'\n'"
+			null, "'import'", "'['", "']'", "'if'", "'elif'", "'else if'", "'else'", 
+			"'case'", "':'", "'default:'", "'switch'", "','", "'global'", "'='", 
+			"'while'", "'for'", "'in'", "'func'", "'function'", "'def'", null, null, 
+			null, null, "'&&'", "'||'", "'!'", null, null, "'++'", "'--'", "'+'", 
+			"'-'", "'**'", "'*'", "'/'", "'/_'", "'%'", "'>'", "'>='", "'<'", "'<='", 
+			"'=='", "'!='", "'('", "')'", "'return'", "'break'", null, null, "'{'", 
+			"'}'", null, "';'", "'\n'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, null, null, null, "STRING", "COMMENT", 
+			null, null, null, null, null, null, null, null, null, "STRING", "COMMENT", 
 			"LINE_COMMENT_C", "LINE_COMMENT_P", "AND", "OR", "NOT", "TRUE", "FALSE", 
-			"INC", "DEC", "ADD", "SUBTRACT", "MULT", "DIVIDE", "FLOOR_DIVISION", 
+			"INC", "DEC", "ADD", "SUBTRACT", "POWER", "MULT", "DIVIDE", "FLOOR_DIVISION", 
 			"MODULO", "GT", "GE", "LT", "LE", "EQ", "NOT_EQ", "LPAREN", "RPAREN", 
 			"RETURN", "BREAK", "DECIMAL", "IDENTIFIER", "OPEN_CURLY", "CLOSE_CURLY", 
 			"WS", "SEMI_COLON", "NEW_LINE"
@@ -145,21 +146,21 @@ public class PytovParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(83); 
+			setState(85); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(82);
+				setState(84);
 				allCode();
 				}
 				}
-				setState(85); 
+				setState(87); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << T__6) | (1L << T__8) | (1L << T__9) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__16) | (1L << T__17) | (1L << T__18) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << RETURN) | (1L << BREAK) | (1L << DECIMAL) | (1L << IDENTIFIER) | (1L << SEMI_COLON) | (1L << NEW_LINE))) != 0) );
-			setState(87);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << T__3) | (1L << T__7) | (1L << T__9) | (1L << T__10) | (1L << T__12) | (1L << T__14) | (1L << T__15) | (1L << T__17) | (1L << T__18) | (1L << T__19) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << RETURN) | (1L << BREAK) | (1L << DECIMAL) | (1L << IDENTIFIER) | (1L << SEMI_COLON) | (1L << NEW_LINE))) != 0) );
+			setState(89);
 			match(EOF);
 			}
 		}
@@ -197,34 +198,34 @@ public class PytovParser extends Parser {
 		AllCodeContext _localctx = new AllCodeContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_allCode);
 		try {
-			setState(93);
+			setState(95);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(89);
+				setState(91);
 				seperators();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(90);
+				setState(92);
 				statement();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(91);
+				setState(93);
 				declaration();
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(92);
+				setState(94);
 				exp(0);
 				}
 				break;
@@ -257,7 +258,7 @@ public class PytovParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(95);
+			setState(97);
 			_la = _input.LA(1);
 			if ( !(_la==SEMI_COLON || _la==NEW_LINE) ) {
 			_errHandler.recoverInline(this);
@@ -363,7 +364,7 @@ public class PytovParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(109);
+			setState(111);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
 			case 1:
@@ -372,11 +373,11 @@ public class PytovParser extends Parser {
 				_ctx = _localctx;
 				_prevctx = _localctx;
 
-				setState(98);
-				match(LPAREN);
-				setState(99);
-				exp(0);
 				setState(100);
+				match(LPAREN);
+				setState(101);
+				exp(0);
+				setState(102);
 				match(RPAREN);
 				}
 				break;
@@ -385,9 +386,9 @@ public class PytovParser extends Parser {
 				_localctx = new NotExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(102);
+				setState(104);
 				notl();
-				setState(103);
+				setState(105);
 				exp(5);
 				}
 				break;
@@ -396,7 +397,7 @@ public class PytovParser extends Parser {
 				_localctx = new AtomExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(105);
+				setState(107);
 				atom();
 				}
 				break;
@@ -405,7 +406,7 @@ public class PytovParser extends Parser {
 				_localctx = new FuncCallExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(106);
+				setState(108);
 				funcCall();
 				}
 				break;
@@ -414,7 +415,7 @@ public class PytovParser extends Parser {
 				_localctx = new IncDecExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(107);
+				setState(109);
 				incDec();
 				}
 				break;
@@ -423,13 +424,13 @@ public class PytovParser extends Parser {
 				_localctx = new BeforeIncDecExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(108);
+				setState(110);
 				beforeIncDec();
 				}
 				break;
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(117);
+			setState(119);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -441,16 +442,16 @@ public class PytovParser extends Parser {
 					_localctx = new OpCpBnExpressionContext(new ExpContext(_parentctx, _parentState));
 					((OpCpBnExpressionContext)_localctx).left = _prevctx;
 					pushNewRecursionContext(_localctx, _startState, RULE_exp);
-					setState(111);
-					if (!(precpred(_ctx, 6))) throw new FailedPredicateException(this, "precpred(_ctx, 6)");
-					setState(112);
-					((OpCpBnExpressionContext)_localctx).op = opCpBn();
 					setState(113);
+					if (!(precpred(_ctx, 6))) throw new FailedPredicateException(this, "precpred(_ctx, 6)");
+					setState(114);
+					((OpCpBnExpressionContext)_localctx).op = opCpBn();
+					setState(115);
 					((OpCpBnExpressionContext)_localctx).right = exp(7);
 					}
 					} 
 				}
-				setState(119);
+				setState(121);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
 			}
@@ -493,47 +494,99 @@ public class PytovParser extends Parser {
 		AtomContext _localctx = new AtomContext(_ctx, getState());
 		enterRule(_localctx, 8, RULE_atom);
 		try {
-			setState(125);
+			setState(127);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case TRUE:
 			case FALSE:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(120);
+				setState(122);
 				boolTF();
 				}
 				break;
 			case STRING:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(121);
+				setState(123);
 				string();
 				}
 				break;
 			case DECIMAL:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(122);
+				setState(124);
 				decimal();
 				}
 				break;
 			case IDENTIFIER:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(123);
+				setState(125);
 				identifier();
 				}
 				break;
-			case T__0:
+			case T__1:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(124);
+				setState(126);
 				listr();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ImportpContext extends ParserRuleContext {
+		public IdentifierContext identifier() {
+			return getRuleContext(IdentifierContext.class,0);
+		}
+		public StringContext string() {
+			return getRuleContext(StringContext.class,0);
+		}
+		public ImportpContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_importp; }
+	}
+
+	public final ImportpContext importp() throws RecognitionException {
+		ImportpContext _localctx = new ImportpContext(_ctx, getState());
+		enterRule(_localctx, 10, RULE_importp);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(129);
+			match(T__0);
+			setState(132);
+			_errHandler.sync(this);
+			switch (_input.LA(1)) {
+			case IDENTIFIER:
+				{
+				setState(130);
+				identifier();
+				}
+				break;
+			case STRING:
+				{
+				setState(131);
+				string();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -559,25 +612,25 @@ public class PytovParser extends Parser {
 
 	public final ListrContext listr() throws RecognitionException {
 		ListrContext _localctx = new ListrContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_listr);
+		enterRule(_localctx, 12, RULE_listr);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(127);
-			match(T__0);
-			setState(129);
+			setState(134);
+			match(T__1);
+			setState(136);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__11) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << DECIMAL) | (1L << IDENTIFIER))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__1) | (1L << T__12) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << DECIMAL) | (1L << IDENTIFIER))) != 0)) {
 				{
-				setState(128);
+				setState(135);
 				parameterInputList(0);
 				}
 			}
 
-			setState(131);
-			match(T__1);
+			setState(138);
+			match(T__2);
 			}
 		}
 		catch (RecognitionException re) {
@@ -609,24 +662,24 @@ public class PytovParser extends Parser {
 
 	public final IncDecContext incDec() throws RecognitionException {
 		IncDecContext _localctx = new IncDecContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_incDec);
+		enterRule(_localctx, 14, RULE_incDec);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(133);
+			setState(140);
 			identifier();
-			setState(136);
+			setState(143);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case INC:
 				{
-				setState(134);
+				setState(141);
 				inc();
 				}
 				break;
 			case DEC:
 				{
-				setState(135);
+				setState(142);
 				dec();
 				}
 				break;
@@ -664,29 +717,29 @@ public class PytovParser extends Parser {
 
 	public final BeforeIncDecContext beforeIncDec() throws RecognitionException {
 		BeforeIncDecContext _localctx = new BeforeIncDecContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_beforeIncDec);
+		enterRule(_localctx, 16, RULE_beforeIncDec);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(140);
+			setState(147);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case INC:
 				{
-				setState(138);
+				setState(145);
 				inc();
 				}
 				break;
 			case DEC:
 				{
-				setState(139);
+				setState(146);
 				dec();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
 			}
-			setState(142);
+			setState(149);
 			identifier();
 			}
 		}
@@ -711,11 +764,11 @@ public class PytovParser extends Parser {
 
 	public final IncContext inc() throws RecognitionException {
 		IncContext _localctx = new IncContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_inc);
+		enterRule(_localctx, 18, RULE_inc);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(144);
+			setState(151);
 			match(INC);
 			}
 		}
@@ -740,11 +793,11 @@ public class PytovParser extends Parser {
 
 	public final DecContext dec() throws RecognitionException {
 		DecContext _localctx = new DecContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_dec);
+		enterRule(_localctx, 20, RULE_dec);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(146);
+			setState(153);
 			match(DEC);
 			}
 		}
@@ -777,20 +830,21 @@ public class PytovParser extends Parser {
 
 	public final OpCpBnContext opCpBn() throws RecognitionException {
 		OpCpBnContext _localctx = new OpCpBnContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_opCpBn);
+		enterRule(_localctx, 22, RULE_opCpBn);
 		try {
-			setState(151);
+			setState(158);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case ADD:
 			case SUBTRACT:
+			case POWER:
 			case MULT:
 			case DIVIDE:
 			case FLOOR_DIVISION:
 			case MODULO:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(148);
+				setState(155);
 				operator();
 				}
 				break;
@@ -802,7 +856,7 @@ public class PytovParser extends Parser {
 			case NOT_EQ:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(149);
+				setState(156);
 				comparator();
 				}
 				break;
@@ -810,7 +864,7 @@ public class PytovParser extends Parser {
 			case OR:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(150);
+				setState(157);
 				binary();
 				}
 				break;
@@ -839,11 +893,11 @@ public class PytovParser extends Parser {
 
 	public final NotlContext notl() throws RecognitionException {
 		NotlContext _localctx = new NotlContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_notl);
+		enterRule(_localctx, 24, RULE_notl);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(153);
+			setState(160);
 			match(NOT);
 			}
 		}
@@ -868,11 +922,11 @@ public class PytovParser extends Parser {
 
 	public final IdentifierContext identifier() throws RecognitionException {
 		IdentifierContext _localctx = new IdentifierContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_identifier);
+		enterRule(_localctx, 26, RULE_identifier);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(155);
+			setState(162);
 			match(IDENTIFIER);
 			}
 		}
@@ -897,11 +951,11 @@ public class PytovParser extends Parser {
 
 	public final DecimalContext decimal() throws RecognitionException {
 		DecimalContext _localctx = new DecimalContext(_ctx, getState());
-		enterRule(_localctx, 26, RULE_decimal);
+		enterRule(_localctx, 28, RULE_decimal);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(157);
+			setState(164);
 			match(DECIMAL);
 			}
 		}
@@ -926,11 +980,11 @@ public class PytovParser extends Parser {
 
 	public final StringContext string() throws RecognitionException {
 		StringContext _localctx = new StringContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_string);
+		enterRule(_localctx, 30, RULE_string);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(159);
+			setState(166);
 			match(STRING);
 			}
 		}
@@ -960,12 +1014,12 @@ public class PytovParser extends Parser {
 
 	public final ComparatorContext comparator() throws RecognitionException {
 		ComparatorContext _localctx = new ComparatorContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_comparator);
+		enterRule(_localctx, 32, RULE_comparator);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(161);
+			setState(168);
 			_la = _input.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << GT) | (1L << GE) | (1L << LT) | (1L << LE) | (1L << EQ) | (1L << NOT_EQ))) != 0)) ) {
 			_errHandler.recoverInline(this);
@@ -999,12 +1053,12 @@ public class PytovParser extends Parser {
 
 	public final BinaryContext binary() throws RecognitionException {
 		BinaryContext _localctx = new BinaryContext(_ctx, getState());
-		enterRule(_localctx, 32, RULE_binary);
+		enterRule(_localctx, 34, RULE_binary);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(163);
+			setState(170);
 			_la = _input.LA(1);
 			if ( !(_la==AND || _la==OR) ) {
 			_errHandler.recoverInline(this);
@@ -1030,6 +1084,7 @@ public class PytovParser extends Parser {
 	public static class OperatorContext extends ParserRuleContext {
 		public TerminalNode ADD() { return getToken(PytovParser.ADD, 0); }
 		public TerminalNode SUBTRACT() { return getToken(PytovParser.SUBTRACT, 0); }
+		public TerminalNode POWER() { return getToken(PytovParser.POWER, 0); }
 		public TerminalNode MULT() { return getToken(PytovParser.MULT, 0); }
 		public TerminalNode DIVIDE() { return getToken(PytovParser.DIVIDE, 0); }
 		public TerminalNode FLOOR_DIVISION() { return getToken(PytovParser.FLOOR_DIVISION, 0); }
@@ -1042,14 +1097,14 @@ public class PytovParser extends Parser {
 
 	public final OperatorContext operator() throws RecognitionException {
 		OperatorContext _localctx = new OperatorContext(_ctx, getState());
-		enterRule(_localctx, 34, RULE_operator);
+		enterRule(_localctx, 36, RULE_operator);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(165);
+			setState(172);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << ADD) | (1L << SUBTRACT) | (1L << MULT) | (1L << DIVIDE) | (1L << FLOOR_DIVISION) | (1L << MODULO))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << ADD) | (1L << SUBTRACT) | (1L << POWER) | (1L << MULT) | (1L << DIVIDE) | (1L << FLOOR_DIVISION) | (1L << MODULO))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -1081,12 +1136,12 @@ public class PytovParser extends Parser {
 
 	public final BoolTFContext boolTF() throws RecognitionException {
 		BoolTFContext _localctx = new BoolTFContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_boolTF);
+		enterRule(_localctx, 38, RULE_boolTF);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(167);
+			setState(174);
 			_la = _input.LA(1);
 			if ( !(_la==TRUE || _la==FALSE) ) {
 			_errHandler.recoverInline(this);
@@ -1136,44 +1191,44 @@ public class PytovParser extends Parser {
 
 	public final IfStatementContext ifStatement() throws RecognitionException {
 		IfStatementContext _localctx = new IfStatementContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_ifStatement);
+		enterRule(_localctx, 40, RULE_ifStatement);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(169);
-			match(T__2);
-			setState(170);
+			setState(176);
+			match(T__3);
+			setState(177);
 			exp(0);
-			setState(171);
+			setState(178);
 			block();
 			}
-			setState(185);
+			setState(192);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,10,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,11,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(176);
+					setState(183);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 					while (_la==SEMI_COLON || _la==NEW_LINE) {
 						{
 						{
-						setState(173);
+						setState(180);
 						seperators();
 						}
 						}
-						setState(178);
+						setState(185);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
 					}
-					setState(179);
+					setState(186);
 					_la = _input.LA(1);
-					if ( !(_la==T__3 || _la==T__4) ) {
+					if ( !(_la==T__4 || _la==T__5) ) {
 					_errHandler.recoverInline(this);
 					}
 					else {
@@ -1181,39 +1236,39 @@ public class PytovParser extends Parser {
 						_errHandler.reportMatch(this);
 						consume();
 					}
-					setState(180);
+					setState(187);
 					exp(0);
-					setState(181);
+					setState(188);
 					block();
 					}
 					} 
 				}
-				setState(187);
+				setState(194);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,10,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,11,_ctx);
 			}
-			setState(196);
+			setState(203);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,12,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
 			case 1:
 				{
-				setState(191);
+				setState(198);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==SEMI_COLON || _la==NEW_LINE) {
 					{
 					{
-					setState(188);
+					setState(195);
 					seperators();
 					}
 					}
-					setState(193);
+					setState(200);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(194);
-				match(T__5);
-				setState(195);
+				setState(201);
+				match(T__6);
+				setState(202);
 				block();
 				}
 				break;
@@ -1241,11 +1296,11 @@ public class PytovParser extends Parser {
 
 	public final BreakpContext breakp() throws RecognitionException {
 		BreakpContext _localctx = new BreakpContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_breakp);
+		enterRule(_localctx, 42, RULE_breakp);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(198);
+			setState(205);
 			match(BREAK);
 			}
 		}
@@ -1278,32 +1333,32 @@ public class PytovParser extends Parser {
 
 	public final SwitchCaseContext switchCase() throws RecognitionException {
 		SwitchCaseContext _localctx = new SwitchCaseContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_switchCase);
+		enterRule(_localctx, 44, RULE_switchCase);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(200);
-			match(T__6);
-			setState(201);
-			exp(0);
-			setState(202);
+			setState(207);
 			match(T__7);
-			setState(206);
+			setState(208);
+			exp(0);
+			setState(209);
+			match(T__8);
+			setState(213);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(203);
+					setState(210);
 					seperators();
 					}
 					} 
 				}
-				setState(208);
+				setState(215);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,13,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
 			}
 			}
 		}
@@ -1333,28 +1388,28 @@ public class PytovParser extends Parser {
 
 	public final SwitchDefaultContext switchDefault() throws RecognitionException {
 		SwitchDefaultContext _localctx = new SwitchDefaultContext(_ctx, getState());
-		enterRule(_localctx, 44, RULE_switchDefault);
+		enterRule(_localctx, 46, RULE_switchDefault);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(209);
-			match(T__8);
-			setState(213);
+			setState(216);
+			match(T__9);
+			setState(220);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,15,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(210);
+					setState(217);
 					seperators();
 					}
 					} 
 				}
-				setState(215);
+				setState(222);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,15,_ctx);
 			}
 			}
 		}
@@ -1405,48 +1460,48 @@ public class PytovParser extends Parser {
 
 	public final SwitchStatementContext switchStatement() throws RecognitionException {
 		SwitchStatementContext _localctx = new SwitchStatementContext(_ctx, getState());
-		enterRule(_localctx, 46, RULE_switchStatement);
+		enterRule(_localctx, 48, RULE_switchStatement);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(216);
-			match(T__9);
-			setState(217);
+			setState(223);
+			match(T__10);
+			setState(224);
 			exp(0);
-			setState(218);
+			setState(225);
 			openCurly();
-			setState(226);
+			setState(233);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << T__6) | (1L << T__8) | (1L << T__9) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__16) | (1L << T__17) | (1L << T__18) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << RETURN) | (1L << BREAK) | (1L << DECIMAL) | (1L << IDENTIFIER) | (1L << SEMI_COLON) | (1L << NEW_LINE))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << T__3) | (1L << T__7) | (1L << T__9) | (1L << T__10) | (1L << T__12) | (1L << T__14) | (1L << T__15) | (1L << T__17) | (1L << T__18) | (1L << T__19) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << RETURN) | (1L << BREAK) | (1L << DECIMAL) | (1L << IDENTIFIER) | (1L << SEMI_COLON) | (1L << NEW_LINE))) != 0)) {
 				{
 				{
-				setState(221);
+				setState(228);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,15,_ctx) ) {
+				switch ( getInterpreter().adaptivePredict(_input,16,_ctx) ) {
 				case 1:
 					{
-					setState(219);
+					setState(226);
 					switchCase();
 					}
 					break;
 				case 2:
 					{
-					setState(220);
+					setState(227);
 					switchDefault();
 					}
 					break;
 				}
-				setState(223);
+				setState(230);
 				allCode();
 				}
 				}
-				setState(228);
+				setState(235);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(229);
+			setState(236);
 			closeCurly();
 			}
 		}
@@ -1476,38 +1531,38 @@ public class PytovParser extends Parser {
 
 	public final IdentifierListContext identifierList() throws RecognitionException {
 		IdentifierListContext _localctx = new IdentifierListContext(_ctx, getState());
-		enterRule(_localctx, 48, RULE_identifierList);
+		enterRule(_localctx, 50, RULE_identifierList);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(231);
+			setState(238);
 			identifier();
-			setState(236);
+			setState(243);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,17,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,18,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(232);
-					match(T__10);
-					setState(233);
+					setState(239);
+					match(T__11);
+					setState(240);
 					identifier();
 					}
 					} 
 				}
-				setState(238);
+				setState(245);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,17,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,18,_ctx);
 			}
-			setState(240);
+			setState(247);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,18,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,19,_ctx) ) {
 			case 1:
 				{
-				setState(239);
-				match(T__10);
+				setState(246);
+				match(T__11);
 				}
 				break;
 			}
@@ -1539,25 +1594,25 @@ public class PytovParser extends Parser {
 
 	public final DeclarationContext declaration() throws RecognitionException {
 		DeclarationContext _localctx = new DeclarationContext(_ctx, getState());
-		enterRule(_localctx, 50, RULE_declaration);
+		enterRule(_localctx, 52, RULE_declaration);
 		try {
-			setState(244);
+			setState(251);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case T__11:
+			case T__12:
 			case IDENTIFIER:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(242);
+				setState(249);
 				variableDeclaration();
 				}
 				break;
-			case T__16:
 			case T__17:
 			case T__18:
+			case T__19:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(243);
+				setState(250);
 				funcDeclaration();
 				}
 				break;
@@ -1591,38 +1646,38 @@ public class PytovParser extends Parser {
 
 	public final DeclarationListContext declarationList() throws RecognitionException {
 		DeclarationListContext _localctx = new DeclarationListContext(_ctx, getState());
-		enterRule(_localctx, 52, RULE_declarationList);
+		enterRule(_localctx, 54, RULE_declarationList);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(246);
+			setState(253);
 			variableDeclaration();
-			setState(251);
+			setState(258);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,20,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,21,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(247);
-					match(T__10);
-					setState(248);
+					setState(254);
+					match(T__11);
+					setState(255);
 					variableDeclaration();
 					}
 					} 
 				}
-				setState(253);
+				setState(260);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,20,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,21,_ctx);
 			}
-			setState(255);
+			setState(262);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,21,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,22,_ctx) ) {
 			case 1:
 				{
-				setState(254);
-				match(T__10);
+				setState(261);
+				match(T__11);
 				}
 				break;
 			}
@@ -1649,6 +1704,9 @@ public class PytovParser extends Parser {
 		public FuncCallContext funcCall() {
 			return getRuleContext(FuncCallContext.class,0);
 		}
+		public OperatorContext operator() {
+			return getRuleContext(OperatorContext.class,0);
+		}
 		public VariableDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1657,37 +1715,47 @@ public class PytovParser extends Parser {
 
 	public final VariableDeclarationContext variableDeclaration() throws RecognitionException {
 		VariableDeclarationContext _localctx = new VariableDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 54, RULE_variableDeclaration);
+		enterRule(_localctx, 56, RULE_variableDeclaration);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(258);
+			setState(265);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==T__11) {
+			if (_la==T__12) {
 				{
-				setState(257);
-				match(T__11);
+				setState(264);
+				match(T__12);
 				}
 			}
 
-			setState(260);
+			setState(267);
 			identifier();
-			setState(261);
-			match(T__12);
-			setState(264);
+			setState(269);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,23,_ctx) ) {
+			_la = _input.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << ADD) | (1L << SUBTRACT) | (1L << POWER) | (1L << MULT) | (1L << DIVIDE) | (1L << FLOOR_DIVISION) | (1L << MODULO))) != 0)) {
+				{
+				setState(268);
+				operator();
+				}
+			}
+
+			setState(271);
+			match(T__13);
+			setState(274);
+			_errHandler.sync(this);
+			switch ( getInterpreter().adaptivePredict(_input,25,_ctx) ) {
 			case 1:
 				{
-				setState(262);
+				setState(272);
 				exp(0);
 				}
 				break;
 			case 2:
 				{
-				setState(263);
+				setState(273);
 				funcCall();
 				}
 				break;
@@ -1720,38 +1788,38 @@ public class PytovParser extends Parser {
 
 	public final ExpListContext expList() throws RecognitionException {
 		ExpListContext _localctx = new ExpListContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_expList);
+		enterRule(_localctx, 58, RULE_expList);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(266);
+			setState(276);
 			exp(0);
-			setState(271);
+			setState(281);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,24,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,26,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(267);
-					match(T__10);
-					setState(268);
+					setState(277);
+					match(T__11);
+					setState(278);
 					exp(0);
 					}
 					} 
 				}
-				setState(273);
+				setState(283);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,24,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,26,_ctx);
 			}
-			setState(275);
+			setState(285);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,25,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,27,_ctx) ) {
 			case 1:
 				{
-				setState(274);
-				match(T__10);
+				setState(284);
+				match(T__11);
 				}
 				break;
 			}
@@ -1796,32 +1864,32 @@ public class PytovParser extends Parser {
 		int _parentState = getState();
 		ParameterListContext _localctx = new ParameterListContext(_ctx, _parentState);
 		ParameterListContext _prevctx = _localctx;
-		int _startState = 58;
-		enterRecursionRule(_localctx, 58, RULE_parameterList, _p);
+		int _startState = 60;
+		enterRecursionRule(_localctx, 60, RULE_parameterList, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(280);
+			setState(290);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,26,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,28,_ctx) ) {
 			case 1:
 				{
-				setState(278);
+				setState(288);
 				identifierList();
 				}
 				break;
 			case 2:
 				{
-				setState(279);
+				setState(289);
 				declarationList();
 				}
 				break;
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(287);
+			setState(297);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,27,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,29,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -1830,18 +1898,18 @@ public class PytovParser extends Parser {
 					{
 					_localctx = new ParameterListContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_parameterList);
-					setState(282);
+					setState(292);
 					if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
-					setState(283);
-					match(T__10);
-					setState(284);
+					setState(293);
+					match(T__11);
+					setState(294);
 					parameterList(4);
 					}
 					} 
 				}
-				setState(289);
+				setState(299);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,27,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,29,_ctx);
 			}
 			}
 		}
@@ -1884,32 +1952,32 @@ public class PytovParser extends Parser {
 		int _parentState = getState();
 		ParameterInputListContext _localctx = new ParameterInputListContext(_ctx, _parentState);
 		ParameterInputListContext _prevctx = _localctx;
-		int _startState = 60;
-		enterRecursionRule(_localctx, 60, RULE_parameterInputList, _p);
+		int _startState = 62;
+		enterRecursionRule(_localctx, 62, RULE_parameterInputList, _p);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(293);
+			setState(303);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,28,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,30,_ctx) ) {
 			case 1:
 				{
-				setState(291);
+				setState(301);
 				expList();
 				}
 				break;
 			case 2:
 				{
-				setState(292);
+				setState(302);
 				declarationList();
 				}
 				break;
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(300);
+			setState(310);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,29,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,31,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
@@ -1918,18 +1986,18 @@ public class PytovParser extends Parser {
 					{
 					_localctx = new ParameterInputListContext(_parentctx, _parentState);
 					pushNewRecursionContext(_localctx, _startState, RULE_parameterInputList);
-					setState(295);
+					setState(305);
 					if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
-					setState(296);
-					match(T__10);
-					setState(297);
+					setState(306);
+					match(T__11);
+					setState(307);
 					parameterInputList(4);
 					}
 					} 
 				}
-				setState(302);
+				setState(312);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,29,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,31,_ctx);
 			}
 			}
 		}
@@ -1959,15 +2027,15 @@ public class PytovParser extends Parser {
 
 	public final WhileStatementContext whileStatement() throws RecognitionException {
 		WhileStatementContext _localctx = new WhileStatementContext(_ctx, getState());
-		enterRule(_localctx, 62, RULE_whileStatement);
+		enterRule(_localctx, 64, RULE_whileStatement);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(303);
-			match(T__13);
-			setState(304);
+			setState(313);
+			match(T__14);
+			setState(314);
 			exp(0);
-			setState(305);
+			setState(315);
 			block();
 			}
 		}
@@ -2000,19 +2068,19 @@ public class PytovParser extends Parser {
 
 	public final ForStatementContext forStatement() throws RecognitionException {
 		ForStatementContext _localctx = new ForStatementContext(_ctx, getState());
-		enterRule(_localctx, 64, RULE_forStatement);
+		enterRule(_localctx, 66, RULE_forStatement);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(307);
-			match(T__14);
-			setState(308);
-			exp(0);
-			setState(309);
+			setState(317);
 			match(T__15);
-			setState(310);
+			setState(318);
 			exp(0);
-			setState(311);
+			setState(319);
+			match(T__16);
+			setState(320);
+			exp(0);
+			setState(321);
 			block();
 			}
 		}
@@ -2057,42 +2125,42 @@ public class PytovParser extends Parser {
 
 	public final NonPythonForStatementContext nonPythonForStatement() throws RecognitionException {
 		NonPythonForStatementContext _localctx = new NonPythonForStatementContext(_ctx, getState());
-		enterRule(_localctx, 66, RULE_nonPythonForStatement);
+		enterRule(_localctx, 68, RULE_nonPythonForStatement);
 		try {
-			setState(337);
+			setState(347);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,32,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,34,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
 				{
-				setState(313);
-				match(T__14);
-				setState(314);
+				setState(323);
+				match(T__15);
+				setState(324);
 				variableDeclaration();
-				setState(315);
+				setState(325);
 				match(SEMI_COLON);
-				setState(316);
+				setState(326);
 				exp(0);
-				setState(317);
+				setState(327);
 				match(SEMI_COLON);
-				setState(320);
+				setState(330);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,30,_ctx) ) {
+				switch ( getInterpreter().adaptivePredict(_input,32,_ctx) ) {
 				case 1:
 					{
-					setState(318);
+					setState(328);
 					exp(0);
 					}
 					break;
 				case 2:
 					{
-					setState(319);
+					setState(329);
 					variableDeclaration();
 					}
 					break;
 				}
-				setState(322);
+				setState(332);
 				block();
 				}
 				}
@@ -2101,37 +2169,37 @@ public class PytovParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				{
-				setState(324);
-				match(T__14);
-				setState(325);
+				setState(334);
+				match(T__15);
+				setState(335);
 				match(LPAREN);
-				setState(326);
+				setState(336);
 				variableDeclaration();
-				setState(327);
+				setState(337);
 				match(SEMI_COLON);
-				setState(328);
+				setState(338);
 				exp(0);
-				setState(329);
+				setState(339);
 				match(SEMI_COLON);
-				setState(332);
+				setState(342);
 				_errHandler.sync(this);
-				switch ( getInterpreter().adaptivePredict(_input,31,_ctx) ) {
+				switch ( getInterpreter().adaptivePredict(_input,33,_ctx) ) {
 				case 1:
 					{
-					setState(330);
+					setState(340);
 					exp(0);
 					}
 					break;
 				case 2:
 					{
-					setState(331);
+					setState(341);
 					variableDeclaration();
 					}
 					break;
 				}
-				setState(334);
+				setState(344);
 				match(RPAREN);
-				setState(335);
+				setState(345);
 				block();
 				}
 				}
@@ -2169,14 +2237,14 @@ public class PytovParser extends Parser {
 
 	public final FuncDeclarationContext funcDeclaration() throws RecognitionException {
 		FuncDeclarationContext _localctx = new FuncDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 68, RULE_funcDeclaration);
+		enterRule(_localctx, 70, RULE_funcDeclaration);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(339);
+			setState(349);
 			_la = _input.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__16) | (1L << T__17) | (1L << T__18))) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__17) | (1L << T__18) | (1L << T__19))) != 0)) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -2184,23 +2252,23 @@ public class PytovParser extends Parser {
 				_errHandler.reportMatch(this);
 				consume();
 			}
-			setState(340);
+			setState(350);
 			identifier();
-			setState(341);
+			setState(351);
 			match(LPAREN);
-			setState(343);
+			setState(353);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if (_la==T__11 || _la==IDENTIFIER) {
+			if (_la==T__12 || _la==IDENTIFIER) {
 				{
-				setState(342);
+				setState(352);
 				parameterList(0);
 				}
 			}
 
-			setState(345);
+			setState(355);
 			match(RPAREN);
-			setState(346);
+			setState(356);
 			block();
 			}
 		}
@@ -2232,26 +2300,26 @@ public class PytovParser extends Parser {
 
 	public final FuncCallContext funcCall() throws RecognitionException {
 		FuncCallContext _localctx = new FuncCallContext(_ctx, getState());
-		enterRule(_localctx, 70, RULE_funcCall);
+		enterRule(_localctx, 72, RULE_funcCall);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(348);
+			setState(358);
 			identifier();
-			setState(349);
+			setState(359);
 			match(LPAREN);
-			setState(351);
+			setState(361);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__11) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << DECIMAL) | (1L << IDENTIFIER))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__1) | (1L << T__12) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << DECIMAL) | (1L << IDENTIFIER))) != 0)) {
 				{
-				setState(350);
+				setState(360);
 				parameterInputList(0);
 				}
 			}
 
-			setState(353);
+			setState(363);
 			match(RPAREN);
 			}
 		}
@@ -2279,18 +2347,18 @@ public class PytovParser extends Parser {
 
 	public final ReturnpContext returnp() throws RecognitionException {
 		ReturnpContext _localctx = new ReturnpContext(_ctx, getState());
-		enterRule(_localctx, 72, RULE_returnp);
+		enterRule(_localctx, 74, RULE_returnp);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(355);
+			setState(365);
 			match(RETURN);
-			setState(357);
+			setState(367);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,35,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,37,_ctx) ) {
 			case 1:
 				{
-				setState(356);
+				setState(366);
 				exp(0);
 				}
 				break;
@@ -2339,6 +2407,9 @@ public class PytovParser extends Parser {
 		public BreakpContext breakp() {
 			return getRuleContext(BreakpContext.class,0);
 		}
+		public ImportpContext importp() {
+			return getRuleContext(ImportpContext.class,0);
+		}
 		public StatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2347,79 +2418,86 @@ public class PytovParser extends Parser {
 
 	public final StatementContext statement() throws RecognitionException {
 		StatementContext _localctx = new StatementContext(_ctx, getState());
-		enterRule(_localctx, 74, RULE_statement);
+		enterRule(_localctx, 76, RULE_statement);
 		try {
-			setState(369);
+			setState(380);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,36,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,38,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(359);
+				setState(369);
 				ifStatement();
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(360);
+				setState(370);
 				switchStatement();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(361);
+				setState(371);
 				switchCase();
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(362);
+				setState(372);
 				switchDefault();
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(363);
+				setState(373);
 				whileStatement();
 				}
 				break;
 			case 6:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(364);
+				setState(374);
 				forStatement();
 				}
 				break;
 			case 7:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(365);
+				setState(375);
 				nonPythonForStatement();
 				}
 				break;
 			case 8:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(366);
+				setState(376);
 				funcCall();
 				}
 				break;
 			case 9:
 				enterOuterAlt(_localctx, 9);
 				{
-				setState(367);
+				setState(377);
 				returnp();
 				}
 				break;
 			case 10:
 				enterOuterAlt(_localctx, 10);
 				{
-				setState(368);
+				setState(378);
 				breakp();
+				}
+				break;
+			case 11:
+				enterOuterAlt(_localctx, 11);
+				{
+				setState(379);
+				importp();
 				}
 				break;
 			}
@@ -2462,42 +2540,42 @@ public class PytovParser extends Parser {
 
 	public final BlockContext block() throws RecognitionException {
 		BlockContext _localctx = new BlockContext(_ctx, getState());
-		enterRule(_localctx, 76, RULE_block);
+		enterRule(_localctx, 78, RULE_block);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(374);
+			setState(385);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==SEMI_COLON || _la==NEW_LINE) {
 				{
 				{
-				setState(371);
+				setState(382);
 				seperators();
 				}
 				}
-				setState(376);
+				setState(387);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(377);
+			setState(388);
 			openCurly();
-			setState(381);
+			setState(392);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << T__6) | (1L << T__8) | (1L << T__9) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__16) | (1L << T__17) | (1L << T__18) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << RETURN) | (1L << BREAK) | (1L << DECIMAL) | (1L << IDENTIFIER) | (1L << SEMI_COLON) | (1L << NEW_LINE))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << T__3) | (1L << T__7) | (1L << T__9) | (1L << T__10) | (1L << T__12) | (1L << T__14) | (1L << T__15) | (1L << T__17) | (1L << T__18) | (1L << T__19) | (1L << STRING) | (1L << NOT) | (1L << TRUE) | (1L << FALSE) | (1L << INC) | (1L << DEC) | (1L << LPAREN) | (1L << RETURN) | (1L << BREAK) | (1L << DECIMAL) | (1L << IDENTIFIER) | (1L << SEMI_COLON) | (1L << NEW_LINE))) != 0)) {
 				{
 				{
-				setState(378);
+				setState(389);
 				allCode();
 				}
 				}
-				setState(383);
+				setState(394);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(384);
+			setState(395);
 			closeCurly();
 			}
 		}
@@ -2522,11 +2600,11 @@ public class PytovParser extends Parser {
 
 	public final OpenCurlyContext openCurly() throws RecognitionException {
 		OpenCurlyContext _localctx = new OpenCurlyContext(_ctx, getState());
-		enterRule(_localctx, 78, RULE_openCurly);
+		enterRule(_localctx, 80, RULE_openCurly);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(386);
+			setState(397);
 			match(OPEN_CURLY);
 			}
 		}
@@ -2551,11 +2629,11 @@ public class PytovParser extends Parser {
 
 	public final CloseCurlyContext closeCurly() throws RecognitionException {
 		CloseCurlyContext _localctx = new CloseCurlyContext(_ctx, getState());
-		enterRule(_localctx, 80, RULE_closeCurly);
+		enterRule(_localctx, 82, RULE_closeCurly);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(388);
+			setState(399);
 			match(CLOSE_CURLY);
 			}
 		}
@@ -2574,9 +2652,9 @@ public class PytovParser extends Parser {
 		switch (ruleIndex) {
 		case 3:
 			return exp_sempred((ExpContext)_localctx, predIndex);
-		case 29:
-			return parameterList_sempred((ParameterListContext)_localctx, predIndex);
 		case 30:
+			return parameterList_sempred((ParameterListContext)_localctx, predIndex);
+		case 31:
 			return parameterInputList_sempred((ParameterInputListContext)_localctx, predIndex);
 		}
 		return true;
@@ -2604,144 +2682,148 @@ public class PytovParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\67\u0189\4\2\t\2"+
-		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
-		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\39\u0194\4\2\t\2\4"+
+		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
+		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
 		"\4\32\t\32\4\33\t\33\4\34\t\34\4\35\t\35\4\36\t\36\4\37\t\37\4 \t \4!"+
-		"\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t&\4\'\t\'\4(\t(\4)\t)\4*\t*\3\2\6\2"+
-		"V\n\2\r\2\16\2W\3\2\3\2\3\3\3\3\3\3\3\3\5\3`\n\3\3\4\3\4\3\5\3\5\3\5\3"+
-		"\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\5\5p\n\5\3\5\3\5\3\5\3\5\7\5v\n\5\f"+
-		"\5\16\5y\13\5\3\6\3\6\3\6\3\6\3\6\5\6\u0080\n\6\3\7\3\7\5\7\u0084\n\7"+
-		"\3\7\3\7\3\b\3\b\3\b\5\b\u008b\n\b\3\t\3\t\5\t\u008f\n\t\3\t\3\t\3\n\3"+
-		"\n\3\13\3\13\3\f\3\f\3\f\5\f\u009a\n\f\3\r\3\r\3\16\3\16\3\17\3\17\3\20"+
-		"\3\20\3\21\3\21\3\22\3\22\3\23\3\23\3\24\3\24\3\25\3\25\3\25\3\25\3\25"+
-		"\7\25\u00b1\n\25\f\25\16\25\u00b4\13\25\3\25\3\25\3\25\3\25\7\25\u00ba"+
-		"\n\25\f\25\16\25\u00bd\13\25\3\25\7\25\u00c0\n\25\f\25\16\25\u00c3\13"+
-		"\25\3\25\3\25\5\25\u00c7\n\25\3\26\3\26\3\27\3\27\3\27\3\27\7\27\u00cf"+
-		"\n\27\f\27\16\27\u00d2\13\27\3\30\3\30\7\30\u00d6\n\30\f\30\16\30\u00d9"+
-		"\13\30\3\31\3\31\3\31\3\31\3\31\5\31\u00e0\n\31\3\31\7\31\u00e3\n\31\f"+
-		"\31\16\31\u00e6\13\31\3\31\3\31\3\32\3\32\3\32\7\32\u00ed\n\32\f\32\16"+
-		"\32\u00f0\13\32\3\32\5\32\u00f3\n\32\3\33\3\33\5\33\u00f7\n\33\3\34\3"+
-		"\34\3\34\7\34\u00fc\n\34\f\34\16\34\u00ff\13\34\3\34\5\34\u0102\n\34\3"+
-		"\35\5\35\u0105\n\35\3\35\3\35\3\35\3\35\5\35\u010b\n\35\3\36\3\36\3\36"+
-		"\7\36\u0110\n\36\f\36\16\36\u0113\13\36\3\36\5\36\u0116\n\36\3\37\3\37"+
-		"\3\37\5\37\u011b\n\37\3\37\3\37\3\37\7\37\u0120\n\37\f\37\16\37\u0123"+
-		"\13\37\3 \3 \3 \5 \u0128\n \3 \3 \3 \7 \u012d\n \f \16 \u0130\13 \3!\3"+
-		"!\3!\3!\3\"\3\"\3\"\3\"\3\"\3\"\3#\3#\3#\3#\3#\3#\3#\5#\u0143\n#\3#\3"+
-		"#\3#\3#\3#\3#\3#\3#\3#\3#\5#\u014f\n#\3#\3#\3#\5#\u0154\n#\3$\3$\3$\3"+
-		"$\5$\u015a\n$\3$\3$\3$\3%\3%\3%\5%\u0162\n%\3%\3%\3&\3&\5&\u0168\n&\3"+
-		"\'\3\'\3\'\3\'\3\'\3\'\3\'\3\'\3\'\3\'\5\'\u0174\n\'\3(\7(\u0177\n(\f"+
-		"(\16(\u017a\13(\3(\3(\7(\u017e\n(\f(\16(\u0181\13(\3(\3(\3)\3)\3*\3*\3"+
-		"*\2\5\b<>+\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\66"+
-		"8:<>@BDFHJLNPR\2\t\3\2\66\67\3\2\',\3\2\32\33\3\2!&\3\2\35\36\3\2\6\7"+
-		"\3\2\23\25\2\u0199\2U\3\2\2\2\4_\3\2\2\2\6a\3\2\2\2\bo\3\2\2\2\n\177\3"+
-		"\2\2\2\f\u0081\3\2\2\2\16\u0087\3\2\2\2\20\u008e\3\2\2\2\22\u0092\3\2"+
-		"\2\2\24\u0094\3\2\2\2\26\u0099\3\2\2\2\30\u009b\3\2\2\2\32\u009d\3\2\2"+
-		"\2\34\u009f\3\2\2\2\36\u00a1\3\2\2\2 \u00a3\3\2\2\2\"\u00a5\3\2\2\2$\u00a7"+
-		"\3\2\2\2&\u00a9\3\2\2\2(\u00ab\3\2\2\2*\u00c8\3\2\2\2,\u00ca\3\2\2\2."+
-		"\u00d3\3\2\2\2\60\u00da\3\2\2\2\62\u00e9\3\2\2\2\64\u00f6\3\2\2\2\66\u00f8"+
-		"\3\2\2\28\u0104\3\2\2\2:\u010c\3\2\2\2<\u011a\3\2\2\2>\u0127\3\2\2\2@"+
-		"\u0131\3\2\2\2B\u0135\3\2\2\2D\u0153\3\2\2\2F\u0155\3\2\2\2H\u015e\3\2"+
-		"\2\2J\u0165\3\2\2\2L\u0173\3\2\2\2N\u0178\3\2\2\2P\u0184\3\2\2\2R\u0186"+
-		"\3\2\2\2TV\5\4\3\2UT\3\2\2\2VW\3\2\2\2WU\3\2\2\2WX\3\2\2\2XY\3\2\2\2Y"+
-		"Z\7\2\2\3Z\3\3\2\2\2[`\5\6\4\2\\`\5L\'\2]`\5\64\33\2^`\5\b\5\2_[\3\2\2"+
-		"\2_\\\3\2\2\2_]\3\2\2\2_^\3\2\2\2`\5\3\2\2\2ab\t\2\2\2b\7\3\2\2\2cd\b"+
-		"\5\1\2de\7-\2\2ef\5\b\5\2fg\7.\2\2gp\3\2\2\2hi\5\30\r\2ij\5\b\5\7jp\3"+
-		"\2\2\2kp\5\n\6\2lp\5H%\2mp\5\16\b\2np\5\20\t\2oc\3\2\2\2oh\3\2\2\2ok\3"+
-		"\2\2\2ol\3\2\2\2om\3\2\2\2on\3\2\2\2pw\3\2\2\2qr\f\b\2\2rs\5\26\f\2st"+
-		"\5\b\5\ttv\3\2\2\2uq\3\2\2\2vy\3\2\2\2wu\3\2\2\2wx\3\2\2\2x\t\3\2\2\2"+
-		"yw\3\2\2\2z\u0080\5&\24\2{\u0080\5\36\20\2|\u0080\5\34\17\2}\u0080\5\32"+
-		"\16\2~\u0080\5\f\7\2\177z\3\2\2\2\177{\3\2\2\2\177|\3\2\2\2\177}\3\2\2"+
-		"\2\177~\3\2\2\2\u0080\13\3\2\2\2\u0081\u0083\7\3\2\2\u0082\u0084\5> \2"+
-		"\u0083\u0082\3\2\2\2\u0083\u0084\3\2\2\2\u0084\u0085\3\2\2\2\u0085\u0086"+
-		"\7\4\2\2\u0086\r\3\2\2\2\u0087\u008a\5\32\16\2\u0088\u008b\5\22\n\2\u0089"+
-		"\u008b\5\24\13\2\u008a\u0088\3\2\2\2\u008a\u0089\3\2\2\2\u008b\17\3\2"+
-		"\2\2\u008c\u008f\5\22\n\2\u008d\u008f\5\24\13\2\u008e\u008c\3\2\2\2\u008e"+
-		"\u008d\3\2\2\2\u008f\u0090\3\2\2\2\u0090\u0091\5\32\16\2\u0091\21\3\2"+
-		"\2\2\u0092\u0093\7\37\2\2\u0093\23\3\2\2\2\u0094\u0095\7 \2\2\u0095\25"+
-		"\3\2\2\2\u0096\u009a\5$\23\2\u0097\u009a\5 \21\2\u0098\u009a\5\"\22\2"+
-		"\u0099\u0096\3\2\2\2\u0099\u0097\3\2\2\2\u0099\u0098\3\2\2\2\u009a\27"+
-		"\3\2\2\2\u009b\u009c\7\34\2\2\u009c\31\3\2\2\2\u009d\u009e\7\62\2\2\u009e"+
-		"\33\3\2\2\2\u009f\u00a0\7\61\2\2\u00a0\35\3\2\2\2\u00a1\u00a2\7\26\2\2"+
-		"\u00a2\37\3\2\2\2\u00a3\u00a4\t\3\2\2\u00a4!\3\2\2\2\u00a5\u00a6\t\4\2"+
-		"\2\u00a6#\3\2\2\2\u00a7\u00a8\t\5\2\2\u00a8%\3\2\2\2\u00a9\u00aa\t\6\2"+
-		"\2\u00aa\'\3\2\2\2\u00ab\u00ac\7\5\2\2\u00ac\u00ad\5\b\5\2\u00ad\u00ae"+
-		"\5N(\2\u00ae\u00bb\3\2\2\2\u00af\u00b1\5\6\4\2\u00b0\u00af\3\2\2\2\u00b1"+
-		"\u00b4\3\2\2\2\u00b2\u00b0\3\2\2\2\u00b2\u00b3\3\2\2\2\u00b3\u00b5\3\2"+
-		"\2\2\u00b4\u00b2\3\2\2\2\u00b5\u00b6\t\7\2\2\u00b6\u00b7\5\b\5\2\u00b7"+
-		"\u00b8\5N(\2\u00b8\u00ba\3\2\2\2\u00b9\u00b2\3\2\2\2\u00ba\u00bd\3\2\2"+
-		"\2\u00bb\u00b9\3\2\2\2\u00bb\u00bc\3\2\2\2\u00bc\u00c6\3\2\2\2\u00bd\u00bb"+
-		"\3\2\2\2\u00be\u00c0\5\6\4\2\u00bf\u00be\3\2\2\2\u00c0\u00c3\3\2\2\2\u00c1"+
-		"\u00bf\3\2\2\2\u00c1\u00c2\3\2\2\2\u00c2\u00c4\3\2\2\2\u00c3\u00c1\3\2"+
-		"\2\2\u00c4\u00c5\7\b\2\2\u00c5\u00c7\5N(\2\u00c6\u00c1\3\2\2\2\u00c6\u00c7"+
-		"\3\2\2\2\u00c7)\3\2\2\2\u00c8\u00c9\7\60\2\2\u00c9+\3\2\2\2\u00ca\u00cb"+
-		"\7\t\2\2\u00cb\u00cc\5\b\5\2\u00cc\u00d0\7\n\2\2\u00cd\u00cf\5\6\4\2\u00ce"+
-		"\u00cd\3\2\2\2\u00cf\u00d2\3\2\2\2\u00d0\u00ce\3\2\2\2\u00d0\u00d1\3\2"+
-		"\2\2\u00d1-\3\2\2\2\u00d2\u00d0\3\2\2\2\u00d3\u00d7\7\13\2\2\u00d4\u00d6"+
-		"\5\6\4\2\u00d5\u00d4\3\2\2\2\u00d6\u00d9\3\2\2\2\u00d7\u00d5\3\2\2\2\u00d7"+
-		"\u00d8\3\2\2\2\u00d8/\3\2\2\2\u00d9\u00d7\3\2\2\2\u00da\u00db\7\f\2\2"+
-		"\u00db\u00dc\5\b\5\2\u00dc\u00e4\5P)\2\u00dd\u00e0\5,\27\2\u00de\u00e0"+
-		"\5.\30\2\u00df\u00dd\3\2\2\2\u00df\u00de\3\2\2\2\u00df\u00e0\3\2\2\2\u00e0"+
-		"\u00e1\3\2\2\2\u00e1\u00e3\5\4\3\2\u00e2\u00df\3\2\2\2\u00e3\u00e6\3\2"+
-		"\2\2\u00e4\u00e2\3\2\2\2\u00e4\u00e5\3\2\2\2\u00e5\u00e7\3\2\2\2\u00e6"+
-		"\u00e4\3\2\2\2\u00e7\u00e8\5R*\2\u00e8\61\3\2\2\2\u00e9\u00ee\5\32\16"+
-		"\2\u00ea\u00eb\7\r\2\2\u00eb\u00ed\5\32\16\2\u00ec\u00ea\3\2\2\2\u00ed"+
-		"\u00f0\3\2\2\2\u00ee\u00ec\3\2\2\2\u00ee\u00ef\3\2\2\2\u00ef\u00f2\3\2"+
-		"\2\2\u00f0\u00ee\3\2\2\2\u00f1\u00f3\7\r\2\2\u00f2\u00f1\3\2\2\2\u00f2"+
-		"\u00f3\3\2\2\2\u00f3\63\3\2\2\2\u00f4\u00f7\58\35\2\u00f5\u00f7\5F$\2"+
-		"\u00f6\u00f4\3\2\2\2\u00f6\u00f5\3\2\2\2\u00f7\65\3\2\2\2\u00f8\u00fd"+
-		"\58\35\2\u00f9\u00fa\7\r\2\2\u00fa\u00fc\58\35\2\u00fb\u00f9\3\2\2\2\u00fc"+
-		"\u00ff\3\2\2\2\u00fd\u00fb\3\2\2\2\u00fd\u00fe\3\2\2\2\u00fe\u0101\3\2"+
-		"\2\2\u00ff\u00fd\3\2\2\2\u0100\u0102\7\r\2\2\u0101\u0100\3\2\2\2\u0101"+
-		"\u0102\3\2\2\2\u0102\67\3\2\2\2\u0103\u0105\7\16\2\2\u0104\u0103\3\2\2"+
-		"\2\u0104\u0105\3\2\2\2\u0105\u0106\3\2\2\2\u0106\u0107\5\32\16\2\u0107"+
-		"\u010a\7\17\2\2\u0108\u010b\5\b\5\2\u0109\u010b\5H%\2\u010a\u0108\3\2"+
-		"\2\2\u010a\u0109\3\2\2\2\u010b9\3\2\2\2\u010c\u0111\5\b\5\2\u010d\u010e"+
-		"\7\r\2\2\u010e\u0110\5\b\5\2\u010f\u010d\3\2\2\2\u0110\u0113\3\2\2\2\u0111"+
-		"\u010f\3\2\2\2\u0111\u0112\3\2\2\2\u0112\u0115\3\2\2\2\u0113\u0111\3\2"+
-		"\2\2\u0114\u0116\7\r\2\2\u0115\u0114\3\2\2\2\u0115\u0116\3\2\2\2\u0116"+
-		";\3\2\2\2\u0117\u0118\b\37\1\2\u0118\u011b\5\62\32\2\u0119\u011b\5\66"+
-		"\34\2\u011a\u0117\3\2\2\2\u011a\u0119\3\2\2\2\u011b\u0121\3\2\2\2\u011c"+
-		"\u011d\f\5\2\2\u011d\u011e\7\r\2\2\u011e\u0120\5<\37\6\u011f\u011c\3\2"+
-		"\2\2\u0120\u0123\3\2\2\2\u0121\u011f\3\2\2\2\u0121\u0122\3\2\2\2\u0122"+
-		"=\3\2\2\2\u0123\u0121\3\2\2\2\u0124\u0125\b \1\2\u0125\u0128\5:\36\2\u0126"+
-		"\u0128\5\66\34\2\u0127\u0124\3\2\2\2\u0127\u0126\3\2\2\2\u0128\u012e\3"+
-		"\2\2\2\u0129\u012a\f\5\2\2\u012a\u012b\7\r\2\2\u012b\u012d\5> \6\u012c"+
-		"\u0129\3\2\2\2\u012d\u0130\3\2\2\2\u012e\u012c\3\2\2\2\u012e\u012f\3\2"+
-		"\2\2\u012f?\3\2\2\2\u0130\u012e\3\2\2\2\u0131\u0132\7\20\2\2\u0132\u0133"+
-		"\5\b\5\2\u0133\u0134\5N(\2\u0134A\3\2\2\2\u0135\u0136\7\21\2\2\u0136\u0137"+
-		"\5\b\5\2\u0137\u0138\7\22\2\2\u0138\u0139\5\b\5\2\u0139\u013a\5N(\2\u013a"+
-		"C\3\2\2\2\u013b\u013c\7\21\2\2\u013c\u013d\58\35\2\u013d\u013e\7\66\2"+
-		"\2\u013e\u013f\5\b\5\2\u013f\u0142\7\66\2\2\u0140\u0143\5\b\5\2\u0141"+
-		"\u0143\58\35\2\u0142\u0140\3\2\2\2\u0142\u0141\3\2\2\2\u0143\u0144\3\2"+
-		"\2\2\u0144\u0145\5N(\2\u0145\u0154\3\2\2\2\u0146\u0147\7\21\2\2\u0147"+
-		"\u0148\7-\2\2\u0148\u0149\58\35\2\u0149\u014a\7\66\2\2\u014a\u014b\5\b"+
-		"\5\2\u014b\u014e\7\66\2\2\u014c\u014f\5\b\5\2\u014d\u014f\58\35\2\u014e"+
-		"\u014c\3\2\2\2\u014e\u014d\3\2\2\2\u014f\u0150\3\2\2\2\u0150\u0151\7."+
-		"\2\2\u0151\u0152\5N(\2\u0152\u0154\3\2\2\2\u0153\u013b\3\2\2\2\u0153\u0146"+
-		"\3\2\2\2\u0154E\3\2\2\2\u0155\u0156\t\b\2\2\u0156\u0157\5\32\16\2\u0157"+
-		"\u0159\7-\2\2\u0158\u015a\5<\37\2\u0159\u0158\3\2\2\2\u0159\u015a\3\2"+
-		"\2\2\u015a\u015b\3\2\2\2\u015b\u015c\7.\2\2\u015c\u015d\5N(\2\u015dG\3"+
-		"\2\2\2\u015e\u015f\5\32\16\2\u015f\u0161\7-\2\2\u0160\u0162\5> \2\u0161"+
-		"\u0160\3\2\2\2\u0161\u0162\3\2\2\2\u0162\u0163\3\2\2\2\u0163\u0164\7."+
-		"\2\2\u0164I\3\2\2\2\u0165\u0167\7/\2\2\u0166\u0168\5\b\5\2\u0167\u0166"+
-		"\3\2\2\2\u0167\u0168\3\2\2\2\u0168K\3\2\2\2\u0169\u0174\5(\25\2\u016a"+
-		"\u0174\5\60\31\2\u016b\u0174\5,\27\2\u016c\u0174\5.\30\2\u016d\u0174\5"+
-		"@!\2\u016e\u0174\5B\"\2\u016f\u0174\5D#\2\u0170\u0174\5H%\2\u0171\u0174"+
-		"\5J&\2\u0172\u0174\5*\26\2\u0173\u0169\3\2\2\2\u0173\u016a\3\2\2\2\u0173"+
-		"\u016b\3\2\2\2\u0173\u016c\3\2\2\2\u0173\u016d\3\2\2\2\u0173\u016e\3\2"+
-		"\2\2\u0173\u016f\3\2\2\2\u0173\u0170\3\2\2\2\u0173\u0171\3\2\2\2\u0173"+
-		"\u0172\3\2\2\2\u0174M\3\2\2\2\u0175\u0177\5\6\4\2\u0176\u0175\3\2\2\2"+
-		"\u0177\u017a\3\2\2\2\u0178\u0176\3\2\2\2\u0178\u0179\3\2\2\2\u0179\u017b"+
-		"\3\2\2\2\u017a\u0178\3\2\2\2\u017b\u017f\5P)\2\u017c\u017e\5\4\3\2\u017d"+
-		"\u017c\3\2\2\2\u017e\u0181\3\2\2\2\u017f\u017d\3\2\2\2\u017f\u0180\3\2"+
-		"\2\2\u0180\u0182\3\2\2\2\u0181\u017f\3\2\2\2\u0182\u0183\5R*\2\u0183O"+
-		"\3\2\2\2\u0184\u0185\7\63\2\2\u0185Q\3\2\2\2\u0186\u0187\7\64\2\2\u0187"+
-		"S\3\2\2\2)W_ow\177\u0083\u008a\u008e\u0099\u00b2\u00bb\u00c1\u00c6\u00d0"+
-		"\u00d7\u00df\u00e4\u00ee\u00f2\u00f6\u00fd\u0101\u0104\u010a\u0111\u0115"+
-		"\u011a\u0121\u0127\u012e\u0142\u014e\u0153\u0159\u0161\u0167\u0173\u0178"+
-		"\u017f";
+		"\t!\4\"\t\"\4#\t#\4$\t$\4%\t%\4&\t&\4\'\t\'\4(\t(\4)\t)\4*\t*\4+\t+\3"+
+		"\2\6\2X\n\2\r\2\16\2Y\3\2\3\2\3\3\3\3\3\3\3\3\5\3b\n\3\3\4\3\4\3\5\3\5"+
+		"\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\3\5\5\5r\n\5\3\5\3\5\3\5\3\5\7\5"+
+		"x\n\5\f\5\16\5{\13\5\3\6\3\6\3\6\3\6\3\6\5\6\u0082\n\6\3\7\3\7\3\7\5\7"+
+		"\u0087\n\7\3\b\3\b\5\b\u008b\n\b\3\b\3\b\3\t\3\t\3\t\5\t\u0092\n\t\3\n"+
+		"\3\n\5\n\u0096\n\n\3\n\3\n\3\13\3\13\3\f\3\f\3\r\3\r\3\r\5\r\u00a1\n\r"+
+		"\3\16\3\16\3\17\3\17\3\20\3\20\3\21\3\21\3\22\3\22\3\23\3\23\3\24\3\24"+
+		"\3\25\3\25\3\26\3\26\3\26\3\26\3\26\7\26\u00b8\n\26\f\26\16\26\u00bb\13"+
+		"\26\3\26\3\26\3\26\3\26\7\26\u00c1\n\26\f\26\16\26\u00c4\13\26\3\26\7"+
+		"\26\u00c7\n\26\f\26\16\26\u00ca\13\26\3\26\3\26\5\26\u00ce\n\26\3\27\3"+
+		"\27\3\30\3\30\3\30\3\30\7\30\u00d6\n\30\f\30\16\30\u00d9\13\30\3\31\3"+
+		"\31\7\31\u00dd\n\31\f\31\16\31\u00e0\13\31\3\32\3\32\3\32\3\32\3\32\5"+
+		"\32\u00e7\n\32\3\32\7\32\u00ea\n\32\f\32\16\32\u00ed\13\32\3\32\3\32\3"+
+		"\33\3\33\3\33\7\33\u00f4\n\33\f\33\16\33\u00f7\13\33\3\33\5\33\u00fa\n"+
+		"\33\3\34\3\34\5\34\u00fe\n\34\3\35\3\35\3\35\7\35\u0103\n\35\f\35\16\35"+
+		"\u0106\13\35\3\35\5\35\u0109\n\35\3\36\5\36\u010c\n\36\3\36\3\36\5\36"+
+		"\u0110\n\36\3\36\3\36\3\36\5\36\u0115\n\36\3\37\3\37\3\37\7\37\u011a\n"+
+		"\37\f\37\16\37\u011d\13\37\3\37\5\37\u0120\n\37\3 \3 \3 \5 \u0125\n \3"+
+		" \3 \3 \7 \u012a\n \f \16 \u012d\13 \3!\3!\3!\5!\u0132\n!\3!\3!\3!\7!"+
+		"\u0137\n!\f!\16!\u013a\13!\3\"\3\"\3\"\3\"\3#\3#\3#\3#\3#\3#\3$\3$\3$"+
+		"\3$\3$\3$\3$\5$\u014d\n$\3$\3$\3$\3$\3$\3$\3$\3$\3$\3$\5$\u0159\n$\3$"+
+		"\3$\3$\5$\u015e\n$\3%\3%\3%\3%\5%\u0164\n%\3%\3%\3%\3&\3&\3&\5&\u016c"+
+		"\n&\3&\3&\3\'\3\'\5\'\u0172\n\'\3(\3(\3(\3(\3(\3(\3(\3(\3(\3(\3(\5(\u017f"+
+		"\n(\3)\7)\u0182\n)\f)\16)\u0185\13)\3)\3)\7)\u0189\n)\f)\16)\u018c\13"+
+		")\3)\3)\3*\3*\3+\3+\3+\2\5\b>@,\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36"+
+		" \"$&(*,.\60\62\64\668:<>@BDFHJLNPRT\2\t\3\289\3\2).\3\2\33\34\3\2\"("+
+		"\3\2\36\37\3\2\7\b\3\2\24\26\2\u01a6\2W\3\2\2\2\4a\3\2\2\2\6c\3\2\2\2"+
+		"\bq\3\2\2\2\n\u0081\3\2\2\2\f\u0083\3\2\2\2\16\u0088\3\2\2\2\20\u008e"+
+		"\3\2\2\2\22\u0095\3\2\2\2\24\u0099\3\2\2\2\26\u009b\3\2\2\2\30\u00a0\3"+
+		"\2\2\2\32\u00a2\3\2\2\2\34\u00a4\3\2\2\2\36\u00a6\3\2\2\2 \u00a8\3\2\2"+
+		"\2\"\u00aa\3\2\2\2$\u00ac\3\2\2\2&\u00ae\3\2\2\2(\u00b0\3\2\2\2*\u00b2"+
+		"\3\2\2\2,\u00cf\3\2\2\2.\u00d1\3\2\2\2\60\u00da\3\2\2\2\62\u00e1\3\2\2"+
+		"\2\64\u00f0\3\2\2\2\66\u00fd\3\2\2\28\u00ff\3\2\2\2:\u010b\3\2\2\2<\u0116"+
+		"\3\2\2\2>\u0124\3\2\2\2@\u0131\3\2\2\2B\u013b\3\2\2\2D\u013f\3\2\2\2F"+
+		"\u015d\3\2\2\2H\u015f\3\2\2\2J\u0168\3\2\2\2L\u016f\3\2\2\2N\u017e\3\2"+
+		"\2\2P\u0183\3\2\2\2R\u018f\3\2\2\2T\u0191\3\2\2\2VX\5\4\3\2WV\3\2\2\2"+
+		"XY\3\2\2\2YW\3\2\2\2YZ\3\2\2\2Z[\3\2\2\2[\\\7\2\2\3\\\3\3\2\2\2]b\5\6"+
+		"\4\2^b\5N(\2_b\5\66\34\2`b\5\b\5\2a]\3\2\2\2a^\3\2\2\2a_\3\2\2\2a`\3\2"+
+		"\2\2b\5\3\2\2\2cd\t\2\2\2d\7\3\2\2\2ef\b\5\1\2fg\7/\2\2gh\5\b\5\2hi\7"+
+		"\60\2\2ir\3\2\2\2jk\5\32\16\2kl\5\b\5\7lr\3\2\2\2mr\5\n\6\2nr\5J&\2or"+
+		"\5\20\t\2pr\5\22\n\2qe\3\2\2\2qj\3\2\2\2qm\3\2\2\2qn\3\2\2\2qo\3\2\2\2"+
+		"qp\3\2\2\2ry\3\2\2\2st\f\b\2\2tu\5\30\r\2uv\5\b\5\tvx\3\2\2\2ws\3\2\2"+
+		"\2x{\3\2\2\2yw\3\2\2\2yz\3\2\2\2z\t\3\2\2\2{y\3\2\2\2|\u0082\5(\25\2}"+
+		"\u0082\5 \21\2~\u0082\5\36\20\2\177\u0082\5\34\17\2\u0080\u0082\5\16\b"+
+		"\2\u0081|\3\2\2\2\u0081}\3\2\2\2\u0081~\3\2\2\2\u0081\177\3\2\2\2\u0081"+
+		"\u0080\3\2\2\2\u0082\13\3\2\2\2\u0083\u0086\7\3\2\2\u0084\u0087\5\34\17"+
+		"\2\u0085\u0087\5 \21\2\u0086\u0084\3\2\2\2\u0086\u0085\3\2\2\2\u0087\r"+
+		"\3\2\2\2\u0088\u008a\7\4\2\2\u0089\u008b\5@!\2\u008a\u0089\3\2\2\2\u008a"+
+		"\u008b\3\2\2\2\u008b\u008c\3\2\2\2\u008c\u008d\7\5\2\2\u008d\17\3\2\2"+
+		"\2\u008e\u0091\5\34\17\2\u008f\u0092\5\24\13\2\u0090\u0092\5\26\f\2\u0091"+
+		"\u008f\3\2\2\2\u0091\u0090\3\2\2\2\u0092\21\3\2\2\2\u0093\u0096\5\24\13"+
+		"\2\u0094\u0096\5\26\f\2\u0095\u0093\3\2\2\2\u0095\u0094\3\2\2\2\u0096"+
+		"\u0097\3\2\2\2\u0097\u0098\5\34\17\2\u0098\23\3\2\2\2\u0099\u009a\7 \2"+
+		"\2\u009a\25\3\2\2\2\u009b\u009c\7!\2\2\u009c\27\3\2\2\2\u009d\u00a1\5"+
+		"&\24\2\u009e\u00a1\5\"\22\2\u009f\u00a1\5$\23\2\u00a0\u009d\3\2\2\2\u00a0"+
+		"\u009e\3\2\2\2\u00a0\u009f\3\2\2\2\u00a1\31\3\2\2\2\u00a2\u00a3\7\35\2"+
+		"\2\u00a3\33\3\2\2\2\u00a4\u00a5\7\64\2\2\u00a5\35\3\2\2\2\u00a6\u00a7"+
+		"\7\63\2\2\u00a7\37\3\2\2\2\u00a8\u00a9\7\27\2\2\u00a9!\3\2\2\2\u00aa\u00ab"+
+		"\t\3\2\2\u00ab#\3\2\2\2\u00ac\u00ad\t\4\2\2\u00ad%\3\2\2\2\u00ae\u00af"+
+		"\t\5\2\2\u00af\'\3\2\2\2\u00b0\u00b1\t\6\2\2\u00b1)\3\2\2\2\u00b2\u00b3"+
+		"\7\6\2\2\u00b3\u00b4\5\b\5\2\u00b4\u00b5\5P)\2\u00b5\u00c2\3\2\2\2\u00b6"+
+		"\u00b8\5\6\4\2\u00b7\u00b6\3\2\2\2\u00b8\u00bb\3\2\2\2\u00b9\u00b7\3\2"+
+		"\2\2\u00b9\u00ba\3\2\2\2\u00ba\u00bc\3\2\2\2\u00bb\u00b9\3\2\2\2\u00bc"+
+		"\u00bd\t\7\2\2\u00bd\u00be\5\b\5\2\u00be\u00bf\5P)\2\u00bf\u00c1\3\2\2"+
+		"\2\u00c0\u00b9\3\2\2\2\u00c1\u00c4\3\2\2\2\u00c2\u00c0\3\2\2\2\u00c2\u00c3"+
+		"\3\2\2\2\u00c3\u00cd\3\2\2\2\u00c4\u00c2\3\2\2\2\u00c5\u00c7\5\6\4\2\u00c6"+
+		"\u00c5\3\2\2\2\u00c7\u00ca\3\2\2\2\u00c8\u00c6\3\2\2\2\u00c8\u00c9\3\2"+
+		"\2\2\u00c9\u00cb\3\2\2\2\u00ca\u00c8\3\2\2\2\u00cb\u00cc\7\t\2\2\u00cc"+
+		"\u00ce\5P)\2\u00cd\u00c8\3\2\2\2\u00cd\u00ce\3\2\2\2\u00ce+\3\2\2\2\u00cf"+
+		"\u00d0\7\62\2\2\u00d0-\3\2\2\2\u00d1\u00d2\7\n\2\2\u00d2\u00d3\5\b\5\2"+
+		"\u00d3\u00d7\7\13\2\2\u00d4\u00d6\5\6\4\2\u00d5\u00d4\3\2\2\2\u00d6\u00d9"+
+		"\3\2\2\2\u00d7\u00d5\3\2\2\2\u00d7\u00d8\3\2\2\2\u00d8/\3\2\2\2\u00d9"+
+		"\u00d7\3\2\2\2\u00da\u00de\7\f\2\2\u00db\u00dd\5\6\4\2\u00dc\u00db\3\2"+
+		"\2\2\u00dd\u00e0\3\2\2\2\u00de\u00dc\3\2\2\2\u00de\u00df\3\2\2\2\u00df"+
+		"\61\3\2\2\2\u00e0\u00de\3\2\2\2\u00e1\u00e2\7\r\2\2\u00e2\u00e3\5\b\5"+
+		"\2\u00e3\u00eb\5R*\2\u00e4\u00e7\5.\30\2\u00e5\u00e7\5\60\31\2\u00e6\u00e4"+
+		"\3\2\2\2\u00e6\u00e5\3\2\2\2\u00e6\u00e7\3\2\2\2\u00e7\u00e8\3\2\2\2\u00e8"+
+		"\u00ea\5\4\3\2\u00e9\u00e6\3\2\2\2\u00ea\u00ed\3\2\2\2\u00eb\u00e9\3\2"+
+		"\2\2\u00eb\u00ec\3\2\2\2\u00ec\u00ee\3\2\2\2\u00ed\u00eb\3\2\2\2\u00ee"+
+		"\u00ef\5T+\2\u00ef\63\3\2\2\2\u00f0\u00f5\5\34\17\2\u00f1\u00f2\7\16\2"+
+		"\2\u00f2\u00f4\5\34\17\2\u00f3\u00f1\3\2\2\2\u00f4\u00f7\3\2\2\2\u00f5"+
+		"\u00f3\3\2\2\2\u00f5\u00f6\3\2\2\2\u00f6\u00f9\3\2\2\2\u00f7\u00f5\3\2"+
+		"\2\2\u00f8\u00fa\7\16\2\2\u00f9\u00f8\3\2\2\2\u00f9\u00fa\3\2\2\2\u00fa"+
+		"\65\3\2\2\2\u00fb\u00fe\5:\36\2\u00fc\u00fe\5H%\2\u00fd\u00fb\3\2\2\2"+
+		"\u00fd\u00fc\3\2\2\2\u00fe\67\3\2\2\2\u00ff\u0104\5:\36\2\u0100\u0101"+
+		"\7\16\2\2\u0101\u0103\5:\36\2\u0102\u0100\3\2\2\2\u0103\u0106\3\2\2\2"+
+		"\u0104\u0102\3\2\2\2\u0104\u0105\3\2\2\2\u0105\u0108\3\2\2\2\u0106\u0104"+
+		"\3\2\2\2\u0107\u0109\7\16\2\2\u0108\u0107\3\2\2\2\u0108\u0109\3\2\2\2"+
+		"\u01099\3\2\2\2\u010a\u010c\7\17\2\2\u010b\u010a\3\2\2\2\u010b\u010c\3"+
+		"\2\2\2\u010c\u010d\3\2\2\2\u010d\u010f\5\34\17\2\u010e\u0110\5&\24\2\u010f"+
+		"\u010e\3\2\2\2\u010f\u0110\3\2\2\2\u0110\u0111\3\2\2\2\u0111\u0114\7\20"+
+		"\2\2\u0112\u0115\5\b\5\2\u0113\u0115\5J&\2\u0114\u0112\3\2\2\2\u0114\u0113"+
+		"\3\2\2\2\u0115;\3\2\2\2\u0116\u011b\5\b\5\2\u0117\u0118\7\16\2\2\u0118"+
+		"\u011a\5\b\5\2\u0119\u0117\3\2\2\2\u011a\u011d\3\2\2\2\u011b\u0119\3\2"+
+		"\2\2\u011b\u011c\3\2\2\2\u011c\u011f\3\2\2\2\u011d\u011b\3\2\2\2\u011e"+
+		"\u0120\7\16\2\2\u011f\u011e\3\2\2\2\u011f\u0120\3\2\2\2\u0120=\3\2\2\2"+
+		"\u0121\u0122\b \1\2\u0122\u0125\5\64\33\2\u0123\u0125\58\35\2\u0124\u0121"+
+		"\3\2\2\2\u0124\u0123\3\2\2\2\u0125\u012b\3\2\2\2\u0126\u0127\f\5\2\2\u0127"+
+		"\u0128\7\16\2\2\u0128\u012a\5> \6\u0129\u0126\3\2\2\2\u012a\u012d\3\2"+
+		"\2\2\u012b\u0129\3\2\2\2\u012b\u012c\3\2\2\2\u012c?\3\2\2\2\u012d\u012b"+
+		"\3\2\2\2\u012e\u012f\b!\1\2\u012f\u0132\5<\37\2\u0130\u0132\58\35\2\u0131"+
+		"\u012e\3\2\2\2\u0131\u0130\3\2\2\2\u0132\u0138\3\2\2\2\u0133\u0134\f\5"+
+		"\2\2\u0134\u0135\7\16\2\2\u0135\u0137\5@!\6\u0136\u0133\3\2\2\2\u0137"+
+		"\u013a\3\2\2\2\u0138\u0136\3\2\2\2\u0138\u0139\3\2\2\2\u0139A\3\2\2\2"+
+		"\u013a\u0138\3\2\2\2\u013b\u013c\7\21\2\2\u013c\u013d\5\b\5\2\u013d\u013e"+
+		"\5P)\2\u013eC\3\2\2\2\u013f\u0140\7\22\2\2\u0140\u0141\5\b\5\2\u0141\u0142"+
+		"\7\23\2\2\u0142\u0143\5\b\5\2\u0143\u0144\5P)\2\u0144E\3\2\2\2\u0145\u0146"+
+		"\7\22\2\2\u0146\u0147\5:\36\2\u0147\u0148\78\2\2\u0148\u0149\5\b\5\2\u0149"+
+		"\u014c\78\2\2\u014a\u014d\5\b\5\2\u014b\u014d\5:\36\2\u014c\u014a\3\2"+
+		"\2\2\u014c\u014b\3\2\2\2\u014d\u014e\3\2\2\2\u014e\u014f\5P)\2\u014f\u015e"+
+		"\3\2\2\2\u0150\u0151\7\22\2\2\u0151\u0152\7/\2\2\u0152\u0153\5:\36\2\u0153"+
+		"\u0154\78\2\2\u0154\u0155\5\b\5\2\u0155\u0158\78\2\2\u0156\u0159\5\b\5"+
+		"\2\u0157\u0159\5:\36\2\u0158\u0156\3\2\2\2\u0158\u0157\3\2\2\2\u0159\u015a"+
+		"\3\2\2\2\u015a\u015b\7\60\2\2\u015b\u015c\5P)\2\u015c\u015e\3\2\2\2\u015d"+
+		"\u0145\3\2\2\2\u015d\u0150\3\2\2\2\u015eG\3\2\2\2\u015f\u0160\t\b\2\2"+
+		"\u0160\u0161\5\34\17\2\u0161\u0163\7/\2\2\u0162\u0164\5> \2\u0163\u0162"+
+		"\3\2\2\2\u0163\u0164\3\2\2\2\u0164\u0165\3\2\2\2\u0165\u0166\7\60\2\2"+
+		"\u0166\u0167\5P)\2\u0167I\3\2\2\2\u0168\u0169\5\34\17\2\u0169\u016b\7"+
+		"/\2\2\u016a\u016c\5@!\2\u016b\u016a\3\2\2\2\u016b\u016c\3\2\2\2\u016c"+
+		"\u016d\3\2\2\2\u016d\u016e\7\60\2\2\u016eK\3\2\2\2\u016f\u0171\7\61\2"+
+		"\2\u0170\u0172\5\b\5\2\u0171\u0170\3\2\2\2\u0171\u0172\3\2\2\2\u0172M"+
+		"\3\2\2\2\u0173\u017f\5*\26\2\u0174\u017f\5\62\32\2\u0175\u017f\5.\30\2"+
+		"\u0176\u017f\5\60\31\2\u0177\u017f\5B\"\2\u0178\u017f\5D#\2\u0179\u017f"+
+		"\5F$\2\u017a\u017f\5J&\2\u017b\u017f\5L\'\2\u017c\u017f\5,\27\2\u017d"+
+		"\u017f\5\f\7\2\u017e\u0173\3\2\2\2\u017e\u0174\3\2\2\2\u017e\u0175\3\2"+
+		"\2\2\u017e\u0176\3\2\2\2\u017e\u0177\3\2\2\2\u017e\u0178\3\2\2\2\u017e"+
+		"\u0179\3\2\2\2\u017e\u017a\3\2\2\2\u017e\u017b\3\2\2\2\u017e\u017c\3\2"+
+		"\2\2\u017e\u017d\3\2\2\2\u017fO\3\2\2\2\u0180\u0182\5\6\4\2\u0181\u0180"+
+		"\3\2\2\2\u0182\u0185\3\2\2\2\u0183\u0181\3\2\2\2\u0183\u0184\3\2\2\2\u0184"+
+		"\u0186\3\2\2\2\u0185\u0183\3\2\2\2\u0186\u018a\5R*\2\u0187\u0189\5\4\3"+
+		"\2\u0188\u0187\3\2\2\2\u0189\u018c\3\2\2\2\u018a\u0188\3\2\2\2\u018a\u018b"+
+		"\3\2\2\2\u018b\u018d\3\2\2\2\u018c\u018a\3\2\2\2\u018d\u018e\5T+\2\u018e"+
+		"Q\3\2\2\2\u018f\u0190\7\65\2\2\u0190S\3\2\2\2\u0191\u0192\7\66\2\2\u0192"+
+		"U\3\2\2\2+Yaqy\u0081\u0086\u008a\u0091\u0095\u00a0\u00b9\u00c2\u00c8\u00cd"+
+		"\u00d7\u00de\u00e6\u00eb\u00f5\u00f9\u00fd\u0104\u0108\u010b\u010f\u0114"+
+		"\u011b\u011f\u0124\u012b\u0131\u0138\u014c\u0158\u015d\u0163\u016b\u0171"+
+		"\u017e\u0183\u018a";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

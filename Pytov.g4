@@ -39,6 +39,10 @@ atom
  | listr
  ;
 
+importp
+ : 'import' (identifier|string)
+ ;
+
 listr
  : '[' parameterInputList? ']'
  ;
@@ -92,6 +96,7 @@ binary
 operator
  : ADD
  | SUBTRACT
+ | POWER
  | MULT
  | DIVIDE
  | FLOOR_DIVISION
@@ -149,7 +154,7 @@ declarationList
  ;
 
 variableDeclaration 
- : 'global'? identifier '=' (exp | funcCall)
+ : 'global'? identifier operator? '=' (exp | funcCall)
  ;
 
 expList
@@ -211,6 +216,7 @@ statement
  | funcCall
  | returnp
  | breakp
+ | importp
  ;
 
 block
@@ -233,7 +239,7 @@ closeCurly
  */
  
 
-STRING : '"' ( '\\"' | . )*? '"' ;
+STRING : ('"' ( '\\"' | . )*? '"') | ('\'' ( '\\\'' | . )*? '\'') ;
 
 COMMENT
     : '/*' .*? '*/' -> skip
@@ -256,6 +262,7 @@ INC        : '++';
 DEC        : '--';
 ADD        : '+';
 SUBTRACT   : '-';
+POWER      : '**';
 MULT       : '*';
 DIVIDE     : '/';
 FLOOR_DIVISION: '/_';
