@@ -13,7 +13,7 @@ class PytovInterpreter(PytovVisitor):
         self.variables = {}
         self.global_variables = {}
         self.errorThrower = LineException(file_name)
-        self.builtin_funcs = ['print', 'range']
+        self.builtin_funcs = ['print', 'range', 'len']
 
         self.block_balance = 0
         self.block_is_true = True
