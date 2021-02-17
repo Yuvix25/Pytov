@@ -41,6 +41,11 @@ class PytovInterpreter(PytovVisitor):
     def visitIndex(self, ctx:PytovParser.IndexContext):
         return self.visit(ctx.children[0])[self.visit(ctx.children[2])]
 
+    def visitIndexOverwrite(self, ctx:PytovParser.IndexOverwriteContext):
+        lst = self.visit(ctx.children[0].children[0])
+        index = self.visit(ctx.children[0].children[2])
+        lst[index] = self.visit(ctx.children[2])
+
     def visitImportp(self, ctx:PytovParser.ImportpContext):
         if type(ctx.children[1]) == PytovParser.string:
             im_name = ctx.children[1].getText() + ".pv"

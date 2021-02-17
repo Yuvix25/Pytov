@@ -109,6 +109,9 @@ index
  : identifier '[' exp ']'
  ;
 
+indexOverwrite
+ : index '=' exp
+ ;
 
 boolTF
  : TRUE | FALSE
@@ -223,6 +226,7 @@ statement
  | returnp
  | breakp
  | importp
+ | indexOverwrite
  ;
 
 block

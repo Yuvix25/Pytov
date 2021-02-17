@@ -251,6 +251,15 @@ class PytovListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PytovParser#indexOverwrite.
+    def enterIndexOverwrite(self, ctx:PytovParser.IndexOverwriteContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#indexOverwrite.
+    def exitIndexOverwrite(self, ctx:PytovParser.IndexOverwriteContext):
+        pass
+
+
     # Enter a parse tree produced by PytovParser#boolTF.
     def enterBoolTF(self, ctx:PytovParser.BoolTFContext):
         pass
