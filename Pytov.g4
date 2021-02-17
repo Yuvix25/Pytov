@@ -29,6 +29,7 @@ exp
  | funcCall                       #funcCallExpression
  | incDec                         #incDecExpression
  | beforeIncDec                   #beforeIncDecExpression
+ | index                          #indexExpression
  ;
 
 atom

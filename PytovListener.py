@@ -80,6 +80,15 @@ class PytovListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PytovParser#indexExpression.
+    def enterIndexExpression(self, ctx:PytovParser.IndexExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#indexExpression.
+    def exitIndexExpression(self, ctx:PytovParser.IndexExpressionContext):
+        pass
+
+
     # Enter a parse tree produced by PytovParser#funcCallExpression.
     def enterFuncCallExpression(self, ctx:PytovParser.FuncCallExpressionContext):
         pass

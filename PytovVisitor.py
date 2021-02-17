@@ -49,6 +49,11 @@ class PytovVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PytovParser#indexExpression.
+    def visitIndexExpression(self, ctx:PytovParser.IndexExpressionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PytovParser#funcCallExpression.
     def visitFuncCallExpression(self, ctx:PytovParser.FuncCallExpressionContext):
         return self.visitChildren(ctx)
