@@ -385,7 +385,7 @@ class PytovInterpreter(PytovVisitor):
             return eval(' '.join([l, o, r]))
 
     def visitBoolTF(self, ctx:PytovParser.BoolTFContext):
-        return ctx.getText().title()
+        return ctx.getText().lower()[0] == "t"
 
     def visitIdentifier(self, ctx:PytovParser.IdentifierContext):
         value = ctx.getText()
