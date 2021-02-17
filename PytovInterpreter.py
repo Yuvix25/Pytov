@@ -8,7 +8,7 @@ from pytov import main
 class PytovInterpreter(PytovVisitor):
     def __init__(self, file_name, name = 'main'):
         self._name = name
-        self.file_name = file_name.replace('/', '\\')
+        self.file_name = file_name.replace('\\', '/')
 
         self.variables = {}
         self.global_variables = {}
@@ -42,8 +42,8 @@ class PytovInterpreter(PytovVisitor):
         if type(ctx.children[1]) == PytovParser.string:
             im_name = ctx.children[1].getText() + ".pv"
         else:
-            im_name = self.visit(ctx.children[1]).replace('/', '\\')
-        im_name = '\\'.join(self.file_name.split('\\')[:-1]) + '\\' + im_name
+            im_name = self.visit(ctx.children[1]).replace('\\', '/')
+        im_name = '/'.join(self.file_name.split('/')[:-1]) + '/' + im_name
         
         imported = main(im_name, 'imported')
         self.variables.update(imported.variables)

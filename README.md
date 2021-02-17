@@ -138,7 +138,7 @@ else if __name__ == "imported" { // will be true when file is imported
 ```
 
 #### test1.pv:
-```java
+```js
 x = 6
 import test2 // you can also import like this: import "test2.pv"
 print(x) // output will be 7

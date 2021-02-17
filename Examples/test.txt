@@ -45,7 +45,7 @@ func_test()
 
 switch a{
     case [1, 2, 3]:
-        print("hi0") // no break so will mov on to case [1, 2, 3, 4] even tough it is not equal to a.
+        print("hi0") // no break so will move on to case [1, 2, 3, 4] even though it is not equal to it.
     case [1, 2, 3, 4]:
         print("hi1")
         break
