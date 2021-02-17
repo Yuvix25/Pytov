@@ -25,11 +25,11 @@ exp
  : LPAREN exp RPAREN              #parenExpression
  | left=exp op=opCpBn right=exp   #opCpBnExpression
  | notl exp                       #notExpression
+ | index                          #indexExpression
  | atom                           #atomExpression
  | funcCall                       #funcCallExpression
  | incDec                         #incDecExpression
  | beforeIncDec                   #beforeIncDecExpression
- | index                          #indexExpression
  ;
 
 atom
@@ -160,7 +160,7 @@ declarationList
  ;
 
 variableDeclaration 
- : 'global'? identifier operator? '=' (exp | funcCall)
+ : 'global'? identifier operator? '=' exp
  ;
 
 expList
