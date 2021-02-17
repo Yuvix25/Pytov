@@ -134,6 +134,11 @@ class PytovVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PytovParser#index.
+    def visitIndex(self, ctx:PytovParser.IndexContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PytovParser#boolTF.
     def visitBoolTF(self, ctx:PytovParser.BoolTFContext):
         return self.visitChildren(ctx)

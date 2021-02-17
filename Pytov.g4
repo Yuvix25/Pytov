@@ -104,6 +104,11 @@ operator
  ;
 
 
+index
+ : identifier '[' exp ']'
+ ;
+
+
 boolTF
  : TRUE | FALSE
  ;

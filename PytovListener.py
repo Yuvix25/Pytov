@@ -233,6 +233,15 @@ class PytovListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PytovParser#index.
+    def enterIndex(self, ctx:PytovParser.IndexContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#index.
+    def exitIndex(self, ctx:PytovParser.IndexContext):
+        pass
+
+
     # Enter a parse tree produced by PytovParser#boolTF.
     def enterBoolTF(self, ctx:PytovParser.BoolTFContext):
         pass
