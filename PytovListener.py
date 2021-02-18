@@ -134,6 +134,33 @@ class PytovListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PytovParser#dictKV.
+    def enterDictKV(self, ctx:PytovParser.DictKVContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#dictKV.
+    def exitDictKV(self, ctx:PytovParser.DictKVContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#dictKVs.
+    def enterDictKVs(self, ctx:PytovParser.DictKVsContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#dictKVs.
+    def exitDictKVs(self, ctx:PytovParser.DictKVsContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#dictr.
+    def enterDictr(self, ctx:PytovParser.DictrContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#dictr.
+    def exitDictr(self, ctx:PytovParser.DictrContext):
+        pass
+
+
     # Enter a parse tree produced by PytovParser#incDec.
     def enterIncDec(self, ctx:PytovParser.IncDecContext):
         pass
@@ -419,6 +446,15 @@ class PytovListener(ParseTreeListener):
 
     # Exit a parse tree produced by PytovParser#funcCall.
     def exitFuncCall(self, ctx:PytovParser.FuncCallContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#methodCall.
+    def enterMethodCall(self, ctx:PytovParser.MethodCallContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#methodCall.
+    def exitMethodCall(self, ctx:PytovParser.MethodCallContext):
         pass
 
 

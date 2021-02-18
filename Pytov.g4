@@ -38,6 +38,7 @@ atom
  | decimal
  | identifier
  | listr
+ | dictr
  ;
 
 importp
@@ -45,7 +46,23 @@ importp
  ;
 
 listr
- : '[' parameterInputList? ']'
+ : '[' expList? ']'
+ ;
+
+dictKV
+ : exp ':' exp
+ ;
+
+dictKVs
+ : dictKV
+ (',' dictKV)*
+ ','?
+ ;
+
+dictr
+ : openCurly
+ dictKVs?
+ closeCurly
  ;
 
 incDec
@@ -208,6 +225,10 @@ funcDeclaration
 
 funcCall
  : identifier '(' parameterInputList? ')'
+ ;
+
+methodCall
+ : identifier '.' funcCall
  ;
 
 returnp

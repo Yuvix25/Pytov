@@ -79,6 +79,21 @@ class PytovVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PytovParser#dictKV.
+    def visitDictKV(self, ctx:PytovParser.DictKVContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#dictKVs.
+    def visitDictKVs(self, ctx:PytovParser.DictKVsContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#dictr.
+    def visitDictr(self, ctx:PytovParser.DictrContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PytovParser#incDec.
     def visitIncDec(self, ctx:PytovParser.IncDecContext):
         return self.visitChildren(ctx)
@@ -236,6 +251,11 @@ class PytovVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by PytovParser#funcCall.
     def visitFuncCall(self, ctx:PytovParser.FuncCallContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#methodCall.
+    def visitMethodCall(self, ctx:PytovParser.MethodCallContext):
         return self.visitChildren(ctx)
 
 

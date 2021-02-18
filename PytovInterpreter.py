@@ -1,9 +1,10 @@
-from antlr4 import *
+#from antlr4 import *
 from antlr4.tree.Tree import TerminalNodeImpl
 from PytovVisitor import PytovVisitor
 from PytovParser import PytovParser
 from exceptions import *
 from pytov import main
+from Objects import *
 
 class PytovInterpreter(PytovVisitor):
     def __init__(self, file_name, name = 'main'):
@@ -27,8 +28,8 @@ class PytovInterpreter(PytovVisitor):
     def visitTerminal(self, ctx:TerminalNodeImpl):
         if self.is_in_func:
             value = ctx.getText()
-            if value in list(self.active_funcs[-1]['localVariables'].keys()) + list(self.global_variables.keys()):
-                return self.active_funcs[-1]['localVariables'][value]
+            if value in list(self.active_funcs[-1].localVariables.keys()) + list(self.global_variables.keys()):
+                return self.active_funcs[-1].localVariables[value]
             return value
         else:
             value = ctx.getText()
@@ -142,10 +143,9 @@ class PytovInterpreter(PytovVisitor):
 
     def visitFuncDeclaration(self, ctx:PytovParser.FuncDeclarationContext):
         if len(ctx.children) == 5:
-            self.variables[ctx.children[1].getText()] = {'name':ctx.children[1].getText(), 'body':ctx.children[4], 'localVariables':{}, 'args':[[],{}]}
+            self.variables[ctx.children[1].getText()] = Func(ctx.children[1].getText(), ctx.children[4], [[],{}], {}) #{'name':ctx.children[1].getText(), 'body':ctx.children[4], 'localVariables':{}, 'args':[[],{}]}
         elif len(ctx.children) == 6:
-            self.getParameterList(ctx.children[3])
-            self.variables[ctx.children[1].getText()] = {'name':ctx.children[1].getText(), 'body':ctx.children[5], 'localVariables':self.visit(ctx.children[3]), 'args':self.getParameterList(ctx.children[3])}
+            self.variables[ctx.children[1].getText()] = Func(ctx.children[1].getText(), ctx.children[5], self.getParameterList(ctx.children[3]), self.visit(ctx.children[3])) #{'name':ctx.children[1].getText(), 'body':ctx.children[5], 'localVariables':self.visit(ctx.children[3]), 'args':self.getParameterList(ctx.children[3])}
 
     def visitFuncCall(self, ctx:PytovParser.FuncCallContext):
         if ctx.children[0].getText() in list(self.variables.keys()):
@@ -160,33 +160,33 @@ class PytovInterpreter(PytovVisitor):
             func = self.variables[ctx.children[0].getText()]
 
 
-            func_original_vars = func['localVariables'].copy()
+            func_original_vars = func.localVariables.copy()
 
             if len(ctx.children) == 4:
                 input_args = self.visit(ctx.children[2])
             else:
                 input_args = [[], {}]
             
-            if len(input_args[0]) != len(func['args'][0]):
+            if len(input_args[0]) != len(func.args[0]):
                 print(input_args[0])
-                self.errorThrower._raise([ctx.start.line, ctx.getText()], "TypeError", f"'{func['name']}' requires {len(func['args'][0])} arguments, but {len(input_args[0])} were given.")
+                self.errorThrower._raise([ctx.start.line, ctx.getText()], "TypeError", f"'{func.name}' requires {len(func.args[0])} arguments, but {len(input_args[0])} were given.")
 
             if len(ctx.children) == 4:
                 for index, var in enumerate(input_args[0]):
-                    func['localVariables'][list(func['localVariables'].keys())[index]] = var
-                func['localVariables'].update(input_args[1])
+                    func.localVariables[list(func.localVariables.keys())[index]] = var
+                func.localVariables.update(input_args[1])
 
 
             last_is_in_func = self.is_in_func
             self.is_in_func = True
             self.active_funcs.append(func)
             try:
-                self.visit(func['body'])
+                self.visit(func.body)
             except ReturnIndicator:
                 pass
             self.is_in_func = last_is_in_func
             self.active_funcs.pop(self.active_funcs.index(func))
-            func['localVariables'] = func_original_vars
+            func.localVariables = func_original_vars
 
             # Recreate state
             self.block_balance = block_balance
@@ -261,7 +261,7 @@ class PytovInterpreter(PytovVisitor):
         try:
             for i in range(len(container)):
                 if self.is_in_func:
-                    self.active_funcs[-1]['localVariables'][ctx.children[1].getText()] = container[i]
+                    self.active_funcs[-1].localVariables[ctx.children[1].getText()] = container[i]
                 else:
                     self.variables[ctx.children[1].getText()] = container[i]
                 self.visit(ctx.children[4])
@@ -312,8 +312,8 @@ class PytovInterpreter(PytovVisitor):
 
         value = ctx.children[0].getText()
         if self.is_in_func:
-            if value in list(self.active_funcs[-1]['localVariables'].keys()):
-                self.active_funcs[-1]['localVariables'][value] += add
+            if value in list(self.active_funcs[-1].localVariables.keys()):
+                self.active_funcs[-1].localVariables[value] += add
         elif value in list(self.variables.keys()):
             self.variables[value] += add
         elif value in list(self.global_variables.keys()):
@@ -331,8 +331,8 @@ class PytovInterpreter(PytovVisitor):
 
         value = ctx.children[1].getText()
         if self.is_in_func:
-            if value in list(self.active_funcs[-1]['localVariables'].keys()):
-                self.active_funcs[-1]['localVariables'][value] += add
+            if value in list(self.active_funcs[-1].localVariables.keys()):
+                self.active_funcs[-1].localVariables[value] += add
         elif value in list(self.variables.keys()):
             self.variables[value] += add
         elif value in list(self.global_variables.keys()):
@@ -390,8 +390,8 @@ class PytovInterpreter(PytovVisitor):
     def visitIdentifier(self, ctx:PytovParser.IdentifierContext):
         value = ctx.getText()
         if self.is_in_func:
-            if value in list(self.active_funcs[-1]['localVariables'].keys()):
-                return self.active_funcs[-1]['localVariables'][value]
+            if value in list(self.active_funcs[-1].localVariables.keys()):
+                return self.active_funcs[-1].localVariables[value]
         elif value in list(self.variables.keys()):
             return self.variables[value]
         elif value in list(self.global_variables.keys()):
@@ -413,7 +413,10 @@ class PytovInterpreter(PytovVisitor):
         return ctx.getText()[1:-1]
 
     def visitListr(self, ctx:PytovParser.ListrContext):
-        return self.visit(ctx.children[1])[0]
+        return [self.visit(exp) for exp in ctx.children[1].children if type(exp) != TerminalNodeImpl]
+
+    def visitDictr(self, ctx:PytovParser.DictrContext):
+        return {self.visit(kv.children[0]):self.visit(kv.children[2]) for kv in ctx.children[1].children if type(kv) != TerminalNodeImpl}
 
     def visitVariableDeclaration(self, ctx:PytovParser.VariableDeclarationContext):
         if len(ctx.children) == 5:
@@ -430,7 +433,7 @@ class PytovInterpreter(PytovVisitor):
                     if ctx.children[0].getText() in self.global_variables:
                         self.global_variables[ctx.children[0].getText()] = eval(f"{self.global_variables[ctx.children[0].getText()]} {op} {self.visit(ctx.children[3])}")
                     elif self.is_in_func:
-                        self.active_funcs[-1]['localVariables'][ctx.children[0].getText()] = eval(f"{self.active_funcs[-1]['localVariables'][ctx.children[0].getText()]} {op} {self.visit(ctx.children[3])}")
+                        self.active_funcs[-1].localVariables[ctx.children[0].getText()] = eval(f"{self.active_funcs[-1].localVariables[ctx.children[0].getText()]} {op} {self.visit(ctx.children[3])}")
                     else:
                         self.variables[ctx.children[0].getText()] = eval(f"{self.variables[ctx.children[0].getText()]} {op} {self.visit(ctx.children[3])}")
                 except KeyError:
@@ -442,7 +445,7 @@ class PytovInterpreter(PytovVisitor):
             if ctx.children[0].getText() in self.global_variables:
                 self.global_variables[ctx.children[0].getText()] = self.visit(ctx.children[2])
             elif self.is_in_func:
-                self.active_funcs[-1]['localVariables'][ctx.children[0].getText()] = self.visit(ctx.children[2])
+                self.active_funcs[-1].localVariables[ctx.children[0].getText()] = self.visit(ctx.children[2])
             else:
                 self.variables[ctx.children[0].getText()] = self.visit(ctx.children[2])
 

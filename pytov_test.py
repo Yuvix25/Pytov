@@ -1,4 +1,4 @@
-from antlr4 import *
+from antlr4 import FileStream, CommonTokenStream
 from PytovLexer import PytovLexer
 from PytovParser import PytovParser
 from PytovVisitor import PytovVisitor
