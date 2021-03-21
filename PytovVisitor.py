@@ -24,13 +24,18 @@ class PytovVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PytovParser#beforeIncDecExpression.
-    def visitBeforeIncDecExpression(self, ctx:PytovParser.BeforeIncDecExpressionContext):
+    # Visit a parse tree produced by PytovParser#fdivExpression.
+    def visitFdivExpression(self, ctx:PytovParser.FdivExpressionContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PytovParser#atomExpression.
-    def visitAtomExpression(self, ctx:PytovParser.AtomExpressionContext):
+    # Visit a parse tree produced by PytovParser#powExpression.
+    def visitPowExpression(self, ctx:PytovParser.PowExpressionContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#modExpression.
+    def visitModExpression(self, ctx:PytovParser.ModExpressionContext):
         return self.visitChildren(ctx)
 
 
@@ -44,18 +49,38 @@ class PytovVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PytovParser#divExpression.
+    def visitDivExpression(self, ctx:PytovParser.DivExpressionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PytovParser#parenExpression.
     def visitParenExpression(self, ctx:PytovParser.ParenExpressionContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PytovParser#indexExpression.
-    def visitIndexExpression(self, ctx:PytovParser.IndexExpressionContext):
+    # Visit a parse tree produced by PytovParser#funcCallExpression.
+    def visitFuncCallExpression(self, ctx:PytovParser.FuncCallExpressionContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by PytovParser#funcCallExpression.
-    def visitFuncCallExpression(self, ctx:PytovParser.FuncCallExpressionContext):
+    # Visit a parse tree produced by PytovParser#beforeIncDecExpression.
+    def visitBeforeIncDecExpression(self, ctx:PytovParser.BeforeIncDecExpressionContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#atomExpression.
+    def visitAtomExpression(self, ctx:PytovParser.AtomExpressionContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#multExpression.
+    def visitMultExpression(self, ctx:PytovParser.MultExpressionContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PytovParser#indexExpression.
+    def visitIndexExpression(self, ctx:PytovParser.IndexExpressionContext):
         return self.visitChildren(ctx)
 
 

@@ -301,6 +301,21 @@ class PytovInterpreter(PytovVisitor):
     def visitParenExpression(self, ctx:PytovParser.ParenExpressionContext):
         return self.visit(ctx.exp())
 
+    def visitPowExpression(self, ctx:PytovParser.PowExpressionContext):
+        return self.visit(ctx.left) ** self.visit(ctx.right)
+
+    def visitMultExpression(self, ctx:PytovParser.MultExpressionContext):
+        return self.visit(ctx.left) * self.visit(ctx.right)
+
+    def visitDivExpression(self, ctx:PytovParser.DivExpressionContext):
+        return self.visit(ctx.left) / self.visit(ctx.right)
+
+    def visitFdivExpression(self, ctx:PytovParser.FdivExpressionContext):
+        return self.visit(ctx.left) // self.visit(ctx.right)
+    
+    def visitModExpression(self, ctx:PytovParser.ModExpressionContext):
+        return self.visit(ctx.left) % self.visit(ctx.right)
+
     def visitAtom(self, ctx:PytovParser.AtomContext):
         return self.visit(ctx.children[0])
 

@@ -35,21 +35,30 @@ class PytovListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PytovParser#beforeIncDecExpression.
-    def enterBeforeIncDecExpression(self, ctx:PytovParser.BeforeIncDecExpressionContext):
+    # Enter a parse tree produced by PytovParser#fdivExpression.
+    def enterFdivExpression(self, ctx:PytovParser.FdivExpressionContext):
         pass
 
-    # Exit a parse tree produced by PytovParser#beforeIncDecExpression.
-    def exitBeforeIncDecExpression(self, ctx:PytovParser.BeforeIncDecExpressionContext):
+    # Exit a parse tree produced by PytovParser#fdivExpression.
+    def exitFdivExpression(self, ctx:PytovParser.FdivExpressionContext):
         pass
 
 
-    # Enter a parse tree produced by PytovParser#atomExpression.
-    def enterAtomExpression(self, ctx:PytovParser.AtomExpressionContext):
+    # Enter a parse tree produced by PytovParser#powExpression.
+    def enterPowExpression(self, ctx:PytovParser.PowExpressionContext):
         pass
 
-    # Exit a parse tree produced by PytovParser#atomExpression.
-    def exitAtomExpression(self, ctx:PytovParser.AtomExpressionContext):
+    # Exit a parse tree produced by PytovParser#powExpression.
+    def exitPowExpression(self, ctx:PytovParser.PowExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#modExpression.
+    def enterModExpression(self, ctx:PytovParser.ModExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#modExpression.
+    def exitModExpression(self, ctx:PytovParser.ModExpressionContext):
         pass
 
 
@@ -71,6 +80,15 @@ class PytovListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by PytovParser#divExpression.
+    def enterDivExpression(self, ctx:PytovParser.DivExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#divExpression.
+    def exitDivExpression(self, ctx:PytovParser.DivExpressionContext):
+        pass
+
+
     # Enter a parse tree produced by PytovParser#parenExpression.
     def enterParenExpression(self, ctx:PytovParser.ParenExpressionContext):
         pass
@@ -80,21 +98,48 @@ class PytovListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by PytovParser#indexExpression.
-    def enterIndexExpression(self, ctx:PytovParser.IndexExpressionContext):
-        pass
-
-    # Exit a parse tree produced by PytovParser#indexExpression.
-    def exitIndexExpression(self, ctx:PytovParser.IndexExpressionContext):
-        pass
-
-
     # Enter a parse tree produced by PytovParser#funcCallExpression.
     def enterFuncCallExpression(self, ctx:PytovParser.FuncCallExpressionContext):
         pass
 
     # Exit a parse tree produced by PytovParser#funcCallExpression.
     def exitFuncCallExpression(self, ctx:PytovParser.FuncCallExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#beforeIncDecExpression.
+    def enterBeforeIncDecExpression(self, ctx:PytovParser.BeforeIncDecExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#beforeIncDecExpression.
+    def exitBeforeIncDecExpression(self, ctx:PytovParser.BeforeIncDecExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#atomExpression.
+    def enterAtomExpression(self, ctx:PytovParser.AtomExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#atomExpression.
+    def exitAtomExpression(self, ctx:PytovParser.AtomExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#multExpression.
+    def enterMultExpression(self, ctx:PytovParser.MultExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#multExpression.
+    def exitMultExpression(self, ctx:PytovParser.MultExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by PytovParser#indexExpression.
+    def enterIndexExpression(self, ctx:PytovParser.IndexExpressionContext):
+        pass
+
+    # Exit a parse tree produced by PytovParser#indexExpression.
+    def exitIndexExpression(self, ctx:PytovParser.IndexExpressionContext):
         pass
 
 

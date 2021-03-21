@@ -22,14 +22,19 @@ seperators
 
 
 exp
- : LPAREN exp RPAREN              #parenExpression
- | left=exp op=opCpBn right=exp   #opCpBnExpression
- | notl exp                       #notExpression
- | index                          #indexExpression
- | atom                           #atomExpression
- | funcCall                       #funcCallExpression
- | incDec                         #incDecExpression
- | beforeIncDec                   #beforeIncDecExpression
+ : LPAREN exp RPAREN                      #parenExpression
+ | left=exp op=POWER          right=exp   #powExpression
+ | left=exp op=MULT           right=exp   #multExpression
+ | left=exp op=DIVIDE         right=exp   #divExpression
+ | left=exp op=FLOOR_DIVISION right=exp   #fdivExpression
+ | left=exp op=MODULO         right=exp   #modExpression
+ | left=exp op=opCpBn         right=exp   #opCpBnExpression
+ | notl exp                               #notExpression
+ | index                                  #indexExpression
+ | atom                                   #atomExpression
+ | funcCall                               #funcCallExpression
+ | incDec                                 #incDecExpression
+ | beforeIncDec                           #beforeIncDecExpression
  ;
 
 atom
