@@ -3,6 +3,7 @@ from PytovLexer import PytovLexer
 from PytovParser import PytovParser
 from PytovVisitor import PytovVisitor
 from antlr4.tree.Tree import TerminalNodeImpl
+import argparse
 
 
 def main(fileName, name='main'):
@@ -16,9 +17,11 @@ def main(fileName, name='main'):
     visitor.visit(tree)
     return visitor
 
-if __name__ == '__main__':
-    import argparse
+def run():
     parser = argparse.ArgumentParser()
     parser.add_argument('file')
     args = parser.parse_args()
     main(args.file)
+
+if __name__ == '__main__':
+    run()
