@@ -2,7 +2,7 @@
 The idea was to take all well known syntaxes, and combine them into one programming language with many posabilities.
 
 ## Installation
-Install using `pip install pytov`, or via git `git clone https://github.com/Yuvix25/Pytov.git`.
+Install using `pip install pytov`, or via git: `git clone https://github.com/Yuvix25/Pytov.git`.
 
 ## Usage
 

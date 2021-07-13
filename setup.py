@@ -1,9 +1,9 @@
 import setuptools
 
 setuptools.setup(
-    name="Pytov",
-    version="0.3.0",
-    license='MIT',
+    name="pytov",
+    version="0.3.1",
+    license='GNU',
     author="Yuval Rosen",
     author_email="yuv.rosen@gmail.com",
     description="Python with a larger syntax support",
