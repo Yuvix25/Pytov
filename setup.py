@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="pytov",
-    version="0.3.1",
+    version="0.3.9",
     license='GNU',
     author="Yuval Rosen",
     author_email="yuv.rosen@gmail.com",
@@ -11,6 +11,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/Yuvix25/pytov",
     packages=setuptools.find_packages(),
+    package_data = {'pytov' : ['*.tokens', '*.interp', '*.g4', '*.iml', '*.txt']},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",

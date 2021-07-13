@@ -63,5 +63,5 @@ for (i = 5; i<10; i++){
 }
 
 x = 6
-import "test2.txt"
+import "test2.py"
 print(x)

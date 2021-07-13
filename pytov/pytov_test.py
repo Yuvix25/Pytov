@@ -1,7 +1,7 @@
 from antlr4 import FileStream, CommonTokenStream
-from PytovLexer import PytovLexer
-from PytovParser import PytovParser
-from PytovVisitor import PytovVisitor
+from pytov.PytovLexer import PytovLexer
+from pytov.PytovParser import PytovParser
+from pytov.PytovVisitor import PytovVisitor
 from antlr4.tree.Tree import TerminalNodeImpl
 from antlr4.error.ErrorListener import ErrorListener
 
@@ -26,10 +26,10 @@ def main(fileName):
     stream = CommonTokenStream(lexer)
     parser = PytovParser(stream)
     tree = parser.parse()
-    from PytovInterpreter import PytovInterpreter
+    from pytov.PytovInterpreter import PytovInterpreter
     visitor = PytovInterpreter(fileName)
     visitor.visit(tree)
     #traverse(tree, parser.ruleNames)
 
 if __name__ == '__main__':
-    main("./Examples/test.txt")
+    main("./Examples/test.py")

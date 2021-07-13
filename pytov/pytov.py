@@ -1,7 +1,7 @@
 from antlr4 import *
-from PytovLexer import PytovLexer
-from PytovParser import PytovParser
-from PytovVisitor import PytovVisitor
+from pytov.PytovLexer import PytovLexer
+from pytov.PytovParser import PytovParser
+from pytov.PytovVisitor import PytovVisitor
 from antlr4.tree.Tree import TerminalNodeImpl
 import argparse
 
@@ -12,7 +12,7 @@ def main(fileName, name='main'):
     stream = CommonTokenStream(lexer)
     parser = PytovParser(stream)
     tree = parser.parse()
-    from PytovInterpreter import PytovInterpreter
+    from pytov.PytovInterpreter import PytovInterpreter
     visitor = PytovInterpreter(fileName, name)
     visitor.visit(tree)
     return visitor

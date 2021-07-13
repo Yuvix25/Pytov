@@ -1,10 +1,10 @@
 #from antlr4 import *
 from antlr4.tree.Tree import TerminalNodeImpl
-from PytovVisitor import PytovVisitor
-from PytovParser import PytovParser
-from exceptions import *
+from pytov.PytovVisitor import PytovVisitor
+from pytov.PytovParser import PytovParser
+from pytov.exceptions import *
 from pytov import main
-from Objects import *
+from pytov.Objects import *
 
 class PytovInterpreter(PytovVisitor):
     def __init__(self, file_name, name = 'main'):
