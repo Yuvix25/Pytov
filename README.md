@@ -1,18 +1,29 @@
 # Pytov
 The idea was to take all well known syntaxes, and combine them into one programming language with many posabilities.
 
+## Installation
+Install using `pip install pytov`, or via git `git clone https://github.com/Yuvix25/Pytov.git`.
+
 ## Usage
 
-Run using python (requires libraries: run `$ pip install -r requirements.txt`):
+### If was installed via pip:
+```sh
+$ pytov [path_to_your_pytov_file]
+```
+### If was installed via git:  
+
+Run using Python:
 ```sh
 $ cd [folder_of_installation]
-$ python pytov.py [path_to_your_pytov_code]
+$ cd pytov
+$ python pytov.py [path_to_your_pytov_file]
 ```
-Run using executables:
+
+Run using pre-built executables:
 ```sh
 $ cd [folder_of_installation]
 $ cd exe
-$ pytov [path_to_your_pytov_code]
+$ pytov [path_to_your_pytov_file]
 ```
 
 ## Syntax
