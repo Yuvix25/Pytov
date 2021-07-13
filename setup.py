@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="Pytov",
-    version="0.2.7",
+    version="0.3.0",
     license='MIT',
     author="Yuval Rosen",
     author_email="yuv.rosen@gmail.com",
@@ -13,7 +13,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: GNU License",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',

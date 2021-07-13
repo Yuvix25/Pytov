@@ -19,7 +19,7 @@ def main(fileName, name='main'):
 
 def run():
     parser = argparse.ArgumentParser()
-    parser.add_argument('file')
+    parser.add_argument('-f', '--file', help="File to run.")
     args = parser.parse_args()
     main(args.file)
 
